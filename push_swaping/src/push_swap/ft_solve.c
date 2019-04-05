@@ -8,7 +8,7 @@ void ft_checking_pos(t_env *vn, int pos)
   ft_checking(vn, rank);
 }
 
-int ft_calc_head(t_env *vn, int rank, t_ps *ps)
+int ft_calc_head(t_env *vn, int rank)
 {
   int pos;
   int bot;
@@ -34,7 +34,6 @@ int ft_calc_head(t_env *vn, int rank, t_ps *ps)
 void ft_select_to_b(t_env *vn, t_ps *ps)
 {
   int i;
-  int j;
   int tmp;
   int pos;
   int bot;
@@ -42,11 +41,11 @@ void ft_select_to_b(t_env *vn, t_ps *ps)
   i = 0;
   bot = vn->a->bot;
   ps->head = i;
-  ps->moves = ft_calc_head(vn, ps->head, ps);
+  ps->moves = ft_calc_head(vn, ps->head);
   i++;
   while (i < vn->len)
   {
-    tmp = ft_calc_head(vn, i, ps);
+    tmp = ft_calc_head(vn, i);
     if (ps->moves < tmp || (ps->moves == tmp && i < ps->head))
      {
        ps->moves = tmp;
@@ -119,12 +118,10 @@ void ft_a_to_b(t_env *vn, t_ps *ps)
   }
 }
 
-int ft_is_done(t_env *vn, t_ps *ps)
+int ft_is_done(t_env *vn)
 {
   int len;
   int rank;
-  int pos_upper;
-  int pos_lower;
   int pos;
 
   rank = 0;
@@ -230,12 +227,48 @@ void ft_common(t_ps *ps)
   }*/
 }
 
+char *ft_ins(char *ins)
+{
+  char **tab;
+  int i;
+  int j;
+  char *str = NULL;
+
+  tab = ft_strsplit(ins, '\n');
+  i = 0;
+  j = 1;
+  while (tab[j] != NULL)
+  {
+    if (!ft_strcmp(tab[i], "ra") && !ft_strcmp(tab[j], "rb"))
+      str = ft_strjoin_customed(str, "rr\n");
+    else if (!ft_strcmp(tab[i], "rb") && !ft_strcmp(tab[j], "ra"))
+      str = ft_strjoin_customed(str, "rr\n");
+    else if (!ft_strcmp(tab[i], "rra") && !ft_strcmp(tab[j], "rrb"))
+      str = ft_strjoin_customed(str, "rrr\n");
+    else if (!ft_strcmp(tab[i], "rrb") && !ft_strcmp(tab[j], "rra"))
+      str = ft_strjoin_customed(str, "rrr\n");
+    else
+    {
+      str = ft_strjoin_customed(str, tab[i]);
+      str = ft_strjoin_customed(str, "\n");
+      i++; j++;
+      continue ;
+    }
+    i+=2; j+=2;
+  }
+  return (str);
+}
+
 void push_swap2(t_env *vn, t_ps *ps)
 {
+    char *str = NULL;
+
     ft_select_to_b(vn, ps);
     ft_a_to_b(vn, ps);
     ft_select_to_a(vn, ps);
     ft_align_a(vn, ps);
 
-    printf("%s", ps->ins);
+    str = ft_ins(ps->ins);
+
+    printf("%s", str);
 }
