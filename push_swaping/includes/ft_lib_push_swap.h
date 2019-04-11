@@ -57,7 +57,7 @@ typedef struct s_env
   int *res;
   int *cb;
   int len;
-  char *ins;
+  //char *ins;
 }               t_env;
 
 typedef struct  s_ps
@@ -68,9 +68,7 @@ typedef struct  s_ps
   int tail_max;
   int moves;
   int next_move;
-  char *ins;
-  char *ins_a;
-  char *ins_b;
+  //char *ins;
 }               t_ps;
 
 int in(int n);
@@ -118,13 +116,10 @@ int calc_elem_to_suit_pos_from_b(t_env *vn, int rank);
 void put_elem_to_suit_pos(t_env *vn, int rank, t_ps *ps);
 void ft_select_to_a(t_env *vn, t_ps *ps);
 void push_swap(t_env *vn, t_ps *ps);
-void push_swap2(t_env *vn, t_ps *ps);
 int push_a_to_b(t_env *vn, int pos, t_ps *ps);
 int push_b_to_a(t_env *vn, int pos, t_ps *ps);
 t_ps *ft_init_ps();
 int place_elem(t_st *a, int i);
-void ft_apply(t_env *vn, t_ps *ps);
-void ft_common(t_ps *ps);
 int	pos_to_top(t_env *vn, int pos, t_ps *ps);
 
 #endif

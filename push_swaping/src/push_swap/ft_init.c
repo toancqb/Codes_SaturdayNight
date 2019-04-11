@@ -10,8 +10,6 @@ t_ps *ft_init_ps()
   ps->tail_min = 0;
   ps->moves = 0;
   ps->next_move = 0;
-  ps->ins = ft_strnew(1);
-  ps->ins_a = ft_strnew(1);
-  ps->ins_b = ft_strnew(1);
+//  ps->ins = ft_strnew(1);
   return (ps);
 }

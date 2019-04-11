@@ -3,9 +3,11 @@
 void upper(t_env *vn, int pos, int len, t_ps *ps)
 {
   (void)vn;
+  (void)ps;
   while (pos < len - 1)
   {
-    ps->ins = ft_strjoin_customed(ps->ins, "ra\n");
+    //ps->ins = ft_strjoin_customed(ps->ins, "ra\n");
+    ft_putstr("ra\n");
     ra(vn->a);
     pos++;
   }
@@ -14,9 +16,11 @@ void upper(t_env *vn, int pos, int len, t_ps *ps)
 void lower(t_env *vn, int pos, t_ps *ps)
 {
   (void)vn;
+  (void)ps;
   while (pos >= 0)
   {
-    ps->ins = ft_strjoin_customed(ps->ins, "rra\n");
+    //ps->ins = ft_strjoin_customed(ps->ins, "rra\n");
+    ft_putstr("rra\n");
     rra(vn->a);
     pos--;
   }
@@ -33,7 +37,8 @@ int pos_to_top(t_env *vn, int pos, t_ps *ps)
     upper(vn, pos, len, ps);
   else if(place == 3)
   {
-    ps->ins = ft_strjoin_customed(ps->ins, "rra\n");
+    //ps->ins = ft_strjoin_customed(ps->ins, "rra\n");
+    ft_putstr("rra\n");
     rra(vn->a);
   }
   else
@@ -57,16 +62,19 @@ void ft_checking(t_env *vn, int rank)
 
 void ft_align_up_down(t_env *vn, int times, t_ps *ps, int cmd)
 {
+  (void)ps;
   while(times >= 0)
   {
     if (cmd)
     {
-      ps->ins = ft_strjoin_customed(ps->ins, "rra\n");
+      //ps->ins = ft_strjoin_customed(ps->ins, "rra\n");
+      ft_putstr("rra\n");
       rra(vn->a);
     }
     else
     {
-      ps->ins = ft_strjoin_customed(ps->ins, "ra\n");
+      //ps->ins = ft_strjoin_customed(ps->ins, "ra\n");
+      ft_putstr("ra\n");
       ra(vn->a);
     }
     times--;

@@ -16,26 +16,32 @@ int place_elem(t_st *a, int i)
 
 void pos_upper(t_env *vn, int pos, int len, t_ps *ps)
 {
+  (void)ps;
   while (pos < len - 1)
   {
-    ps->ins = ft_strjoin_customed(ps->ins, "ra\n");
+    //ps->ins = ft_strjoin_customed(ps->ins, "ra\n");
+    ft_putstr("ra\n");
     ra(vn->a);
     pos++;
   }
-  ps->ins = ft_strjoin_customed(ps->ins, "pb\n");
+  //ps->ins = ft_strjoin_customed(ps->ins, "pb\n");
+  ft_putstr("pb\n");
   pb(vn->b, vn->a);
 }
 
 void pos_lower(t_env *vn, int pos, int len, t_ps *ps)
 {
   (void)len;
+  (void)ps;
   while (pos >= 0)
   {
-    ps->ins = ft_strjoin_customed(ps->ins, "rra\n");
+    //ps->ins = ft_strjoin_customed(ps->ins, "rra\n");
+    ft_putstr("rra\n");
     rra(vn->a);
     pos--;
   }
-  ps->ins = ft_strjoin_customed(ps->ins, "pb\n");
+  //ps->ins = ft_strjoin_customed(ps->ins, "pb\n");
+  ft_putstr("pb\n");
   pb(vn->b, vn->a);
 }
 
@@ -48,14 +54,16 @@ int push_a_to_b(t_env *vn, int pos, t_ps *ps)
   place = place_elem(vn->a, pos);
   if (place == 0)
   {
-    ps->ins = ft_strjoin_customed(ps->ins, "pb\n");
+    //ps->ins = ft_strjoin_customed(ps->ins, "pb\n");
+    ft_putstr("pb\n");
     pb(vn->b, vn->a);
   }
   else if (place == 1)
     pos_upper(vn, pos, len, ps);
   else if(place == 3)
   {
-    ps->ins = ft_strjoin_customed(ps->ins, "rra\npb\n");
+    //ps->ins = ft_strjoin_customed(ps->ins, "rra\npb\n");
+    ft_putstr("rra\npb\n");
     rra(vn->a);
     pb(vn->b, vn->a);
   }

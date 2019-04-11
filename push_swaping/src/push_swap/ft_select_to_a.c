@@ -109,7 +109,6 @@ void ft_select_to_a(t_env *vn, t_ps *ps)
       }
       pos--;
     }
-    printf("--(%d)--", curr);
     rank = val_to_rank(vn, b->tab[in(b->bot + curr)]);
     if (rank < vn->len - 1)
     {
@@ -128,10 +127,6 @@ void ft_select_to_a(t_env *vn, t_ps *ps)
         rank++;
       pos_to_top(vn, rank_to_pos_a(vn, rank), ps);
     }
-    push_b_to_a(vn, curr, ps);
-    /*ft_common(ps);
-    ft_apply(vn, ps);
-    free(ps->ins_a); ps->ins_a = ft_strnew(1);
-    free(ps->ins_b); ps->ins_b = ft_strnew(1);*/
+    push_b_to_a(vn, curr, ps);    
   }
 }

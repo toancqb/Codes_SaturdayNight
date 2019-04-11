@@ -53,7 +53,6 @@ void ft_select_to_b(t_env *vn, t_ps *ps)
      }
     i++;
   }
-  //ft_checking(vn, rank_to_pos_a(vn, ps->head));
   pos = rank_to_pos_a(vn, ps->head);
   ft_checking_pos(vn, pos);
   tmp = pos;
@@ -103,172 +102,122 @@ int ft_is_f_in_a(t_env *vn)
 
 void ft_a_to_b(t_env *vn, t_ps *ps)
 {
+  (void)ps;
   while (ft_is_f_in_a(vn))
   {
     if (!ft_is_true(vn, vn->a->tab[in(vn->a->top)]))
     {
-      ps->ins = ft_strjoin_customed(ps->ins, "pb\n");
+      ft_putstr("pb\n");
       pb(vn->b, vn->a);
     }
     else
     {
-      ps->ins = ft_strjoin_customed(ps->ins, "ra\n");
+      ft_putstr("ra\n");
       ra(vn->a);
     }
   }
 }
 
-int ft_is_done(t_env *vn)
-{
-  int len;
-  int rank;
-  int pos;
 
-  rank = 0;
-  len = st_nb_elem(vn->a);
-  while (rank < len)
-  {
-    pos = rank_to_pos_a(vn, rank);
-    if (rank != pos)
-      return (0);
-    rank++;
-  }
-  return (1);
-}
-
-void ft_apply(t_env *vn, t_ps *ps)
-{
-  char **tab;
-  int i;
-
-  tab = ft_strsplit(ps->ins, '\n');
-  i = 0;
-  while (tab[i] != NULL)
-  {
-    if (!ft_strcmp(tab[i], "pb"))
-      pb(vn->b, vn->a);
-    if (!ft_strcmp(tab[i], "pa"))
-      pa(vn->a, vn->b);
-    if (!ft_strcmp(tab[i], "sa"))
-      sa(vn->a);
-    if (!ft_strcmp(tab[i], "sb"))
-      sb(vn->b);
-    if (!ft_strcmp(tab[i], "ss"))
-      ss(vn->a, vn->b);
-    if (!ft_strcmp(tab[i], "ra"))
-      ra(vn->a);
-    if (!ft_strcmp(tab[i], "rb"))
-      rb(vn->b);
-    if (!ft_strcmp(tab[i], "rr"))
-      rr(vn->a, vn->b);
-    if (!ft_strcmp(tab[i], "rra"))
-      rra(vn->a);
-    if (!ft_strcmp(tab[i], "rrb"))
-      rrb(vn->b);
-    if (!ft_strcmp(tab[i], "rrr"))
-      rrr(vn->a, vn->b);
-    i++;
-  }
-}
-
-void ft_common(t_ps *ps)
+void printf_ps(t_st *st) //
 {
   int i;
-  int j;
-  char **ta = NULL;
-  char **tb = NULL;
 
-  ta = ft_strsplit(ps->ins_a, '\n');
-  tb = ft_strsplit(ps->ins_b, '\n');
-  i = 0;
-  j = 0;
+  if (st_is_empty(st) == 0)
+  {
+    i = st->top;
+    while (i >= st->bot)
+    {
+      printf("(%d)\n", st->tab[in(i)]);
+      i--;
+    }
+  }
+  printf("\n=--=\n");
+}
 
-  while (ta[i] != NULL)
+int maxi(int a, int b)
+{
+  return ((a >= b)? a : b);
+}
+
+int ft_calc_longest_inc_subarr(t_env *vn, int index)
+{
+  int result = 1;
+  int *f;
+
+  f = (int*)malloc(sizeof(int) * (index + 1));
+  /*for (int i=1; i <= index; i++)
   {
-    if (tb[j] != NULL && !ft_strcmp(ta[i], "ra") && !ft_strcmp(tb[j], "rb"))
+    f[i] = 0;
+    for (int j=0; j<i; j++)
     {
-      ps->ins = ft_strjoin_customed(ps->ins, "rr\n");
-      i++;
-      if (tb[j] != NULL)
-        j++;
-      continue ;
+      if (vn->org[j] < vn->org[i])
+        f[i] = maxi(f[i], f[j] + 1);
     }
-    else if (tb[j] != NULL && !ft_strcmp(ta[i], "rra")
-    && !ft_strcmp(tb[j], "rrb"))
-    {
-      ps->ins = ft_strjoin_customed(ps->ins, "rrr\n");
-      i++;
-      if (tb[j] != NULL)
-        j++;
-      continue ;
-    }
-    ps->ins = ft_strjoin_customed(ps->ins, ta[i]);
-    ps->ins = ft_strjoin_customed(ps->ins, "\n");
-    i++;
-  }
-  while (tb[j] != NULL)
-  {
-    ps->ins = ft_strjoin_customed(ps->ins, tb[j]);
-    ps->ins = ft_strjoin_customed(ps->ins, "\n");
-    j++;
-  }
-  /*while (ta[i])
-  {
-    ps->ins = ft_strjoin_customed(ps->ins, ta[i]);
-    //ps->ins = ft_strjoin_customed(ps->ins, "\n");
-    i++;
-  }
-  ps->ins = ft_strjoin_customed(ps->ins, "\n");
-  while (tb[j])
-  {
-    ps->ins = ft_strjoin_customed(ps->ins, tb[j]);
-    //ps->ins = ft_strjoin_customed(ps->ins, "\n");
-    j++;
+    result = maxi(result, f[i]);
   }*/
-}
-
-char *ft_ins(char *ins)
-{
-  char **tab;
-  int i;
-  int j;
-  char *str = NULL;
-
-  tab = ft_strsplit(ins, '\n');
-  i = 0;
-  j = 1;
-  while (tab[j] != NULL)
+  for (int i=0; i<=index; i++)
   {
-    if (!ft_strcmp(tab[i], "ra") && !ft_strcmp(tab[j], "rb"))
-      str = ft_strjoin_customed(str, "rr\n");
-    else if (!ft_strcmp(tab[i], "rb") && !ft_strcmp(tab[j], "ra"))
-      str = ft_strjoin_customed(str, "rr\n");
-    else if (!ft_strcmp(tab[i], "rra") && !ft_strcmp(tab[j], "rrb"))
-      str = ft_strjoin_customed(str, "rrr\n");
-    else if (!ft_strcmp(tab[i], "rrb") && !ft_strcmp(tab[j], "rra"))
-      str = ft_strjoin_customed(str, "rrr\n");
-    else
-    {
-      str = ft_strjoin_customed(str, tab[i]);
-      str = ft_strjoin_customed(str, "\n");
-      i++; j++;
-      continue ;
+      f[i] = 0;
+      for (int j=i-1; j>=0; j--)
+      {
+        if (vn->org[i] > vn->org[j])
+            f[i] = maxi(f[i], f[j]);
+      }
+      f[i] += 1;
+      result = maxi(result, f[i]);
     }
-    i+=2; j+=2;
-  }
-  return (str);
+
+  free(f);
+  return (result);
 }
 
-void push_swap2(t_env *vn, t_ps *ps)
-{
-    char *str = NULL;
+int lis(t_env *vn,  int* a, int len ) {
+  int *best, i, j, max = 0;
+  int *p;
 
-    ft_select_to_b(vn, ps);
+  best = (int*) malloc ( sizeof( int ) * len );
+  p = (int*) malloc ( sizeof( int ) * len );
+  for ( i = 0; i < len; i++ )
+  {
+    best[i] = 1;
+    p[i] = -1;
+  }
+  for ( i = 1; i < len; i++ )
+  {    for ( j = 0; j < i; j++ )
+      {
+
+          if ( a[i] < a[j] && best[i] < best[j] + 1 )
+          {
+            best[i] = best[j] + 1;
+            p[i] = j;
+            if(best[max] < best[i])
+                  max = i;
+           }
+       }
+  }
+  i = max;
+  while (1)
+  {
+    vn->cb[i] = 1;
+    i = p[i];
+    if (i == -1)
+      break ;
+  }
+  free(best);
+  free(p);
+  return max;
+}
+
+void ft_select_to_b_new(t_env *vn)
+{
+  lis(vn, vn->org, vn->len);
+}
+
+void push_swap(t_env *vn, t_ps *ps)
+{
+    ft_select_to_b_new(vn);
     ft_a_to_b(vn, ps);
     ft_select_to_a(vn, ps);
     ft_align_a(vn, ps);
-
-    str = ft_ins(ps->ins);
-
-    printf("%s", str);
 }
