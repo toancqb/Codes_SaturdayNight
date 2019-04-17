@@ -1,0 +1,19 @@
+#include "st_lib_stack.h"
+
+int st_nb_elem(t_st *st)
+{
+  int count;
+  t_elem *e;
+
+  count = 0;
+  if (st)
+  {
+    e = st->st_f;
+    while (e != NULL)
+    {
+      count++;
+      e = e->next;
+    }
+  }
+  return (count);
+}
