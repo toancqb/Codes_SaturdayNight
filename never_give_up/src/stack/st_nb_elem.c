@@ -8,11 +8,11 @@ int st_nb_elem(t_st *st)
   count = 0;
   if (st)
   {
-    e = st->st_f;
+    e = st->st_l;
     while (e != NULL)
     {
       count++;
-      e = e->next;
+      e = e->prev;
     }
   }
   return (count);

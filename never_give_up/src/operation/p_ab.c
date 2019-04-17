@@ -1,4 +1,5 @@
 #include "../../includes/ft_lib_push_swap.h"
+#include "../stack/st_lib_stack.h"
 
 void pa(t_st **st_a, t_st **st_b)
 {

@@ -1,4 +1,5 @@
 #include "../../includes/ft_lib_push_swap.h"
+#include "../stack/st_lib_stack.h"
 
 void swap_int(int *a, int *b)
 {

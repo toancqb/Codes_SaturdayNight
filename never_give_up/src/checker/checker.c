@@ -1,4 +1,5 @@
 #include "../../includes/ft_lib_push_swap.h"
+#include "../stack/st_lib_stack.h"
 
 void ft_error()
 {
@@ -76,9 +77,9 @@ void ft_command(char *line, t_st *a, t_st *b)
   if (!ft_strcmp(line, "ss"))
     ss(a, b);
   if (!ft_strcmp(line, "pa"))
-    pa(a, b);
+    pa(&a, &b);
   if (!ft_strcmp(line, "pb"))
-    pb(a, b);
+    pb(&a, &b);
   if (!ft_strcmp(line, "ra"))
     ra(a);
   if (!ft_strcmp(line, "rb"))
@@ -104,11 +105,13 @@ void check_st(t_st *a, int len)
 {
   t_elem *tmp;
 
+  printf("\n--%d--%d\n", st_nb_elem(a), len);
   if (st_nb_elem(a) == len)
   {
     tmp = a->st_l;
     while (tmp->prev != NULL)
     {
+      //printf("\n(%d < %d)\n", tmp->v, tmp->prev->v);
       if (tmp->v > tmp->prev->v)
         ft_ko();
       tmp = tmp->prev;

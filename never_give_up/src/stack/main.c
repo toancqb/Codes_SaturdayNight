@@ -25,12 +25,25 @@ void test_st()
   st_push(&st, st_init_elem(60, 0));
   st_f_inverse_val(st, &f_p);
   printf("=---=\n");
-  //pb(&st, &b);
-  //pb(&st, &b);
-  st_push(&b, st_pop(&st));
+  pb(&st, &b);
+  pb(&st, &b);
   st_f_inverse_val(st, &f_p);
   printf("=---=\n");
-  //st_f_inverse_val(b, &f_p);
+  st_f_inverse_val(b, &f_p);
+}
+
+void test_st2()
+{
+  t_st *a;
+  t_st *b;
+  t_elem *elem;
+
+  a = st_init_stack();
+  b = st_init_stack();
+  st_push(&a, st_init_elem(11, 0));
+  elem = st_pop(&a);
+  st_push(&b, elem);
+  st_f_inverse_val(b, &f_p);
 }
 
 int main(int argc, char *argv[])

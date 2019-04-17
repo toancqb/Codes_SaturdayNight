@@ -29,5 +29,5 @@ void st_push(t_st **st, t_elem *elem);
 t_elem *st_pop(t_st **st);
 
 void st_f_val(t_st *st, void (*f)(int val));
-
+void st_f_inverse_val(t_st *st, void (*f)(int val));
 #endif
