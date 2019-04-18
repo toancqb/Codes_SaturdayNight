@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_select.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/18 12:26:08 by qtran             #+#    #+#             */
+/*   Updated: 2019/04/18 12:26:09 by qtran            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/ft_lib_push_swap.h"
 
 int maxi(int a, int b)
@@ -5,29 +17,8 @@ int maxi(int a, int b)
   return ((a >= b)? a : b);
 }
 
-int ft_calc_longest_inc_subarr(t_env *vn, int index)
+void ft_select(int *select, int len)
 {
-  int result = 1;
-  int *f;
-
-  f = (int*)malloc(sizeof(int) * (index + 1));
-  for (int i=0; i<=index; i++)
-  {
-      f[i] = 0;
-      for (int j=i-1; j>=0; j--)
-      {
-        if (vn->org[i] > vn->org[j])
-            f[i] = maxi(f[i], f[j]);
-      }
-      f[i] += 1;
-      result = maxi(result, f[i]);
-    }
-
-  free(f);
-  return (result);
-}
-
-int lis(t_env *vn,  int* a, int len ) {
   int *best, i, j, max = 0;
   int *p;
 
@@ -42,7 +33,7 @@ int lis(t_env *vn,  int* a, int len ) {
   {    for ( j = 0; j < i; j++ )
       {
 
-          if ( a[i] < a[j] && best[i] < best[j] + 1 )
+          if ( select[i] < select[j] && best[i] < best[j] + 1 )
           {
             best[i] = best[j] + 1;
             p[i] = j;
@@ -51,20 +42,29 @@ int lis(t_env *vn,  int* a, int len ) {
            }
        }
   }
+  i = 0;
+  while (i < len)
+  {
+    select[i] = 0;
+    i++;
+  }
   i = max;
   while (1)
   {
-    vn->cb[i] = 1;
+    select[i] = 1;
     i = p[i];
     if (i == -1)
       break ;
   }
   free(best);
   free(p);
-  return max;
 }
 
-void ft_select_to_b(t_env *vn)
+/*void ft_select(t_st *a, int *input, int len)
 {
-  lis(vn, vn->org, vn->len);
-}
+  t_elem *e;
+
+  lis(input, len);
+  e = a->st_l;
+
+}*/

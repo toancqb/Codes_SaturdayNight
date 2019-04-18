@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   st_lib_stack.h                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/18 12:29:49 by qtran             #+#    #+#             */
+/*   Updated: 2019/04/18 12:29:50 by qtran            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_LIB_STACK_H
 # define FT_LIB_STACK_H
 # include <stdlib.h>
@@ -29,5 +41,5 @@ void st_push(t_st **st, t_elem *elem);
 t_elem *st_pop(t_st **st);
 
 void st_f_val(t_st *st, void (*f)(int val));
-void st_f_inverse_val(t_st *st, void (*f)(int val));
+void st_f_inverse_val(t_st *st, void (*f)(int val), int c);
 #endif

@@ -1,23 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/18 12:26:27 by qtran             #+#    #+#             */
+/*   Updated: 2019/04/18 12:26:29 by qtran            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/ft_lib_push_swap.h"
 #include "../stack/st_lib_stack.h"
-
-void ft_error()
-{
-  ft_putstr("Error\n");
-  exit(-1);
-}
-
-void ft_ok()
-{
-  ft_putstr("OK\n");
-  exit(1);
-}
-
-void ft_ko()
-{
-  ft_putstr("KO\n");
-  exit(0);
-}
 
 int *ft_process_input(int argc, char **argv, int *len)
 {

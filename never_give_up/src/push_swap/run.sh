@@ -1,0 +1,1 @@
+gcc push_swap.c ft*.c ../stack/st*.c ../operation/*.c ../../libft/libft.a
