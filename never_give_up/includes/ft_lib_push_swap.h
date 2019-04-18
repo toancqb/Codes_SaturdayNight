@@ -32,13 +32,13 @@ void sa(t_st *st_a);
 void sb(t_st *st_b);
 void ss(t_st *st_a, t_st *st_b);
 
-void ra(t_st *st_a);
-void rb(t_st *st_b);
-void rr(t_st *st_a, t_st *st_b);
+void ra(t_st **st_a);
+void rb(t_st **st_b);
+void rr(t_st **st_a, t_st **st_b);
 
-void rra(t_st *st_a);
-void rrb(t_st *st_b);
-void rrr(t_st *st_a, t_st *st_b);
+void rra(t_st **st_a);
+void rrb(t_st **st_b);
+void rrr(t_st **st_a, t_st **st_b);
 
 void f_p(int val);
 void ft_error();
@@ -51,8 +51,8 @@ int ft_calc_b_to_a(t_st *a, t_st *b, int *rr);
 int *ft_process_input(int argc, char **argv, int *len);
 void ft_init_push_swap(t_st *a, int *input, int *select, int len);
 void ft_select(int *select, int len);
-void ft_a_to_b(t_st *a, t_st *b, int *input, int *select, int len);
-void ft_a_to_top(t_st *a, int rank);
+void ft_a_to_b(t_st **a, t_st **b, int *input, int *select, int len);
+void ft_a_to_top(t_st **a, int rank);
 void ft_b_to_a(t_st **a, t_st **b);
 
 #endif

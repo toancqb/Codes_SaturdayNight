@@ -60,20 +60,20 @@ void ft_init_checker(t_st *a, t_st *b, int *input, int len)
     return ;
 }
 
-void ft_command(char *line, t_st *a, t_st *b)
+void ft_command(char *line, t_st **a, t_st **b)
 {
   ft_putstr(line); ft_putchar('\n');
 
   if (!ft_strcmp(line, "sa"))
-    sa(a);
+    sa(*a);
   if (!ft_strcmp(line, "sb"))
-    sb(b);
+    sb(*b);
   if (!ft_strcmp(line, "ss"))
-    ss(a, b);
+    ss(*a, *b);
   if (!ft_strcmp(line, "pa"))
-    pa(&a, &b);
+    pa(a, b);
   if (!ft_strcmp(line, "pb"))
-    pb(&a, &b);
+    pb(a, b);
   if (!ft_strcmp(line, "ra"))
     ra(a);
   if (!ft_strcmp(line, "rb"))
@@ -134,7 +134,7 @@ int main(int argc, char *argv[])
   free(input);
   while ((size = get_next_line(STDIN_DEFAULT, &line)) > 0)
   {
-    ft_command(line, a, b);
+    ft_command(line, &a, &b);
     free(line);
   }
   if (size == -1)

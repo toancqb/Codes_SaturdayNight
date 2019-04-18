@@ -13,28 +13,33 @@
 #include "../../includes/ft_lib_push_swap.h"
 #include "../stack/st_lib_stack.h"
 
-void rra(t_st *st_a)
+void rra(t_st **st_a)
 {
+  t_st *a;
   t_elem *tmp;
 
-  if (st_nb_elem(st_a) >= 2)
+  a = *st_a;
+  if (st_nb_elem(a) >= 2)
   {
-    tmp = st_a->st_f;
-    st_a->st_f = tmp->next;
-    st_a->st_f->prev = NULL;
+    tmp = a->st_l;
+    while (tmp->prev != NULL)
+      tmp = tmp->prev;
+    a->st_f = tmp->next;
+    a->st_f->prev = NULL;
     tmp->next = NULL;
-    tmp->prev = st_a->st_l;
-    st_a->st_l = tmp;
+    a->st_l->next = tmp;
+    tmp->prev = a->st_l;
+    a->st_l = tmp;
   }
 }
 
-void rrb(t_st *st_b)
+void rrb(t_st **st_b)
 {
   rra(st_b);
 }
 
-void rrr(t_st *st_a, t_st *st_b)
+void rrr(t_st **st_a, t_st **st_b)
 {
   rra(st_a);
-  rrb(st_b);
+  rra(st_b);
 }

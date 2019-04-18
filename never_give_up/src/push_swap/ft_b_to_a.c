@@ -22,7 +22,7 @@ void top_bot(t_st **a, t_st **b, int c)
   else
   {
     ft_putstr("rrb\npa\n");
-    rrb(*b);
+    rrb(b);
     pa(a, b);
   }
 }
@@ -35,7 +35,7 @@ void mtop(t_st **a, t_st **b, int index)
   while (i < index)
   {
     ft_putstr("rb\n");
-    rb(*b);
+    rb(b);
     i++;
   }
   ft_putstr("pa\n");
@@ -52,7 +52,7 @@ void mbot(t_st **a, t_st **b, int index)
   while (i < len_b - index)
   {
     ft_putstr("rrb\n");
-    rrb(*b);
+    rrb(b);
     i++;
   }
   ft_putstr("pa\n");
@@ -83,8 +83,8 @@ void ft_b_to_a(t_st **a, t_st **b)
   index = 0;
   while (st_nb_elem(*b) > 0)
   {
-    //index = ft_calc_b_to_a(*a, *b, &rr);
+    index = ft_calc_b_to_a(*a, *b, &rr);
+    ft_a_to_top(a, rr);
     ft_b_to_top_and_pa(a, b, index);
-    ft_a_to_top(*a, rr);
   }
 }

@@ -12,7 +12,7 @@
 
 #include "../../includes/ft_lib_push_swap.h"
 
-void mtopa(t_st *a, int index)
+void mtopa(t_st **a, int index)
 {
   int i;
 
@@ -25,12 +25,12 @@ void mtopa(t_st *a, int index)
   }
 }
 
-void mbota(t_st *a, int index)
+void mbota(t_st **a, int index)
 {
   int len_a;
   int i;
 
-  len_a = st_nb_elem(a);
+  len_a = st_nb_elem(*a);
   i = 0;
   while (i < len_a - index)
   {
@@ -40,12 +40,12 @@ void mbota(t_st *a, int index)
   }
 }
 
-void ft_a_to_top(t_st *a, int rank)
+void ft_a_to_top(t_st **a, int rank)
 {
   int len_a;
   int index;
 
-  len_a = st_nb_elem(a);
+  len_a = st_nb_elem(*a);
   if (index == 0)
     return;
   else if (index <= len_a / 2)

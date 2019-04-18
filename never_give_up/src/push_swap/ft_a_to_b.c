@@ -40,19 +40,19 @@ int ft_f_in_a(t_st *a, int *input, int *select, int len)
   return (0);
 }
 
-void ft_a_to_b(t_st *a, t_st *b, int *input, int *select, int len)
+void ft_a_to_b(t_st **a, t_st **b, int *input, int *select, int len)
 {
-  while (ft_f_in_a(a, input, select, len))
+  while (ft_f_in_a(*a, input, select, len))
   {
-    if (!ft_is_f(a->st_l->v, input, select, len))
+    if (!ft_is_f((*a)->st_l->v, input, select, len))
     {
       ft_putstr("pb\n");
-      pb(&a, &b);
+      pb(a, b);
     }
     else
     {
       ft_putstr("rra\n");
-      ra(a);
+      rra(a);
     }
   }
 }
