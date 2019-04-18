@@ -44,8 +44,18 @@ void ft_a_to_top(t_st **a, int rank)
 {
   int len_a;
   int index;
+  t_elem *e;
 
   len_a = st_nb_elem(*a);
+  index = 0;
+  e = (*a)->st_l;
+  while (e != NULL)
+  {
+    if (e->r == rank)
+      break ;
+    index++;
+    e = e->prev;
+  }
   if (index == 0)
     return;
   else if (index <= len_a / 2)
