@@ -29,7 +29,7 @@ void push_swap(int argc, char **argv)
   ft_init_push_swap(a, input, select, len);
   ft_select(select, len);
   ft_a_to_b(&a, &b, input, select, len);
-  //ft_b_to_a(&a, &b);
+  ft_b_to_a(&a, &b);
   free(input);
   free(select);
   st_f_inverse_val(a, &f_p, 0); ft_putstr("=--=\n");

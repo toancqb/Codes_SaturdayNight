@@ -23,14 +23,12 @@ void ra(t_st **st_a)
   if (st_nb_elem(a) >= 2)
   {
     tmp = a->st_l;
-    while (tmp->prev != NULL)
-      tmp = tmp->prev;
-    tmp2 = a->st_l;
+    tmp2 = a->st_f;
     a->st_l = a->st_l->prev;
-    a->st_l->next = NULL;
-    tmp2->prev = NULL;
-    tmp2->next = tmp;
-    a->st_f = tmp2;
+    tmp->prev = NULL;
+    tmp->next = tmp2;
+    tmp2->prev = tmp;
+    a->st_f = tmp;
   }
 }
 

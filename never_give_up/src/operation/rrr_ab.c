@@ -15,21 +15,21 @@
 
 void rra(t_st **st_a)
 {
-  t_st *a;
   t_elem *tmp;
+  t_elem *tmp2;
+  t_st *a;
 
   a = *st_a;
   if (st_nb_elem(a) >= 2)
   {
     tmp = a->st_l;
-    while (tmp->prev != NULL)
-      tmp = tmp->prev;
-    a->st_f = tmp->next;
+    tmp2 = a->st_f;
+    a->st_f = a->st_f->next;
     a->st_f->prev = NULL;
-    tmp->next = NULL;
-    a->st_l->next = tmp;
-    tmp->prev = a->st_l;
-    a->st_l = tmp;
+    tmp2->next = NULL;
+    tmp2->prev = tmp;
+    tmp->next = tmp2;
+    a->st_l = a->st_l->next;
   }
 }
 

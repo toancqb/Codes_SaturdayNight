@@ -12,30 +12,6 @@
 
 #include "../../includes/ft_lib_push_swap.h"
 
-int ft_place(t_st *st, int val, int len)
-{
-  int index;
-  t_elem *e;
-
-  index = 0;
-  e = st->st_l;
-  while (e != NULL)
-  {
-    if (e->v == val)
-     break ;
-    index++;
-    e = e->prev;
-  }
-  if (index == 0)
-    return (0);
-  else if (index == len - 1)
-    return (3);
-  else if (index <= len / 2)
-   return (1);
-  else
-    return (2);
-}
-
 int ft_calc_index_to_top(int index, int len)
 {
   if (index == 0)
@@ -52,17 +28,22 @@ int ft_calc_a_rank_to_top(t_st *a, int rank, int len)
 {
     t_elem *e;
     int index;
+    int check;
 
+    check = 0;
     index = 0;
     e = a->st_l;
     while (e != NULL)
     {
         if (e->r == rank)
+        {
+          check = 1;
           break ;
+        }
         index++;
         e = e->prev;
     }
-    if (index == len - 1 && e->r != rank)
+    if (check == 0)
       return (-1);
     return (ft_calc_index_to_top(index, len));
 }
@@ -76,13 +57,28 @@ int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr)
   len_a = st_nb_elem(a);
   len_b = st_nb_elem(b);
   tmp = rank + 1;
-  while (ft_calc_a_rank_to_top(a, tmp, len_a) == -1)
+  if (tmp <= len_a + len_b - 1)
   {
-      if (tmp == len_b - 1)
+    while (ft_calc_a_rank_to_top(a, tmp, len_a) == -1)
+    {
+      if (tmp == len_a + len_b - 1)
         break ;
       tmp++;
+    }
+    if (tmp == len_a + len_b - 1 && ft_calc_a_rank_to_top(a, tmp, len_a) == -1)
+    {
+      rank--;
+      while (ft_calc_a_rank_to_top(a, rank, len_a) == -1)
+      {
+          if (rank == 0)
+            break ;
+          rank--;
+      }
+    }
+    else
+      rank = tmp;
   }
-  if (tmp == len_b - 1 && ft_calc_a_rank_to_top(a, tmp, len_a) == -1)
+  else if (rank == len_a + len_b - 1)
   {
     rank--;
     while (ft_calc_a_rank_to_top(a, rank, len_a) == -1)
@@ -92,8 +88,6 @@ int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr)
         rank--;
     }
   }
-  else
-    rank = tmp;
   *rrr = rank;
   return (ft_calc_a_rank_to_top(a, rank, len_a)
   + ft_calc_index_to_top(index, len_b) + 1);
