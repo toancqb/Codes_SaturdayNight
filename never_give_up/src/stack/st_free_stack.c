@@ -23,14 +23,16 @@ void st_free_elem(t_elem **e)
 void st_free_stack(t_st **st)
 {
   t_elem *tmp;
+  t_elem *tmp2;
 
   if (st)
   {
-    while ((*st)->st_f != NULL)
+    tmp = (*st)->st_l;
+    while (tmp != NULL)
     {
-      tmp = (*st)->st_f;
-      (*st)->st_f = (*st)->st_f->next;
-      free(tmp);
+      tmp2 = tmp;
+      tmp = tmp->prev;
+      st_free_elem(&tmp2);
     }
   }
 }

@@ -82,13 +82,13 @@ int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
   }
   else if (rank == len_a + len_b - 1)
   {
-    rank--;
+    rank = 0;
     while (ft_calc_a_rank_to_top(a, rank, len_a) == -1)
     {
         *check = 1;
-        if (rank == 0)
+        if (rank == len_a + len_b - 1)
           break ;
-        rank--;
+        rank++;
     }
   }
   *rrr = rank;
