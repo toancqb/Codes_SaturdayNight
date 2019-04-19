@@ -76,7 +76,6 @@ void ft_b_to_top_and_pa(t_st **a, t_st **b, int index)
 
 void ft_b_to_a(t_st **a, t_st **b)
 {
-  t_elem *e;
   int index;
   int check;
   int rr;

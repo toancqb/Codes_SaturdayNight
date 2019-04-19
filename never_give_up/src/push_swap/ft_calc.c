@@ -110,49 +110,12 @@ int is_rank_in_a(t_st *a, int rank)
   return (0);
 }
 
-/*int find_suit_next_rank(t_st *a, int rank, int len_ab, int *r, int *c)
-{
-  t_elem *e;
-  int r_max;
-  int i;
-
-  *r = 0;
-  *c = 0;
-  if (rank < len_ab - 1)
-  {
-    i = rank + 1;
-    while (!is_rank_in_a(a, i))
-    {
-      if (i == len_ab - 1)
-        break ;
-      i++;
-    }
-    if (i == len_ab - 1 && !is_rank_in_a(a, i))
-      return (-1);
-    rank = i;
-  }
-  else if (rank == len_ab - 1)
-  {
-    if (is_rank_in_a(a, 0))
-      rank = 0;
-    else
-    {
-      rank--;
-      while (!is_rank_in_a(a, rank))
-        rank--;
-    }
-  }
-  *r = rank;
-  return (1);
-}*/
-
 int find_suit_next_rank(t_st *a, int rank, int len_ab, int *r, int *c)
 {
   t_elem *e;
   int r_max;
   int r_min;
-  int i;
-
+  
   *r = 0;
   *c = 0;
   e = a->st_l;
