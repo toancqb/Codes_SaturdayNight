@@ -55,5 +55,6 @@ void ft_a_to_b(t_st **a, t_st **b, int *input, int *select, int len);
 void ft_a_to_top(t_st **a, int rank);
 void ft_a_to_top_minus(t_st **a, int rank);
 void ft_b_to_a(t_st **a, t_st **b);
+void ft_align_a(t_st **a, int len);
 
 #endif
