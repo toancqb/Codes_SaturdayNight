@@ -48,7 +48,7 @@ int ft_calc_a_rank_to_top(t_st *a, int rank, int len)
     return (ft_calc_index_to_top(index, len));
 }
 
-int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr)
+int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
 {
   int len_a;
   int len_b;
@@ -56,6 +56,7 @@ int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr)
 
   len_a = st_nb_elem(a);
   len_b = st_nb_elem(b);
+  *check = 0;
   tmp = rank + 1;
   if (tmp <= len_a + len_b - 1)
   {
@@ -67,6 +68,7 @@ int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr)
     }
     if (tmp == len_a + len_b - 1 && ft_calc_a_rank_to_top(a, tmp, len_a) == -1)
     {
+      *check = 1;
       rank--;
       while (ft_calc_a_rank_to_top(a, rank, len_a) == -1)
       {
@@ -83,6 +85,7 @@ int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr)
     rank--;
     while (ft_calc_a_rank_to_top(a, rank, len_a) == -1)
     {
+        *check = 1;
         if (rank == 0)
           break ;
         rank--;
@@ -93,17 +96,18 @@ int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr)
   + ft_calc_index_to_top(index, len_b) + 1);
 }
 
-int ft_calc_b_to_a(t_st *a, t_st *b, int *rr)
+int ft_calc_b_to_a(t_st *a, t_st *b, int *rr, int *check)
 {
   t_elem *e;
   int index;
+  int ch_tmp;
   int rrr;
   int min[3];
 
   min[0] = 0;
   index = 0;
   e = b->st_l;
-  min[1] = ft_calc_b(a, b, 0, e->r, &rrr);
+  min[1] = ft_calc_b(a, b, 0, e->r, &rrr, check);
   *rr = rrr;
   if (e->prev == NULL)
     return (0);
@@ -111,12 +115,13 @@ int ft_calc_b_to_a(t_st *a, t_st *b, int *rr)
   index++;
   while (e != NULL)
   {
-    min[2] = ft_calc_b(a, b, index, e->r, &rrr);
+    min[2] = ft_calc_b(a, b, index, e->r, &rrr, &ch_tmp);
     if (min[1] > min[2])
     {
       min[1] = min[2];
       min[0] = index;
       *rr = rrr;
+      *check = ch_tmp;
     }
     index++;
     e = e->prev;

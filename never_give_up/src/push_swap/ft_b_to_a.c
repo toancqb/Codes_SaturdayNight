@@ -78,13 +78,22 @@ void ft_b_to_a(t_st **a, t_st **b)
 {
   t_elem *e;
   int index;
+  int check;
   int rr;
 
   index = 0;
   while (st_nb_elem(*b) > 0)
   {
-    index = ft_calc_b_to_a(*a, *b, &rr);
-    ft_a_to_top(a, rr);
-    ft_b_to_top_and_pa(a, b, index);
+    index = ft_calc_b_to_a(*a, *b, &rr, &check);
+    if (check == 0)
+    {
+      ft_a_to_top(a, rr);
+      ft_b_to_top_and_pa(a, b, index);
+    }
+    else
+    {
+      ft_a_to_top_minus(a, rr);
+      ft_b_to_top_and_pa(a, b, index);
+    }
   }
 }
