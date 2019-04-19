@@ -30,6 +30,7 @@ void push_swap(int argc, char **argv)
   ft_select(select, len);
   ft_a_to_b(&a, &b, input, select, len);
   ft_b_to_a(&a, &b);
+  //ft_align_a(&a, st_nb_elem(a));
   free(input);
   free(select);
   st_f_inverse_val(a, &f_p, 0); ft_putstr("=--=\n");
