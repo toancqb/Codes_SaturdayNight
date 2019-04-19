@@ -48,7 +48,7 @@ int ft_calc_a_rank_to_top(t_st *a, int rank, int len)
     return (ft_calc_index_to_top(index, len));
 }
 
-int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
+int ft_calc_b_old(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
 {
   int len_a;
   int len_b;
@@ -93,6 +93,111 @@ int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
   }
   *rrr = rank;
   return (ft_calc_a_rank_to_top(a, rank, len_a)
+  + ft_calc_index_to_top(index, len_b) + 1);
+}
+
+int is_rank_in_a(t_st *a, int rank)
+{
+  t_elem *e;
+
+  e = a->st_l;
+  while (e != NULL)
+  {
+    if (e->r == rank)
+      return (1);
+    e = e->prev;
+  }
+  return (0);
+}
+
+/*int find_suit_next_rank(t_st *a, int rank, int len_ab, int *r, int *c)
+{
+  t_elem *e;
+  int r_max;
+  int i;
+
+  *r = 0;
+  *c = 0;
+  if (rank < len_ab - 1)
+  {
+    i = rank + 1;
+    while (!is_rank_in_a(a, i))
+    {
+      if (i == len_ab - 1)
+        break ;
+      i++;
+    }
+    if (i == len_ab - 1 && !is_rank_in_a(a, i))
+      return (-1);
+    rank = i;
+  }
+  else if (rank == len_ab - 1)
+  {
+    if (is_rank_in_a(a, 0))
+      rank = 0;
+    else
+    {
+      rank--;
+      while (!is_rank_in_a(a, rank))
+        rank--;
+    }
+  }
+  *r = rank;
+  return (1);
+}*/
+
+int find_suit_next_rank(t_st *a, int rank, int len_ab, int *r, int *c)
+{
+  t_elem *e;
+  int r_max;
+  int r_min;
+  int i;
+
+  *r = 0;
+  *c = 0;
+  e = a->st_l;
+  r_max = len_ab;
+  r_min = -1;
+  while (e != NULL)
+  {
+    if (e->r > rank && e->r < r_max)
+      r_max = e->r;
+    if (e->r < rank && e->r > r_min)
+      r_min = e->r;
+    e = e->prev;
+  }
+  if (r_max == len_ab)
+  {
+    rank = r_min;
+    *c = 1;
+  }
+  else
+  {
+    //rank = r_max;
+    rank++;
+    while (!is_rank_in_a(a, rank))
+      rank++;
+  }
+  *r = rank;
+  return (1);
+}
+
+int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
+{
+  int len_a;
+  int len_b;
+  int ch_tmp;
+  int r_tmp;
+
+  len_a = st_nb_elem(a);
+  len_b = st_nb_elem(b);
+  ch_tmp = 0;
+  //if (find_suit_next_rank(a, rank, len_a + len_b, &r_tmp, &ch_tmp) == -1)
+  //  return (9999999);
+  find_suit_next_rank(a, rank, len_a + len_b, &r_tmp, &ch_tmp);
+  *rrr = r_tmp;
+  *check = ch_tmp;
+  return (ft_calc_a_rank_to_top(a, r_tmp, len_a)
   + ft_calc_index_to_top(index, len_b) + 1);
 }
 

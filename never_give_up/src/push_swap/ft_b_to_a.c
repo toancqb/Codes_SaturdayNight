@@ -87,15 +87,10 @@ void ft_b_to_a(t_st **a, t_st **b)
     check = 0;
     index = ft_calc_b_to_a(*a, *b, &rr, &check);
     if (check == 0)
-    {
       ft_a_to_top(a, rr);
-      ft_b_to_top_and_pa(a, b, index);
-    }
     else
-    {
       ft_a_to_top_minus(a, rr);
-      ft_b_to_top_and_pa(a, b, index);
-    }
+    ft_b_to_top_and_pa(a, b, index);
     /*printf("=--=\n");
     st_f_inverse_val(*a, &f_p, 0);
     printf("=--=\n");*/

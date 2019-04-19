@@ -62,50 +62,41 @@ void ft_init_checker(t_st *a, t_st *b, int *input, int len)
 
 void ft_command(char *line, t_st **a, t_st **b)
 {
-  ft_putstr(line); ft_putchar('\n');
-
-  if (!ft_strcmp(line, "sa"))
+  if (ft_strequ(line, "sa"))
     sa(*a);
-  if (!ft_strcmp(line, "sb"))
+  else if (ft_strequ(line, "sb"))
     sb(*b);
-  if (!ft_strcmp(line, "ss"))
+  else if (ft_strequ(line, "ss"))
     ss(*a, *b);
-  if (!ft_strcmp(line, "pa"))
+  else if (ft_strequ(line, "pa"))
     pa(a, b);
-  if (!ft_strcmp(line, "pb"))
+  else if (ft_strequ(line, "pb"))
     pb(a, b);
-  if (!ft_strcmp(line, "ra"))
+  else if (ft_strequ(line, "ra"))
     ra(a);
-  if (!ft_strcmp(line, "rb"))
+  else if (ft_strequ(line, "rb"))
     rb(b);
-  if (!ft_strcmp(line, "rr"))
+  else if (ft_strequ(line, "rr"))
     rr(a, b);
-  if (!ft_strcmp(line, "rra"))
+  else if (ft_strequ(line, "rra"))
     rra(a);
-  if (!ft_strcmp(line, "rrb"))
+  else if (ft_strequ(line, "rrb"))
     rrb(b);
-  if (!ft_strcmp(line, "rrr"))
+  else if (ft_strequ(line, "rrr"))
     rrr(a, b);
-  //else
-  //  ft_error();
-}
-
-void f_p(int val)
-{
-  printf("(%d)\n", val);
+  else
+    ft_error();
 }
 
 void check_st(t_st *a, int len)
 {
   t_elem *tmp;
 
-  printf("\n--%d--%d\n", st_nb_elem(a), len);
   if (st_nb_elem(a) == len)
   {
     tmp = a->st_l;
     while (tmp->prev != NULL)
     {
-      //printf("\n(%d < %d)\n", tmp->v, tmp->prev->v);
       if (tmp->v > tmp->prev->v)
         ft_ko();
       tmp = tmp->prev;
@@ -114,6 +105,14 @@ void check_st(t_st *a, int len)
   }
   else
     ft_ko();
+}
+
+void ff_p(int val)
+{
+//  printf("(%d)\n", val);
+  ft_putchar('(');
+  ft_putnbr(val);
+  ft_putstr(")\n");
 }
 
 int main(int argc, char *argv[])
@@ -131,19 +130,15 @@ int main(int argc, char *argv[])
   b = st_init_stack();
   input = ft_process_input(argc, argv, &len);
   ft_init_checker(a, b, input, len);
-  free(input);
   while ((size = get_next_line(STDIN_DEFAULT, &line)) > 0)
   {
     ft_command(line, &a, &b);
     free(line);
   }
   if (size == -1)
-  {
-    ft_putstr("zz\n");
     ft_error();
-  }
-  st_f_inverse_val(a, &f_p);
   check_st(a, len);
+  free(input);
   st_free_stack(&a);
   st_free_stack(&b);
   return (0);

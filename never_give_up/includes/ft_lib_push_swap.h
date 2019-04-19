@@ -12,7 +12,8 @@
 
 #ifndef FT_LIB_PUSH_SWAP_H
 # define FT_LIB_PUSH_SWAP_H
-# include "../libft/libft.h"
+# include "../libft/includes/libft.h"
+# include "../libft/includes/get_next_line.h"
 # include "../src/stack/st_lib_stack.h"
 # include <stdlib.h>
 # include <unistd.h>
@@ -56,5 +57,6 @@ void ft_a_to_top(t_st **a, int rank);
 void ft_a_to_top_minus(t_st **a, int rank);
 void ft_b_to_a(t_st **a, t_st **b);
 void ft_align_a(t_st **a, int len);
+void ft_align_a_min_max(t_st **a, int len);
 
 #endif

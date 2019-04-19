@@ -29,6 +29,7 @@ void push_swap(int argc, char **argv)
   ft_init_push_swap(a, input, select, len);
   ft_select(select, len);
   ft_a_to_b(&a, &b, input, select, len);
+  ft_align_a_min_max(&a, st_nb_elem(a));
   ft_b_to_a(&a, &b);
   ft_align_a(&a, st_nb_elem(a));
   free(input);

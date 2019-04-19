@@ -59,3 +59,31 @@ void ft_align_a(t_st **a, int len) // len_a + len_b
   else
     ft_align_up_down(a, len - pos_max - 2, 0);
 }
+
+void ft_align_a_min_max(t_st **a, int len) // len_a + len_b
+{
+  int pos_min;
+  int pos_max;
+  int i;
+  int j;
+  t_elem *e;
+
+  e = (*a)->st_l;
+  i = e->r;
+  j = e->r;
+  e = e->prev;
+  while (e != NULL)
+  {
+    if (i > e->r)
+      i = e->r;
+    if (j < e->r)
+      j = e->r;
+    e = e->prev;
+  }
+  pos_min = rank_to_index_a(*a, i, len);
+  pos_max = rank_to_index_a(*a, j, len);
+  if (pos_min + 1 < j - pos_max)
+    ft_align_up_down(a, pos_min - 1, 1);
+  else
+    ft_align_up_down(a, j - pos_max - 1, 0);
+}
