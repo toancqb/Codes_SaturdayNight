@@ -65,3 +65,31 @@ void ft_sort_array(int *arr, int len)
 		i++;
 	}
 }
+
+char		*ft_strjoin_customed(char *str, char *buf)
+{
+	char	*str_return;
+	int		len;
+	int		i;
+
+	if (str && buf)
+	{
+		str_return = ft_strnew(ft_strlen(str) + ft_strlen(buf));
+		i = 0;
+		while (str[i] != '\0')
+		{
+			str_return[i] = str[i];
+			i++;
+		}
+		len = 0;
+		while (buf[len] != '\0')
+		{
+			str_return[i + len] = buf[len];
+			len++;
+		}
+		str_return[i + len] = '\0';
+		free(str);
+		return (str_return);
+	}
+	return (str);
+}

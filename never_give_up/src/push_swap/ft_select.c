@@ -17,31 +17,10 @@ int maxi(int a, int b)
   return ((a >= b)? a : b);
 }
 
-void ft_select(int *select, int len)
+void ft_assign_track(int *select, int *p, int max, int len)
 {
-  int *best, i, j, max = 0;
-  int *p;
+  int i;
 
-  best = (int*) malloc ( sizeof( int ) * len );
-  p = (int*) malloc ( sizeof( int ) * len );
-  for ( i = 0; i < len; i++ )
-  {
-    best[i] = 1;
-    p[i] = -1;
-  }
-  for ( i = 1; i < len; i++ )
-  {    for ( j = 0; j < i; j++ )
-      {
-
-          if ( select[i] < select[j] && best[i] < best[j] + 1 )
-          {
-            best[i] = best[j] + 1;
-            p[i] = j;
-            if(best[max] < best[i])
-                  max = i;
-           }
-       }
-  }
   i = 0;
   while (i < len)
   {
@@ -56,15 +35,48 @@ void ft_select(int *select, int len)
     if (i == -1)
       break ;
   }
+}
+
+void ft_init_best_p(int *best, int *p, int len)
+{
+  int i;
+
+  i = 0;
+  while (i < len)
+  {
+    best[i] = 1;
+    p[i] = -1;
+    i++;
+  }
+}
+
+void ft_select(int *select, int len)
+{
+  int *best;
+  int i[3];
+  int *p;
+
+  i[2] = 0;
+  best = (int*)malloc(sizeof(int) * len);
+  p = (int*)malloc(sizeof(int) * len);
+  ft_init_best_p(best, p, len);
+  while (i[0] < len)
+  {
+    i[1] = 0;
+    while (i[1] < i[0])
+    {
+      if (select[i[0]] < select[i[1]] && best[i[0]] < best[i[1]] + 1)
+      {
+        best[i[0]] = best[i[1]] + 1;
+        p[i[0]] = i[1];
+        if (best[i[2]] < best[i[0]])
+          i[2] = i[0];
+      }
+      i[1]++;
+    }
+    i[0]++;
+  }
+  ft_assign_track(select, p, i[2], len);
   free(best);
   free(p);
 }
-
-/*void ft_select(t_st *a, int *input, int len)
-{
-  t_elem *e;
-
-  lis(input, len);
-  e = a->st_l;
-
-}*/

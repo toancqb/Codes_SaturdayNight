@@ -48,54 +48,6 @@ int ft_calc_a_rank_to_top(t_st *a, int rank, int len)
     return (ft_calc_index_to_top(index, len));
 }
 
-int ft_calc_b_old(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
-{
-  int len_a;
-  int len_b;
-  int tmp;
-
-  len_a = st_nb_elem(a);
-  len_b = st_nb_elem(b);
-  *check = 0;
-  tmp = rank + 1;
-  if (tmp <= len_a + len_b - 1)
-  {
-    while (ft_calc_a_rank_to_top(a, tmp, len_a) == -1)
-    {
-      if (tmp == len_a + len_b - 1)
-        break ;
-      tmp++;
-    }
-    if (tmp == len_a + len_b - 1 && ft_calc_a_rank_to_top(a, tmp, len_a) == -1)
-    {
-      *check = 1;
-      rank--;
-      while (ft_calc_a_rank_to_top(a, rank, len_a) == -1)
-      {
-          if (rank == 0)
-            break ;
-          rank--;
-      }
-    }
-    else
-      rank = tmp;
-  }
-  else if (rank == len_a + len_b - 1)
-  {
-    rank = 0;
-    while (ft_calc_a_rank_to_top(a, rank, len_a) == -1)
-    {
-        *check = 1;
-        if (rank == len_a + len_b - 1)
-          break ;
-        rank++;
-    }
-  }
-  *rrr = rank;
-  return (ft_calc_a_rank_to_top(a, rank, len_a)
-  + ft_calc_index_to_top(index, len_b) + 1);
-}
-
 int is_rank_in_a(t_st *a, int rank)
 {
   t_elem *e;
@@ -115,7 +67,7 @@ int find_suit_next_rank(t_st *a, int rank, int len_ab, int *r, int *c)
   t_elem *e;
   int r_max;
   int r_min;
-  
+
   *r = 0;
   *c = 0;
   e = a->st_l;

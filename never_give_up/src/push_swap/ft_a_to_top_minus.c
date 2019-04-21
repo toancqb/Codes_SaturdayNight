@@ -12,20 +12,21 @@
 
 #include "../../includes/ft_lib_push_swap.h"
 
-void mtopa_minus(t_st **a, int index)
+void mtopa_minus(t_st **a, int index, char **ins)
 {
   int i;
 
   i = 0;
   while (i < index + 1)
   {
-    ft_putstr("ra\n");
+    //ft_putstr("ra\n");
+    *ins = ft_strjoin_customed(*ins, "ra\n");
     ra(a);
     i++;
   }
 }
 
-void mbota_minus(t_st **a, int index)
+void mbota_minus(t_st **a, int index, char **ins)
 {
   int len_a;
   int i;
@@ -34,13 +35,14 @@ void mbota_minus(t_st **a, int index)
   i = 0;
   while (i < len_a - index - 1)
   {
-    ft_putstr("rra\n");
+    //ft_putstr("rra\n");
+    *ins = ft_strjoin_customed(*ins, "rra\n");
     rra(a);
     i++;
   }
 }
 
-void ft_a_to_top_minus(t_st **a, int rank)
+void ft_a_to_top_minus(t_st **a, int rank, char **ins)
 {
   int len_a;
   int index;
@@ -58,13 +60,14 @@ void ft_a_to_top_minus(t_st **a, int rank)
   }
   if (index == 0)
   {
-    ft_putstr("ra\n");
+    //ft_putstr("ra\n");
+    *ins = ft_strjoin_customed(*ins, "ra\n");
     ra(a);
   }
   else if (index <= len_a / 2)
-    mtopa_minus(a, index);
+    mtopa_minus(a, index, ins);
   else if (index > len_a / 2)
-    mbota_minus(a, index);
+    mbota_minus(a, index, ins);
   else
     return;
 }

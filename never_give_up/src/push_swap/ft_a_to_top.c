@@ -12,20 +12,21 @@
 
 #include "../../includes/ft_lib_push_swap.h"
 
-void mtopa(t_st **a, int index)
+void mtopa(t_st **a, int index, char **ins)
 {
   int i;
 
   i = 0;
   while (i < index)
   {
-    ft_putstr("ra\n");
+    //ft_putstr("ra\n");
+    *ins = ft_strjoin_customed(*ins, "ra\n");
     ra(a);
     i++;
   }
 }
 
-void mbota(t_st **a, int index)
+void mbota(t_st **a, int index, char **ins)
 {
   int len_a;
   int i;
@@ -34,13 +35,14 @@ void mbota(t_st **a, int index)
   i = 0;
   while (i < len_a - index)
   {
-    ft_putstr("rra\n");
+    //ft_putstr("rra\n");
+    *ins = ft_strjoin_customed(*ins, "rra\n");
     rra(a);
     i++;
   }
 }
 
-void ft_a_to_top(t_st **a, int rank)
+void ft_a_to_top(t_st **a, int rank, char **ins)
 {
   int len_a;
   int index;
@@ -59,12 +61,13 @@ void ft_a_to_top(t_st **a, int rank)
   if (index == 0)
     return;
   else if (index <= len_a / 2)
-    mtopa(a, index);
+    mtopa(a, index, ins);
   else if (index > len_a / 2)
-    mbota(a, index);
+    mbota(a, index, ins);
   else
   {
-    ft_putstr("rra\n");
+    *ins = ft_strjoin_customed(*ins, "rra\n");
+    //ft_putstr("rra\n");
     rra(a);
   }
 }

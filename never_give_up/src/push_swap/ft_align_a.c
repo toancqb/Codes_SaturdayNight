@@ -47,7 +47,10 @@ int rank_to_index_a(t_st *a, int rank, int len)
   return (index);
 }
 
-void ft_align_a(t_st **a, int len) // len_a + len_b
+/*
+ *  len = len_a + len_b
+ */
+void ft_align_a(t_st **a, int len) 
 {
   int pos_min;
   int pos_max;
@@ -60,7 +63,10 @@ void ft_align_a(t_st **a, int len) // len_a + len_b
     ft_align_up_down(a, len - pos_max - 2, 0);
 }
 
-void ft_align_a_min_max(t_st **a, int len) // len_a + len_b
+/*
+ *  len = len_a + len_b
+ */
+void ft_align_a_min_max(t_st **a, int len)
 {
   int pos_min;
   int pos_max;
