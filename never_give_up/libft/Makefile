@@ -22,6 +22,9 @@ HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 SOURCES_DIRECTORY = ./sources/
 SOURCES_LIST = \
 	ft_bzero.c\
+	ft_isdigit.c\
+	ft_isspace.c\
+	ft_memalloc.c\
 	ft_strlen.c\
 	ft_strdup.c\
 	ft_strcpy.c\

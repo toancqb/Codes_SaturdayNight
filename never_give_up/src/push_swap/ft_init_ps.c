@@ -43,22 +43,30 @@ int		*ft_process_input(int argc, char **argv, int *len)
 	return (NULL);
 }
 
-void	ft_init_push_swap(t_st *a, int *input, int *select, int len)
+int	is_sorted_st(t_st *a, int len)
 {
-	int		i;
-	int		*tmp;
-	t_elem	*e;
+	t_elem *tmp;
 
-	i = 0;
-	tmp = (int*)malloc(sizeof(int) * (len));
-	while (i < len)
+	if (st_nb_elem(a) == len)
 	{
-		tmp[i] = input[i];
-		select[i] = input[i];
-		st_push(&a, st_init_elem(input[i], 0));
-		i++;
+		tmp = a->st_l;
+		while (tmp->prev != NULL)
+		{
+			if (tmp->v > tmp->prev->v)
+				return (0);
+			tmp = tmp->prev;
+		}
+		return (1);
 	}
-	ft_sort_array(tmp, len);
+	else
+		return (0);
+}
+
+void ft_assign_rank(t_st *a, int len, int *tmp)
+{
+	t_elem *e;
+	int i;
+
 	e = a->st_l;
 	while (e != NULL)
 	{
@@ -71,5 +79,30 @@ void	ft_init_push_swap(t_st *a, int *input, int *select, int len)
 		}
 		e = e->prev;
 	}
+}
+
+void	ft_init_push_swap(t_st **a, int *input, int *select, int len)
+{
+	int		i;
+	int		*tmp;
+
+	i = 0;
+	tmp = (int*)malloc(sizeof(int) * (len));
+	while (i < len)
+	{
+		tmp[i] = input[i];
+		select[i] = input[i];
+		st_push(a, st_init_elem(input[i], 0));
+		i++;
+	}
+	if (is_sorted_st(*a, len))
+		exit(0);
+	/*if (ft_rev(*a))
+	{
+		ft_align_a(a, st_nb_elem(*a));
+		exit(0);
+	}*/
+	ft_sort_array(tmp, len);
+	ft_assign_rank(*a, len, tmp);
 	free(tmp);
 }

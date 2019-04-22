@@ -43,4 +43,7 @@ t_elem			*st_pop(t_st **st);
 void			st_f_val(t_st *st, void (*f)(int val));
 void			st_f_inverse_val(t_st *st, void (*f)(int val), int c);
 
+void st_free_2stacks(t_st **a, t_st **b);
+void st_init_2stacks(t_st **a, t_st **b);
+
 #endif

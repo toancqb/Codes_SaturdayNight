@@ -1,44 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   st_free_stack.c                                    :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/18 12:27:41 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 13:06:00 by qtran            ###   ########.fr       */
+/*   Created: 2019/04/22 14:38:10 by qtran             #+#    #+#             */
+/*   Updated: 2019/04/22 14:38:12 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "st_lib_stack.h"
-
-void	st_free_elem(t_elem **e)
+int		ft_isdigit(int c)
 {
-	if (e)
-	{
-		free(*e);
-	}
-}
-
-void	st_free_stack(t_st **st)
-{
-	t_elem	*tmp;
-	t_elem	*tmp2;
-
-	if (st)
-	{
-		tmp = (*st)->st_l;
-		while (tmp != NULL)
-		{
-			tmp2 = tmp;
-			tmp = tmp->prev;
-			st_free_elem(&tmp2);
-		}
-	}
-}
-
-void st_free_2stacks(t_st **a, t_st **b)
-{
-	st_free_stack(a);
-	st_free_stack(b);
+	return (c >= '0' && c <= '9');
 }

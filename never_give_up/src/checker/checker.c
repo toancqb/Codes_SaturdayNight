@@ -44,7 +44,7 @@ int		*ft_process_input(int argc, char **argv, int *len)
 	return (NULL);
 }
 
-void	ft_init_checker(t_st *a, t_st *b, int *input, int len)
+void	ft_init_checker(t_st *a, int *input, int len)
 {
 	int i;
 	int tmp;
@@ -121,7 +121,7 @@ int		main(int argc, char *argv[])
 	a = st_init_stack();
 	b = st_init_stack();
 	input = ft_process_input(argc, argv, &len);
-	ft_init_checker(a, b, input, len);
+	ft_init_checker(a, input, len);
 	while ((size = get_next_line(STDIN_DEFAULT, &line)) > 0)
 	{
 		ft_command(line, &a, &b);

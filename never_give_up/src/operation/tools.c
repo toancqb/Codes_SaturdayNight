@@ -12,6 +12,15 @@
 
 #include "../../includes/ft_lib_push_swap.h"
 
+void	swap_int(int *a, int *b)
+{
+	int tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
 void	ft_sort_array(int *arr, int len)
 {
 	int i;

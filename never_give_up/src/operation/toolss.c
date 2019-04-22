@@ -36,12 +36,3 @@ void	f_p(int val)
 	ft_putnbr(val);
 	ft_putstr(")\n");
 }
-
-void	swap_int(int *a, int *b)
-{
-	int tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}

@@ -21,3 +21,9 @@ t_st	*st_init_stack(void)
 	st->st_l = NULL;
 	return (st);
 }
+
+void st_init_2stacks(t_st **a, t_st **b)
+{
+	*a = st_init_stack();
+	*b = st_init_stack();
+}
