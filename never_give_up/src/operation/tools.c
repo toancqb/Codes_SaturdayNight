@@ -6,48 +6,13 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 12:27:05 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/18 12:27:06 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/22 13:16:40 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_lib_push_swap.h"
 
-void ft_error()
-{
-  ft_putstr("Error\n");
-  exit(-1);
-}
-
-void ft_ok()
-{
-  ft_putstr("OK\n");
-  exit(1);
-}
-
-void ft_ko()
-{
-  ft_putstr("KO\n");
-  exit(0);
-}
-
-void f_p(int val)
-{
-//  printf("(%d)\n", val);
-  ft_putchar('(');
-  ft_putnbr(val);
-  ft_putstr(")\n");
-}
-
-void swap_int(int *a, int *b)
-{
-  int tmp;
-
-  tmp = *a;
-  *a = *b;
-  *b = tmp;
-}
-
-void ft_sort_array(int *arr, int len)
+void	ft_sort_array(int *arr, int len)
 {
 	int i;
 	int j;
@@ -66,7 +31,7 @@ void ft_sort_array(int *arr, int len)
 	}
 }
 
-char		*ft_strjoin_customed(char *str, char *buf)
+char	*ft_strjoin_customed(char *str, char *buf)
 {
 	char	*str_return;
 	int		len;
@@ -92,4 +57,18 @@ char		*ft_strjoin_customed(char *str, char *buf)
 		return (str_return);
 	}
 	return (str);
+}
+
+int		is_rank_in_a(t_st *a, int rank)
+{
+	t_elem *e;
+
+	e = a->st_l;
+	while (e != NULL)
+	{
+		if (e->r == rank)
+			return (1);
+		e = e->prev;
+	}
+	return (0);
 }

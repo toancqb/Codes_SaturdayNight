@@ -6,18 +6,18 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 12:27:56 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/18 12:28:19 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/22 13:09:18 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "st_lib_stack.h"
 
-t_st *st_init_stack()
+t_st	*st_init_stack(void)
 {
-  t_st *st;
+	t_st	*st;
 
-  st = (t_st*)malloc(sizeof(t_st));
-  st->st_f = NULL;
-  st->st_l = NULL;
-  return (st);
+	st = (t_st*)malloc(sizeof(t_st));
+	st->st_f = NULL;
+	st->st_l = NULL;
+	return (st);
 }

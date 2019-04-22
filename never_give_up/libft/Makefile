@@ -1,14 +1,14 @@
-#******************************************************************************#
+# **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: qtran    <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: qtran <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/07/05 13:39:23 by qtran             #+#    #+#              #
-#    Updated: 2018/08/22 16:48:32 by qtran            ###   ########.fr        #
+#    Created: 2019/04/22 12:52:49 by qtran             #+#    #+#              #
+#    Updated: 2019/04/22 12:52:50 by qtran            ###   ########.fr        #
 #                                                                              #
-#******************************************************************************#
+# **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
@@ -21,13 +21,7 @@ HEADERS_DIRECTORY = ./includes/
 HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 SOURCES_DIRECTORY = ./sources/
 SOURCES_LIST = \
-	ft_memset.c\
 	ft_bzero.c\
-	ft_memcpy.c\
-	ft_memccpy.c\
-	ft_memmove.c\
-	ft_memchr.c\
-	ft_memcmp.c\
 	ft_strlen.c\
 	ft_strdup.c\
 	ft_strcpy.c\
@@ -42,15 +36,6 @@ SOURCES_LIST = \
 	ft_strcmp.c\
 	ft_strncmp.c\
 	ft_atoi.c\
-	ft_isalpha.c\
-	ft_isdigit.c\
-	ft_isalnum.c\
-	ft_isascii.c\
-	ft_isprint.c\
-	ft_toupper.c\
-	ft_tolower.c\
-	ft_memalloc.c\
-	ft_memdel.c\
 	ft_strnew.c\
 	ft_strdel.c\
 	ft_strclr.c\
@@ -67,44 +52,22 @@ SOURCES_LIST = \
 	ft_itoa.c\
 	ft_putchar.c\
 	ft_putstr.c\
-	ft_putendl.c\
 	ft_putnbr.c\
-	ft_putchar_fd.c\
-	ft_putstr_fd.c\
-	ft_putendl_fd.c\
-	ft_putnbr_fd.c\
-	ft_lstnew.c\
-	ft_lstdelone.c\
-	ft_lstdel.c\
-	ft_lstadd.c\
-	ft_lstiter.c\
-	ft_lstmap.c\
-	ft_isupper.c\
-	ft_islower.c\
-	ft_isspace.c\
-	ft_isblank.c\
 	ft_strnlen.c\
 	ft_strndup.c\
-	ft_lstaddback.c\
 	ft_strlwr.c\
 	ft_strupr.c\
 	ft_strrev.c\
 	ft_strchrs.c\
 	ft_strsubchr.c\
 	get_next_line.c\
-	ft_percent.c\
 	ft_arrindex.c\
-	ft_isdigit_base.c\
-	ft_isprefix.c\
-	ft_isnum.c\
 	ft_signedlen.c\
 	ft_unsignedlen.c\
-	ft_isint.c\
 	ft_strsplit_free.c\
 	ft_strsplit_len.c\
 	ft_wchar_size.c\
-	ft_wcslen.c\
-	ft_pow_int.c
+	ft_wcslen.c
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 OBJECTS_DIRECTORY = objects/
 OBJECTS_LIST = $(patsubst %.c, %.o, $(SOURCES_LIST))

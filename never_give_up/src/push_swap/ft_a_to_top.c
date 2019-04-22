@@ -6,68 +6,65 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 16:07:19 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/18 16:07:20 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/22 13:21:10 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_lib_push_swap.h"
 
-void mtopa(t_st **a, int index, char **ins)
+void	mtopa(t_st **a, int index, char **ins)
 {
-  int i;
+	int i;
 
-  i = 0;
-  while (i < index)
-  {
-    //ft_putstr("ra\n");
-    *ins = ft_strjoin_customed(*ins, "ra\n");
-    ra(a);
-    i++;
-  }
+	i = 0;
+	while (i < index)
+	{
+		*ins = ft_strjoin_customed(*ins, "ra\n");
+		ra(a);
+		i++;
+	}
 }
 
-void mbota(t_st **a, int index, char **ins)
+void	mbota(t_st **a, int index, char **ins)
 {
-  int len_a;
-  int i;
+	int len_a;
+	int i;
 
-  len_a = st_nb_elem(*a);
-  i = 0;
-  while (i < len_a - index)
-  {
-    //ft_putstr("rra\n");
-    *ins = ft_strjoin_customed(*ins, "rra\n");
-    rra(a);
-    i++;
-  }
+	len_a = st_nb_elem(*a);
+	i = 0;
+	while (i < len_a - index)
+	{
+		*ins = ft_strjoin_customed(*ins, "rra\n");
+		rra(a);
+		i++;
+	}
 }
 
-void ft_a_to_top(t_st **a, int rank, char **ins)
+void	ft_a_to_top(t_st **a, int rank, char **ins)
 {
-  int len_a;
-  int index;
-  t_elem *e;
+	int		len_a;
+	int		index;
+	t_elem	*e;
 
-  len_a = st_nb_elem(*a);
-  index = 0;
-  e = (*a)->st_l;
-  while (e != NULL)
-  {
-    if (e->r == rank)
-      break ;
-    index++;
-    e = e->prev;
-  }
-  if (index == 0)
-    return;
-  else if (index <= len_a / 2)
-    mtopa(a, index, ins);
-  else if (index > len_a / 2)
-    mbota(a, index, ins);
-  else
-  {
-    *ins = ft_strjoin_customed(*ins, "rra\n");
-    //ft_putstr("rra\n");
-    rra(a);
-  }
+	len_a = st_nb_elem(*a);
+	index = 0;
+	e = (*a)->st_l;
+	while (e != NULL)
+	{
+		if (e->r == rank)
+			break ;
+		index++;
+		e = e->prev;
+	}
+	if (index == 0)
+		return;
+	else if (index <= len_a / 2)
+		mtopa(a, index, ins);
+	else if (index > len_a / 2)
+		mbota(a, index, ins);
+	else
+	{
+		*ins = ft_strjoin_customed(*ins, "rra\n");
+		rra(a);
+	}
 }

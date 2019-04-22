@@ -1,20 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   toolss.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/22 12:47:03 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 12:47:04 by qtran            ###   ########.fr       */
+/*   Created: 2019/04/22 13:12:20 by qtran             #+#    #+#             */
+/*   Updated: 2019/04/22 13:17:44 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/ft_lib_push_swap.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+void	ft_error(void)
 {
-	if (s1 && s2)
-		return (ft_strcmp(s1, s2) ? 0 : 1);
-	return (0);
+	ft_putstr("Error\n");
+	exit(-1);
+}
+
+void	ft_ok(void)
+{
+	ft_putstr("OK\n");
+	exit(1);
+}
+
+void	ft_ko(void)
+{
+	ft_putstr("KO\n");
+	exit(0);
+}
+
+void	f_p(int val)
+{
+	ft_putchar('(');
+	ft_putnbr(val);
+	ft_putstr(")\n");
+}
+
+void	swap_int(int *a, int *b)
+{
+	int tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

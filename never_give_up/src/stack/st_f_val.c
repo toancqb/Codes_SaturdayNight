@@ -6,23 +6,23 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 12:27:25 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/18 12:27:26 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/22 13:05:42 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "st_lib_stack.h"
 
-void st_f_val(t_st *st, void (*f)(int val))
+void	st_f_val(t_st *st, void (*f)(int val))
 {
-  t_elem *tmp;
+	t_elem	*tmp;
 
-  if (st)
-  {
-    tmp = st->st_f;
-    while (tmp != NULL)
-    {
-      (*f)(tmp->v);
-      tmp = tmp->next;
-    }
-  }
+	if (st)
+	{
+		tmp = st->st_f;
+		while (tmp != NULL)
+		{
+			(*f)(tmp->v);
+			tmp = tmp->next;
+		}
+	}
 }
