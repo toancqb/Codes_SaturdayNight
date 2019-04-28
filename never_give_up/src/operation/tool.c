@@ -14,8 +14,24 @@ int ft_rev(t_st *a)
 	return (1);
 }
 
-void ft_free_2arr(int **i, int **j)
+void ft_free_2arr(long **i, int **j)
 {
 	free(*i);
 	free(*j);
+}
+
+void ft_free_one_tab(char ***tab)
+{
+	int i;
+
+	if (tab)
+	{
+		i = 0;
+		while ((*tab)[i] != NULL)
+		{
+			free((*tab)[i]);
+			i++;
+		}
+		free(*tab);
+	}
 }

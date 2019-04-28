@@ -19,6 +19,8 @@
 # include <unistd.h>
 # include <stdio.h>
 # define STDIN_DEFAULT 0
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
 
 void			pa(t_st **st_a, t_st **st_b);
 void			pb(t_st **st_a, t_st **st_b);
@@ -45,12 +47,16 @@ int ft_rev(t_st *a);
 int is_rank_in_a(t_st *a, int rank);
 char			*ft_strjoin_customed(char *str, char *buf);
 int				ft_calc_b_to_a(t_st *a, t_st *b, int *rr, int *check);
-void ft_free_2arr(int **i, int **j);
+void ft_free_2arr(long **i, int **j);
+void ft_free_one_tab(char ***tab);
+int fcmax(t_st *a);
+void ps_3(t_st **a, int len);
+void ps_5(t_st **a, t_st **b, int len);
 
-int				*ft_process_input(int argc, char **argv, int *len);
-void			ft_init_push_swap(t_st **a, int *input, int *select, int len);
+long				*ft_process_input(int argc, char **argv, int *len);
+void			ft_init_push_swap(t_st **a, long *input, int *select, int len);
 void			ft_select(int *select, int len);
-void			ft_a_to_b(t_st **a, t_st **b, int *input, int *select, int len);
+void			ft_a_to_b(t_st **a, t_st **b, long *input, int *select, int len);
 void			ft_a_to_top(t_st **a, int rank, char **ins);
 void			ft_a_to_top_minus(t_st **a, int rank, char **ins);
 void			ft_b_to_a(t_st **a, t_st **b);

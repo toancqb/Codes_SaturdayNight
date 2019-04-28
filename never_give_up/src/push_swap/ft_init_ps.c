@@ -12,35 +12,98 @@
 
 #include "../../includes/ft_lib_push_swap.h"
 
-int		*ft_process_input(int argc, char **argv, int *len)
+int ft_count_len_input(int argc, char **argv)
 {
-	char	**tab;
-	int		i;
-	int		j;
-	int		*input;
+	int len;
+	int i;
+	int j;
+	char **tab;
 
-	*len = 0;
-	if (argc >= 2)
+	len = 0;
+	i = 1;
+	while (i < argc)
 	{
-		tab = ft_strsplit(argv[1], ' ');
-		while (tab[*len] != NULL)
-			(*len)++;
-		input = (int*)malloc(sizeof(int) * (*len));
-		i = 0;
-		j = *len - 1;
-		while (j >= 0 && tab[i])
-		{
-			input[j] = (int)ft_atoi(tab[i]);
-			j--;
-			free(tab[i]);
-			i++;
-		}
-		free(tab);
-		return (input);
+		tab = ft_strsplit(argv[i], ' ');
+		j = 0;
+		while (tab[j] != NULL)
+			j++;
+		len += j;
+		i++;
+		ft_free_one_tab(&tab);
 	}
-	else
-		ft_error();
-	return (NULL);
+	return (len);
+}
+
+void ft_check_input(char *str)
+{
+	int i;
+
+	i = 0;
+	if (str[i] != '\0' && str[i] == '-')
+		i++;
+	while (str[i] != '\0')
+	{
+		if (str[i] < '0' || str[i] > '9')
+			ft_error();
+		i++;
+	}
+}
+
+void ft_check_dup(long *input, int len)
+{
+	int i;
+	int j;
+
+	i = 0;
+	while (i < len - 1)
+	{
+		j = i + 1;
+		while (j < len)
+		{
+			if (input[i] == input[j])
+				ft_error();
+			j++;
+		}
+		i++;
+	}
+}
+
+void ft_assign_input_argv(long *input, int *j, char *argv)
+{
+	char **tab;
+	int i;
+
+	tab = ft_strsplit(argv, ' ');
+	i = 0;
+	while (tab[i] != NULL)
+	{
+		ft_check_input(tab[i]);
+		input[*j] = ft_atoi_long(tab[i]);
+		if (input[*j] > INT_MAX || input[*j] < INT_MIN)
+			ft_error();
+		i++;
+		(*j)--;
+	}
+	ft_free_one_tab(&tab);
+}
+
+long		*ft_process_input(int argc, char **argv, int *len)
+{
+	int i;
+	int j;
+	long *input;
+
+	*len = ft_count_len_input(argc, argv);
+	input = (long*)malloc(sizeof(long) * (*len));
+	i = 1;
+	j = *len - 1;
+	while (i < argc && j >= 0)
+	{
+		ft_assign_input_argv(input, &j, argv[i]);
+		i++;
+	}
+	ft_check_dup(input, *len);
+	return (input);
 }
 
 int	is_sorted_st(t_st *a, int len)
@@ -81,7 +144,7 @@ void ft_assign_rank(t_st *a, int len, int *tmp)
 	}
 }
 
-void	ft_init_push_swap(t_st **a, int *input, int *select, int len)
+void	ft_init_push_swap(t_st **a, long *input, int *select, int len)
 {
 	int		i;
 	int		*tmp;
@@ -90,18 +153,13 @@ void	ft_init_push_swap(t_st **a, int *input, int *select, int len)
 	tmp = (int*)malloc(sizeof(int) * (len));
 	while (i < len)
 	{
-		tmp[i] = input[i];
-		select[i] = input[i];
-		st_push(a, st_init_elem(input[i], 0));
+		tmp[i] = (int)input[i];
+		select[i] = (int)input[i];
+		st_push(a, st_init_elem((int)input[i], 0));
 		i++;
 	}
 	if (is_sorted_st(*a, len))
 		exit(0);
-	/*if (ft_rev(*a))
-	{
-		ft_align_a(a, st_nb_elem(*a));
-		exit(0);
-	}*/
 	ft_sort_array(tmp, len);
 	ft_assign_rank(*a, len, tmp);
 	free(tmp);

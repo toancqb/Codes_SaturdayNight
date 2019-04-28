@@ -101,6 +101,8 @@ int					ft_toupper(int c);
 
 int					ft_tolower(int c);
 
+long		ft_atoi_long(const char *str);
+
 void				*ft_memalloc(size_t size);
 
 void				ft_memdel(void **ap);

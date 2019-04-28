@@ -12,21 +12,21 @@
 
 #include "../../includes/ft_lib_push_swap.h"
 
-int		ft_is_f(int val, int *input, int *select, int len)
+int		ft_is_f(int val, long *input, int *select, int len)
 {
 	int i;
 
 	i = 0;
 	while (i < len)
 	{
-		if (val == input[i])
+		if (val == (int)input[i])
 			return (select[i]);
 		i++;
 	}
 	return (-1);
 }
 
-int		ft_f_in_a(t_st *a, int *input, int *select, int len)
+int		ft_f_in_a(t_st *a, long *input, int *select, int len)
 {
 	t_elem *e;
 
@@ -40,7 +40,7 @@ int		ft_f_in_a(t_st *a, int *input, int *select, int len)
 	return (0);
 }
 
-void	ft_a_to_b(t_st **a, t_st **b, int *input, int *select, int len)
+void	ft_a_to_b(t_st **a, t_st **b, long *input, int *select, int len)
 {
 	while (ft_f_in_a(*a, input, select, len))
 	{

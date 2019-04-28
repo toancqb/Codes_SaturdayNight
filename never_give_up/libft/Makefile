@@ -12,7 +12,7 @@
 
 NAME = libft.a
 CC = gcc
-FLAGS = -Wall -Werror -Wextra -O3 -c
+FLAGS = -Wall -Werror -Wno-unused-result -Wextra -O3 -c
 INCLUDES = -I$(HEADERS_DIRECTORY)
 HEADERS_LIST = \
 	libft.h\
@@ -70,6 +70,7 @@ SOURCES_LIST = \
 	ft_strsplit_free.c\
 	ft_strsplit_len.c\
 	ft_wchar_size.c\
+	ft_atoi_long.c\
 	ft_wcslen.c
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 OBJECTS_DIRECTORY = objects/

@@ -13,38 +13,7 @@
 #include "../../includes/ft_lib_push_swap.h"
 #include "../stack/st_lib_stack.h"
 
-int		*ft_process_input(int argc, char **argv, int *len)
-{
-	char	**tab;
-	int		i;
-	int		j;
-	int		*input;
-
-	*len = 0;
-	if (argc >= 2)
-	{
-		tab = ft_strsplit(argv[1], ' ');
-		while (tab[*len] != NULL)
-			(*len)++;
-		input = (int*)malloc(sizeof(int) * (*len));
-		i = 0;
-		j = *len - 1;
-		while (j >= 0 && tab[i])
-		{
-			input[j] = (int)ft_atoi(tab[i]);
-			j--;
-			free(tab[i]);
-			i++;
-		}
-		free(tab);
-		return (input);
-	}
-	else
-		ft_error();
-	return (NULL);
-}
-
-void	ft_init_checker(t_st *a, int *input, int len)
+void	ft_init_checker(t_st *a, long *input, int len)
 {
 	int i;
 	int tmp;
@@ -52,7 +21,7 @@ void	ft_init_checker(t_st *a, int *input, int len)
 	i = 0;
 	while (i < len)
 	{
-		tmp = input[i];
+		tmp = (int)input[i];
 		st_push(&a, st_init_elem(tmp, 0));
 		i++;
 	}
@@ -112,7 +81,7 @@ int		main(int argc, char *argv[])
 	t_st		*a;
 	t_st		*b;
 	char		*line;
-	int			*input;
+	long			*input;
 	ssize_t		size;
 	int			len;
 

@@ -17,134 +17,30 @@
 *	 - Input: 1 2 3 4 | "1 2 3 4" | 1 "2" "3 4" | 1 " " 2 "3"
 *  - Errors : Dup number, max Int, op non valide, non numeric
 *
-* Sort 3ps, 5ps
+* Sort 3ps, 5ps (ok)
 *
 */
 
-int fcmax(t_st *a)
+void ft_rev_op(t_st **a, t_st **b)
 {
-	t_elem *e;
-	int tmp;
-	int index;
-	int i;
-
-	e = a->st_l;
-	tmp = e->v;
-	index = 0;
-	i = 1;
-	e = e->prev;
-	while (e != NULL)
+	while (st_nb_elem(*a) > 0)
 	{
-		if (e->v > tmp)
-		{
-			tmp = e->v;
-			index = i;
-		}
-		i++;
-		e = e->prev;
-	}
-	return (index);
-}
-
-void ps_3(t_st **a, int len)
-{
-		int imax;
-
-		if (len == 1)
-			exit(0);
-		if (len == 2)
-		{
-			if ((*a)->st_l->v > (*a)->st_l->prev->v)
-			{
-				ft_putstr("sa\n");
-				sa(*a);
-			}
-			exit(0);
-		}
-		imax = fcmax(*a);
-		if (imax == 0)
-		{
-			ft_putstr("rra\n");
-			rra(a);
-		}
-		else if (imax == 2)
-		{
-			ft_putstr("sa\n");
-			sa(*a);
-		}
-		else
-		{
-			ft_putstr("rra\n");
-			rra(a);
-			if ((*a)->st_l->v > (*a)->st_l->prev->v)
-			{
-				ft_putstr("sa\n");
-				sa(*a);
-			}
-		}
-		st_f_inverse_val(*a, &f_p, 0);
-		ft_putstr("=--=\n");
-		exit(0);
-}
-
-void ps_3_customed(t_st **a, int len)
-{
-		int imax;
-
-		if (is_sorted_st(*a, len))
-			return;
-		if (ft_rev(*a))
-		{
-			ft_align_a(a, st_nb_elem(*a));
-			return;
-		}
-		imax = fcmax(*a);
-		if (imax == 0)
-		{
-			ft_putstr("rra\n");
-			rra(a);
-		}
-		else if (imax == 2)
-		{
-			ft_putstr("sa\n");
-			sa(*a);
-		}
-		else
-		{
-			ft_putstr("rra\n");
-			rra(a);
-			if ((*a)->st_l->v > (*a)->st_l->prev->v)
-			{
-				ft_putstr("sa\n");
-				sa(*a);
-			}
-		}
-}
-
-void ps_5(t_st **a, t_st **b, int len)
-{
-	int i;
-
-	i = len;
-	while (i > 3)
-	{
-		ft_putstr("pb\n");
+		ft_putstr("rra\npb\n");
+		rra(a);
 		pb(a, b);
-		i--;
 	}
-	ps_3_customed(a, len);
-	ft_b_to_a(a, b);
-	ft_align_a(a, st_nb_elem(*a));
-	st_f_inverse_val(*a, &f_p, 0);
-	ft_putstr("=--=\n");
-	exit(0);
+	while (st_nb_elem(*b) > 0)
+	{
+		ft_putstr("pa\n");
+		pa(a, b);
+	}
 }
 
 void	push_swap(int argc, char **argv)
 {
 	t_st	*a;
 	t_st	*b;
-	int		*input;
+	long		*input;
 	int		*select;
 	int		len;
 
@@ -154,29 +50,30 @@ void	push_swap(int argc, char **argv)
 	input = ft_process_input(argc, argv, &len);
 	select = (int*)malloc(sizeof(int) * len);
 	ft_init_push_swap(&a, input, select, len);
-	if (ft_rev(a))
-	{
-		ft_align_a(&a, st_nb_elem(a));
-		exit(0);
-	}
 	if (len <= 3)
 		ps_3(&a, len);
 	else if (len <= 5)
 		ps_5(&a, &b, len);
-	ft_select(select, len); // Day Con tang lon nhat
-	ft_a_to_b(&a, &b, input, select, len); // Chuyen sang b tat ca elem False
-	ft_align_a_min_max(&a, st_nb_elem(a)); // Dua thanh Day con tang lon nhat
+	if (ft_rev(a))
+	{
+		ft_rev_op(&a, &b);
+		exit(0);
+	}
+	ft_select(select, len);
+	ft_a_to_b(&a, &b, input, select, len);
+	ft_align_a_min_max(&a, st_nb_elem(a));
 	ft_b_to_a(&a, &b);
 	ft_align_a(&a, st_nb_elem(a));
-	//st_f_inverse_val(a, &f_p, 0);
-	//ft_putstr("=--=\n");
 	ft_free_2arr(&input, &select);
 	st_free_2stacks(&a, &b);
 }
 
 int main(int argc, char *argv[])
 {
-	push_swap(argc, argv);
+	if (argc == 1)
+		return (0);
+	else
+		push_swap(argc, argv);
 
 	return (0);
 }
