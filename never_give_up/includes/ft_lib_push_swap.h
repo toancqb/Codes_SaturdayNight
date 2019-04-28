@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/28 14:41:40 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/28 20:22:39 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 21:15:23 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ int				is_sorted_st(t_st *a, int len);
 int				ft_rev(t_st *a);
 int				is_rank_in_a(t_st *a, int rank);
 char			*ft_strjoin_customed(char *str, char *buf);
-void find_r_minmax(t_st *a, int *r_max, int *r_min, int rank);
+void			find_r_minmax(t_st *a, int *r_max, int *r_min, int rank);
+void			ft_1(t_st *a, t_st *b, int *m, int *r);
+void			ft_2(t_elem **e, int *index, int c);
 int				ft_calc_b_to_a(t_st *a, t_st *b, int *rr, int *check);
 void			ft_free_2arr(long **i, int **j);
 void			ft_free_one_tab(char ***tab);

@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 18:10:53 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/28 18:11:17 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 21:14:27 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_free_one_tab(char ***tab)
 	}
 }
 
-void find_r_minmax(t_st *a, int *r_max, int *r_min, int rank)
+void	find_r_minmax(t_st *a, int *r_max, int *r_min, int rank)
 {
 	t_elem *e;
 

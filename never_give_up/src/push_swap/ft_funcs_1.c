@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 17:57:25 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/28 17:57:27 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 21:13:29 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,24 @@ void	ft_init_push_swap(t_st **a, long *input, int *select, int len)
 	ft_sort_array(tmp, len);
 	ft_assign_rank(*a, len, tmp);
 	free(tmp);
+}
+
+void	ft_1(t_st *a, t_st *b, int *m, int *r)
+{
+	*m = 0;
+	*r = st_nb_elem(a) + st_nb_elem(b);
+}
+
+void	ft_2(t_elem **e, int *index, int c)
+{
+	if (c)
+	{
+		*e = (*e)->prev;
+		*index = 1;
+	}
+	else
+	{
+		*e = (*e)->prev;
+		*index += 1;
+	}
 }

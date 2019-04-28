@@ -87,31 +87,27 @@ int	ft_calc_b_to_a(t_st *a, t_st *b, int *rr, int *check)
 {
 	t_elem	*e;
 	int		index;
-	int		r[2];
-	int		min[3];
+	int		r[5];
 
-	min[0] = 0;
 	e = b->st_l;
-	r[0] = st_nb_elem(a) + st_nb_elem(b);
-	min[1] = ft_calc_b(a, e->r, &r[0], check) + ft_c(0, st_nb_elem(b));
+	ft_1(a, b, &r[2], &r[0]);
+	r[3] = ft_calc_b(a, e->r, &r[0], check) + ft_c(0, st_nb_elem(b));
 	*rr = r[0];
 	if (e->prev == NULL)
 		return (0);
-	e = e->prev;
-	index = 1;
+	ft_2(&e, &index, 1);
 	while (e != NULL)
 	{
 		r[0] = st_nb_elem(a) + st_nb_elem(b);
-		min[2] = ft_calc_b(a, e->r, &r[0], &r[1]) + ft_c(index, st_nb_elem(b));
-		if (min[1] > min[2])
+		r[4] = ft_calc_b(a, e->r, &r[0], &r[1]) + ft_c(index, st_nb_elem(b));
+		if (r[3] > r[4])
 		{
-			min[1] = min[2];
-			min[0] = index;
+			r[3] = r[4];
+			r[2] = index;
 			*rr = r[0];
 			*check = r[1];
 		}
-		index++;
-		e = e->prev;
+		ft_2(&e, &index, 0);
 	}
-	return (min[0]);
+	return (r[2]);
 }
