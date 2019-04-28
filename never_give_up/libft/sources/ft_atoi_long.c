@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_long.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/28 20:20:39 by qtran             #+#    #+#             */
+/*   Updated: 2019/04/28 20:20:42 by qtran            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int		ft_isdigit_long(int c)
@@ -15,7 +27,7 @@ int		ft_isspace_long(int c)
 			c == ' ');
 }
 
-long		ft_atoi_long(const char *str)
+long	ft_atoi_long(const char *str)
 {
 	unsigned long	result;
 	unsigned long	border;

@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 12:29:49 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 13:10:18 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 18:13:57 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ t_elem			*st_pop(t_st **st);
 void			st_f_val(t_st *st, void (*f)(int val));
 void			st_f_inverse_val(t_st *st, void (*f)(int val), int c);
 
-void st_free_2stacks(t_st **a, t_st **b);
-void st_init_2stacks(t_st **a, t_st **b);
+void			st_free_2stacks(t_st **a, t_st **b);
+void			st_init_2stacks(t_st **a, t_st **b);
 
 #endif

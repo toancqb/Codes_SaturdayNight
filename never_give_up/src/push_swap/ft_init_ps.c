@@ -6,18 +6,18 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 12:26:01 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 13:25:07 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 17:56:14 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_lib_push_swap.h"
 
-int ft_count_len_input(int argc, char **argv)
+int		ft_count_len_input(int argc, char **argv)
 {
-	int len;
-	int i;
-	int j;
-	char **tab;
+	int		len;
+	int		i;
+	int		j;
+	char	**tab;
 
 	len = 0;
 	i = 1;
@@ -34,9 +34,9 @@ int ft_count_len_input(int argc, char **argv)
 	return (len);
 }
 
-void ft_check_input(char *str)
+void	ft_check_input(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (str[i] != '\0' && str[i] == '-')
@@ -49,10 +49,10 @@ void ft_check_input(char *str)
 	}
 }
 
-void ft_check_dup(long *input, int len)
+void	ft_check_dup(long *input, int len)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i < len - 1)
@@ -68,10 +68,10 @@ void ft_check_dup(long *input, int len)
 	}
 }
 
-void ft_assign_input_argv(long *input, int *j, char *argv)
+void	ft_assign_input_argv(long *input, int *j, char *argv)
 {
-	char **tab;
-	int i;
+	char	**tab;
+	int		i;
 
 	tab = ft_strsplit(argv, ' ');
 	i = 0;
@@ -87,11 +87,11 @@ void ft_assign_input_argv(long *input, int *j, char *argv)
 	ft_free_one_tab(&tab);
 }
 
-long		*ft_process_input(int argc, char **argv, int *len)
+long	*ft_process_input(int argc, char **argv, int *len)
 {
-	int i;
-	int j;
-	long *input;
+	int		i;
+	int		j;
+	long	*input;
 
 	*len = ft_count_len_input(argc, argv);
 	input = (long*)malloc(sizeof(long) * (*len));
@@ -104,63 +104,4 @@ long		*ft_process_input(int argc, char **argv, int *len)
 	}
 	ft_check_dup(input, *len);
 	return (input);
-}
-
-int	is_sorted_st(t_st *a, int len)
-{
-	t_elem *tmp;
-
-	if (st_nb_elem(a) == len)
-	{
-		tmp = a->st_l;
-		while (tmp->prev != NULL)
-		{
-			if (tmp->v > tmp->prev->v)
-				return (0);
-			tmp = tmp->prev;
-		}
-		return (1);
-	}
-	else
-		return (0);
-}
-
-void ft_assign_rank(t_st *a, int len, int *tmp)
-{
-	t_elem *e;
-	int i;
-
-	e = a->st_l;
-	while (e != NULL)
-	{
-		i = 0;
-		while (i < len)
-		{
-			if (e->v == tmp[i])
-				e->r = i;
-			i++;
-		}
-		e = e->prev;
-	}
-}
-
-void	ft_init_push_swap(t_st **a, long *input, int *select, int len)
-{
-	int		i;
-	int		*tmp;
-
-	i = 0;
-	tmp = (int*)malloc(sizeof(int) * (len));
-	while (i < len)
-	{
-		tmp[i] = (int)input[i];
-		select[i] = (int)input[i];
-		st_push(a, st_init_elem((int)input[i], 0));
-		i++;
-	}
-	if (is_sorted_st(*a, len))
-		exit(0);
-	ft_sort_array(tmp, len);
-	ft_assign_rank(*a, len, tmp);
-	free(tmp);
 }

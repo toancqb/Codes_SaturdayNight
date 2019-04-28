@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 12:26:27 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 13:03:24 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 18:06:53 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,29 +78,28 @@ void	check_st(t_st *a, int len)
 
 int		main(int argc, char *argv[])
 {
-	t_st		*a;
-	t_st		*b;
+	t_st		*a[2];
 	char		*line;
-	long			*input;
-	ssize_t		size;
+	long		*input;
 	int			len;
+	ssize_t		size;
 
 	len = 0;
 	input = NULL;
-	a = st_init_stack();
-	b = st_init_stack();
+	a[0] = st_init_stack();
+	a[1] = st_init_stack();
 	input = ft_process_input(argc, argv, &len);
-	ft_init_checker(a, input, len);
+	ft_init_checker(a[0], input, len);
 	while ((size = get_next_line(STDIN_DEFAULT, &line)) > 0)
 	{
-		ft_command(line, &a, &b);
+		ft_command(line, &a[0], &a[1]);
 		free(line);
 	}
 	if (size == -1)
 		ft_error();
-	check_st(a, len);
+	check_st(a[0], len);
 	free(input);
-	st_free_stack(&a);
-	st_free_stack(&b);
+	st_free_stack(&a[0]);
+	st_free_stack(&a[1]);
 	return (0);
 }

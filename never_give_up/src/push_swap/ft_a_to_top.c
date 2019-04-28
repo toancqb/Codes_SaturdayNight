@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 16:07:19 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 13:21:10 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 17:50:04 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	ft_a_to_top(t_st **a, int rank, char **ins)
 		e = e->prev;
 	}
 	if (index == 0)
-		return;
+		return ;
 	else if (index <= len_a / 2)
 		mtopa(a, index, ins);
 	else if (index > len_a / 2)

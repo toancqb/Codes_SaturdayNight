@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/28 14:41:40 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 12:56:07 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 20:22:39 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,21 +42,24 @@ void			ft_ok();
 void			ft_ko();
 void			ft_sort_array(int *arr, int len);
 int				ft_place(t_st *st, int val, int len);
-int	is_sorted_st(t_st *a, int len);
-int ft_rev(t_st *a);
-int is_rank_in_a(t_st *a, int rank);
+int				is_sorted_st(t_st *a, int len);
+int				ft_rev(t_st *a);
+int				is_rank_in_a(t_st *a, int rank);
 char			*ft_strjoin_customed(char *str, char *buf);
 int				ft_calc_b_to_a(t_st *a, t_st *b, int *rr, int *check);
-void ft_free_2arr(long **i, int **j);
-void ft_free_one_tab(char ***tab);
-int fcmax(t_st *a);
-void ps_3(t_st **a, int len);
-void ps_5(t_st **a, t_st **b, int len);
+void			ft_free_2arr(long **i, int **j);
+void			ft_free_one_tab(char ***tab);
+void			ft_free_tab(char ***ta, char ***tb);
+void			ft_free_2intarr(int **best, int **p);
+int				fcmax(t_st *a);
+void			ps_3(t_st **a, int len);
+void			ps_5(t_st **a, t_st **b, int len);
+void			ft_rr_rrr(char **ins_a, char **ins_b);
 
-long				*ft_process_input(int argc, char **argv, int *len);
+long			*ft_process_input(int argc, char **argv, int *len);
 void			ft_init_push_swap(t_st **a, long *input, int *select, int len);
 void			ft_select(int *select, int len);
-void			ft_a_to_b(t_st **a, t_st **b, long *input, int *select, int len);
+void			ft_a_to_b(t_st **a, t_st **b, long *input, int *select);
 void			ft_a_to_top(t_st **a, int rank, char **ins);
 void			ft_a_to_top_minus(t_st **a, int rank, char **ins);
 void			ft_b_to_a(t_st **a, t_st **b);

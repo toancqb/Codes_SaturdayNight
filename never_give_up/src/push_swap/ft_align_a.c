@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 12:25:42 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 13:22:20 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 17:51:37 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_align_up_down(t_st **a, int times, int cmd)
 {
-	while(times >= 0)
+	while (times >= 0)
 	{
 		if (!cmd)
 		{
@@ -47,10 +47,7 @@ int		rank_to_index_a(t_st *a, int rank, int len)
 	return (index);
 }
 
-/*
- *  len = len_a + len_b
- */
-void	ft_align_a(t_st **a, int len) 
+void	ft_align_a(t_st **a, int len)
 {
 	int pos_min;
 	int pos_max;
@@ -63,9 +60,6 @@ void	ft_align_a(t_st **a, int len)
 		ft_align_up_down(a, len - pos_max - 2, 0);
 }
 
-/*
- *  len = len_a + len_b
- */
 void	ft_align_a_min_max(t_st **a, int len)
 {
 	int		pos_min;

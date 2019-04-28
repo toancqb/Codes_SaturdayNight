@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 12:27:41 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 13:06:00 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 18:12:44 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	st_free_elem(t_elem **e)
 	if (e)
 	{
 		free(*e);
+		*e = NULL;
 	}
 }
 
@@ -34,10 +35,11 @@ void	st_free_stack(t_st **st)
 			tmp = tmp->prev;
 			st_free_elem(&tmp2);
 		}
+		free(*st);
 	}
 }
 
-void st_free_2stacks(t_st **a, t_st **b)
+void	st_free_2stacks(t_st **a, t_st **b)
 {
 	st_free_stack(a);
 	st_free_stack(b);

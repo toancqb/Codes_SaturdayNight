@@ -40,8 +40,11 @@ int		ft_f_in_a(t_st *a, long *input, int *select, int len)
 	return (0);
 }
 
-void	ft_a_to_b(t_st **a, t_st **b, long *input, int *select, int len)
+void	ft_a_to_b(t_st **a, t_st **b, long *input, int *select)
 {
+	int len;
+
+	len = st_nb_elem(*a) + st_nb_elem(*b);
 	while (ft_f_in_a(*a, input, select, len))
 	{
 		if (!ft_is_f((*a)->st_l->v, input, select, len))

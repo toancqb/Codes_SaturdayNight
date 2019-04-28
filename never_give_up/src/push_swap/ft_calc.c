@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 12:25:56 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 13:24:32 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 17:52:25 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	find_suit_next_rank(t_st *a, int rank, int len_ab, int *r, int *c)
 	return (1);
 }
 
-int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
+int	ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
 {
 	int len_a;
 	int len_b;
@@ -99,7 +99,7 @@ int ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
 			+ ft_calc_index_to_top(index, len_b) + 1);
 }
 
-int ft_calc_b_to_a(t_st *a, t_st *b, int *rr, int *check)
+int	ft_calc_b_to_a(t_st *a, t_st *b, int *rr, int *check)
 {
 	t_elem	*e;
 	int		index;

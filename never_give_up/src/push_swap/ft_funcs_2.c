@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   st_init_stack.c                                    :+:      :+:    :+:   */
+/*   ft_funcs_2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/18 12:27:56 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/28 18:12:13 by qtran            ###   ########.fr       */
+/*   Created: 2019/04/28 19:57:00 by qtran             #+#    #+#             */
+/*   Updated: 2019/04/28 20:06:13 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "st_lib_stack.h"
+#include "../../includes/ft_lib_push_swap.h"
 
-t_st	*st_init_stack(void)
+void	ft_free_2intarr(int **best, int **p)
 {
-	t_st	*st;
-
-	st = (t_st*)malloc(sizeof(t_st));
-	st->st_f = NULL;
-	st->st_l = NULL;
-	return (st);
+	if (best && p)
+	{
+		free(*best);
+		free(*p);
+	}
 }
 
-void	st_init_2stacks(t_st **a, t_st **b)
+void	ft_free_tab(char ***ta, char ***tb)
 {
-	*a = st_init_stack();
-	*b = st_init_stack();
+	ft_free_one_tab(ta);
+	ft_free_one_tab(tb);
 }

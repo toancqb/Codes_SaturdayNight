@@ -74,66 +74,6 @@ void	ft_b_to_top_and_pa(t_st **a, t_st **b, int index, char **ins)
 		top_bot(a, b, 1, ins);
 }
 
-void	ft_free_tab(char **ta, char **tb)
-{
-	int i;
-
-	i = 0;
-	while (ta[i] != NULL)
-	{
-		free(ta[i]);
-		i++;
-	}
-	i = 0;
-	while (tb[i] != NULL)
-	{
-		free(tb[i]);
-		i++;
-	}
-}
-
-void	ft_rr_rrr(char **ins_a, char **ins_b)
-{
-	char	**ta;
-	char	**tb;
-	int		i;
-	int		j;
-
-	ta = ft_strsplit(*ins_a, '\n');
-	tb = ft_strsplit(*ins_b, '\n');
-	free(*ins_a);
-	*ins_a = ft_strnew(1);
-	i = 0;
-	j = 0;
-	while (ta[i] != NULL)
-	{
-		if (tb[j] != NULL && ft_strequ(ta[i], "ra") && ft_strequ(tb[j], "rb"))
-		{
-			*ins_a = ft_strjoin_customed(*ins_a, "rr\n");
-			i++;
-			j++;
-			continue ;
-		}
-		if (tb[j] != NULL && ft_strequ(ta[i], "rra") && ft_strequ(tb[j], "rrb"))
-		{
-			*ins_a = ft_strjoin_customed(*ins_a, "rrr\n");
-			i++;
-			j++;
-			continue ;
-		}
-		*ins_a = ft_strjoin_customed(*ins_a, ta[i]);
-		*ins_a = ft_strjoin_customed(*ins_a, "\n");
-		i++;
-	}
-	while (tb[j] != NULL)
-	{
-		*ins_a = ft_strjoin_customed(*ins_a, tb[j]);
-		*ins_a = ft_strjoin_customed(*ins_a, "\n");
-		j++;
-	}
-	ft_free_tab(ta, tb);
-}
-
 void	ft_b_to_a(t_st **a, t_st **b)
 {
 	int		index;

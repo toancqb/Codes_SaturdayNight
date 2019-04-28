@@ -6,7 +6,7 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/22 12:25:55 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/22 12:25:57 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 20:21:34 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ int					ft_toupper(int c);
 
 int					ft_tolower(int c);
 
-long		ft_atoi_long(const char *str);
+long				ft_atoi_long(const char *str);
 
 void				*ft_memalloc(size_t size);
 
