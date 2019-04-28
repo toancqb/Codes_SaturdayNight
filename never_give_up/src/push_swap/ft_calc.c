@@ -6,13 +6,13 @@
 /*   By: qtran <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 12:25:56 by qtran             #+#    #+#             */
-/*   Updated: 2019/04/28 17:52:25 by qtran            ###   ########.fr       */
+/*   Updated: 2019/04/28 20:47:08 by qtran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_lib_push_swap.h"
 
-int	ft_calc_index_to_top(int index, int len)
+int	ft_c(int index, int len)
 {
 	if (index == 0)
 		return (0);
@@ -45,28 +45,18 @@ int	ft_calc_a_rank_to_top(t_st *a, int rank, int len)
 	}
 	if (check == 0)
 		return (-1);
-	return (ft_calc_index_to_top(index, len));
+	return (ft_c(index, len));
 }
 
-int	find_suit_next_rank(t_st *a, int rank, int len_ab, int *r, int *c)
+int	find_suit_next_rank(t_st *a, int rank, int len_ab, int *c)
 {
-	t_elem	*e;
 	int		r_max;
 	int		r_min;
 
-	*r = 0;
 	*c = 0;
-	e = a->st_l;
 	r_max = len_ab;
 	r_min = -1;
-	while (e != NULL)
-	{
-		if (e->r > rank && e->r < r_max)
-			r_max = e->r;
-		if (e->r < rank && e->r > r_min)
-			r_min = e->r;
-		e = e->prev;
-	}
+	find_r_minmax(a, &r_max, &r_min, rank);
 	if (r_max == len_ab)
 	{
 		rank = r_min;
@@ -78,53 +68,47 @@ int	find_suit_next_rank(t_st *a, int rank, int len_ab, int *r, int *c)
 		while (!is_rank_in_a(a, rank))
 			rank++;
 	}
-	*r = rank;
-	return (1);
+	return (rank);
 }
 
-int	ft_calc_b(t_st *a, t_st *b, int index, int rank, int *rrr, int *check)
+int	ft_calc_b(t_st *a, int rank, int *rrr, int *check)
 {
 	int len_a;
-	int len_b;
 	int ch_tmp;
-	int r_tmp;
 
 	len_a = st_nb_elem(a);
-	len_b = st_nb_elem(b);
 	ch_tmp = 0;
-	find_suit_next_rank(a, rank, len_a + len_b, &r_tmp, &ch_tmp);
-	*rrr = r_tmp;
+	*rrr = find_suit_next_rank(a, rank, *rrr, &ch_tmp);
 	*check = ch_tmp;
-	return (ft_calc_a_rank_to_top(a, r_tmp, len_a)
-			+ ft_calc_index_to_top(index, len_b) + 1);
+	return (ft_calc_a_rank_to_top(a, *rrr, len_a) + 1);
 }
 
 int	ft_calc_b_to_a(t_st *a, t_st *b, int *rr, int *check)
 {
 	t_elem	*e;
 	int		index;
-	int		ch_tmp;
-	int		rrr;
+	int		r[2];
 	int		min[3];
 
 	min[0] = 0;
-	index = 0;
 	e = b->st_l;
-	min[1] = ft_calc_b(a, b, 0, e->r, &rrr, check);
-	*rr = rrr;
+	r[0] = st_nb_elem(a) + st_nb_elem(b);
+	min[1] = ft_calc_b(a, e->r, &r[0], check) + ft_c(0, st_nb_elem(b));
+	*rr = r[0];
 	if (e->prev == NULL)
 		return (0);
 	e = e->prev;
-	index++;
+	index = 1;
 	while (e != NULL)
 	{
-		min[2] = ft_calc_b(a, b, index, e->r, &rrr, &ch_tmp);
+		r[0] = st_nb_elem(a) + st_nb_elem(b);
+		min[2] = ft_calc_b(a, e->r, &r[0], &r[1]) + ft_c(index, st_nb_elem(b));
 		if (min[1] > min[2])
 		{
 			min[1] = min[2];
 			min[0] = index;
-			*rr = rrr;
-			*check = ch_tmp;
+			*rr = r[0];
+			*check = r[1];
 		}
 		index++;
 		e = e->prev;

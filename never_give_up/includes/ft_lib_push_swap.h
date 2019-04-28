@@ -46,6 +46,7 @@ int				is_sorted_st(t_st *a, int len);
 int				ft_rev(t_st *a);
 int				is_rank_in_a(t_st *a, int rank);
 char			*ft_strjoin_customed(char *str, char *buf);
+void find_r_minmax(t_st *a, int *r_max, int *r_min, int rank);
 int				ft_calc_b_to_a(t_st *a, t_st *b, int *rr, int *check);
 void			ft_free_2arr(long **i, int **j);
 void			ft_free_one_tab(char ***tab);

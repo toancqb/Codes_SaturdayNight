@@ -47,3 +47,18 @@ void	ft_free_one_tab(char ***tab)
 		free(*tab);
 	}
 }
+
+void find_r_minmax(t_st *a, int *r_max, int *r_min, int rank)
+{
+	t_elem *e;
+
+	e = a->st_l;
+	while (e != NULL)
+	{
+		if (e->r > rank && e->r < *r_max)
+			*r_max = e->r;
+		if (e->r < rank && e->r > *r_min)
+			*r_min = e->r;
+		e = e->prev;
+	}
+}
