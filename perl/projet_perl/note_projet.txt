@@ -1,0 +1,24 @@
+
+-  L'objectif général est un travail de programmation en perl, sur
+un corpus textuel de votre choix
+-  avec une sortie html ou une mise en forme dans le terminal.
+-  Le thème proposé est « concordancier en perl » ou « découpage et comptage en perl »,
+ avec une certaine liberté : à chaque groupe de me décrire les fonctionnalités
+  qu'il souhaite implémenter en Perl et sur quel corpus.
+-
+
+
+--==[ PROJET ]==--
+--==[ - Version1: Compter le nombre des mots par le paragraph ]==--
+--==[ - Version2: Compter le nombre des mots par phrase ]==--
+--==[ - Version3: Compter les plus frequences 'mots' ]==--
+--==[ - Version4: Compter le nombre des mots uniques ]==--
+
+ex: 'mots'
+- 'Aller' est different avec 'vas'
+
+ex:
+- Verbe 'aller'
+- "Il faut aller vite" => Aller
+- "Je vais a l'ecole" => vais => Aller
+- "J'iras chez toi" => iras => Aller
