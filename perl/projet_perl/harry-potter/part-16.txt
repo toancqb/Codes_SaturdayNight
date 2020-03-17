@@ -1,7 +1,7 @@
 La prédilection du professeur Trelawney
-L’état d’euphorie dans lequel la victoire de la coupe de Quidditch avait plongé Harry dura une bonne semaine. Même le temps semblait participer à la fête : à l’approche des premiers jours de juin, le ciel se dégageait de ses nuages, la température augmentait, et les élèves n’avaient plus d’autre envie que de s’allonger dans l’herbe avec quelques pintes de jus de citrouille bien frais à portée de main, ou de faire une partie de Bavboules ou encore de regarder le calmar géant émerger paresseusement à la surface du lac.
-Mais c’était malheureusement impossible. Les examens étaient imminents et, au lieu de paresser au soleil, tout le monde était forcé de rester dans le château à se concentrer sur de gros volumes, sans céder aux appels de la brise printanière qui s’insinuait par les fenêtres. Même Fred et George Weasley avaient été surpris à travailler. Ils devaient passer leur BUSE (Brevet Universel de Sorcellerie Élémentaire). Percy, lui, préparait son ASPIC (Accumulation de Sorcellerie Particulièrement Intensive et Contraignante), le plus haut diplôme délivré à Poudlard. Comme il avait l’intention d’entrer au ministère de la Magie, il lui fallait figurer en tête du classement. Il devenait donc de plus en plus irritable et distribuait de sévères punitions à quiconque troublait la tranquillité de la salle commune. La seule personne qui semblait encore plus anxieuse que Percy, c’était Hermione.
-Harry et Ron avaient renoncé à lui demander comment elle s’y prenait pour assister à plusieurs cours en même temps, mais ils ne purent s’empêcher de reposer une dernière fois la question lorsqu’ils virent le programme de ses épreuves d’examen. Dans la première colonne, on lisait :
+L'état d'euphorie dans lequel la victoire de la coupe de Quidditch avait plongé Harry dura une bonne semaine. Même le temps semblait participer à la fête : à l'approche des premiers jours de juin, le ciel se dégageait de ses nuages, la température augmentait, et les élèves n'avaient plus d'autre envie que de s'allonger dans l'herbe avec quelques pintes de jus de citrouille bien frais à portée de main, ou de faire une partie de Bavboules ou encore de regarder le calmar géant émerger paresseusement à la surface du lac.
+Mais c'était malheureusement impossible. Les examens étaient imminents et, au lieu de paresser au soleil, tout le monde était forcé de rester dans le château à se concentrer sur de gros volumes, sans céder aux appels de la brise printanière qui s'insinuait par les fenêtres. Même Fred et George Weasley avaient été surpris à travailler. Ils devaient passer leur BUSE (Brevet Universel de Sorcellerie Élémentaire). Percy, lui, préparait son ASPIC (Accumulation de Sorcellerie Particulièrement Intensive et Contraignante), le plus haut diplôme délivré à Poudlard. Comme il avait l'intention d'entrer au ministère de la Magie, il lui fallait figurer en tête du classement. Il devenait donc de plus en plus irritable et distribuait de sévères punitions à quiconque troublait la tranquillité de la salle commune. La seule personne qui semblait encore plus anxieuse que Percy, c'était Hermione.
+Harry et Ron avaient renoncé à lui demander comment elle s'y prenait pour assister à plusieurs cours en même temps, mais ils ne purent s'empêcher de reposer une dernière fois la question lorsqu'ils virent le programme de ses épreuves d'examen. Dans la première colonne, on lisait :
 
 LUNDI
 9 h Arithmancie
@@ -10,157 +10,155 @@ Déjeuner
 13 h Sortilèges
 13 h Étude des Runes
 
-— Hermione, dit prudemment Ron, sachant qu’elle était sujette aux explosions de colère quand on la dérangeait. Heu… Tu es sûre que tu ne t’es pas trompée en copiant tes horaires ?
+— Hermione, dit prudemment Ron, sachant qu'elle était sujette aux explosions de colère quand on la dérangeait. Heu… Tu es sûre que tu ne t'es pas trompée en copiant tes horaires ?
 — Quoi ? répondit sèchement Hermione en examinant son emploi du temps. Non, bien sûr que je ne me suis pas trompée.
-— Est-ce qu’on peut te demander comment tu comptes passer deux examens en même temps ? demanda Harry.
-— Non, répondit Hermione, agacée. Est-ce que quelqu’un a vu mon exemplaire de Numérologie et grammaire ?
-— Oui, bien sûr, je l’ai emprunté pour lire un peu au lit, répondit Ron, à voix très basse. Hermione se mit à déplacer les piles de parchemins qui s’entassaient sur sa table, à la recherche du livre. Au même moment, il y eut un bruissement et Hedwige s’engouffra par la fenêtre, une lettre dans le bec.
-— C’est Hagrid, dit Harry en ouvrant l’enveloppe. L’audience en appel a été fixée au 6.
-— Ce sera le dernier jour des examens, dit Hermione qui cherchait toujours son livre d’Arithmancie.
-— Et c’est ici que l’audience aura lieu, dit Harry qui continuait de lire la lettre. Il y aura un délégué du ministère de la Magie et… et un bourreau ! Hermione releva brusquement la tête.
-— Ils font venir le bourreau en appel ! Ça veut dire qu’ils ont déjà pris leur décision !
+— Est-ce qu'on peut te demander comment tu comptes passer deux examens en même temps ? demanda Harry.
+— Non, répondit Hermione, agacée. Est-ce que quelqu'un a vu mon exemplaire de Numérologie et grammaire ?
+— Oui, bien sûr, je l'ai emprunté pour lire un peu au lit, répondit Ron, à voix très basse. Hermione se mit à déplacer les piles de parchemins qui s'entassaient sur sa table, à la recherche du livre. Au même moment, il y eut un bruissement et Hedwige s'engouffra par la fenêtre, une lettre dans le bec.
+— C'est Hagrid, dit Harry en ouvrant l'enveloppe. L'audience en appel a été fixée au 6.
+— Ce sera le dernier jour des examens, dit Hermione qui cherchait toujours son livre d'Arithmancie.
+— Et c'est ici que l'audience aura lieu, dit Harry qui continuait de lire la lettre. Il y aura un délégué du ministère de la Magie et… et un bourreau ! Hermione releva brusquement la tête.
+— Ils font venir le bourreau en appel ! Ça veut dire qu'ils ont déjà pris leur décision !
 — En effet, dit lentement Harry.
-— Impossible ! s’exclama Ron. J’ai passé un temps fou à lire des trucs pour lui, ils ne vont quand même pas refuser d’écouter tout ça !
-Mais Harry avait la terrible impression que Mr Malefoy avait déjà réussi à convaincre les membres de la Commission. Drago, qui s’était montré étonnamment réservé depuis le triomphe de Gryffondor lors de la finale de Quidditch, avait repris ses airs bravaches depuis quelques jours. D’après les commentaires narquois que Harry l’avait entendu faire, il avait la certitude que Buck serait mis à mort et paraissait enchanté d’en être la cause. Dans ces occasions-là, Harry avait du mal à se retenir d’imiter Hermione et d’aller frapper Malefoy. Le pire, c’était qu’ils n’avaient ni le temps ni la possibilité d’aller voir Hagrid en raison des strictes mesures de sécurité toujours en vigueur. Et Harry n’osait pas aller récupérer sa cape d’invisibilité sous la statue de la sorcière borgne.
-Pendant la semaine des examens, le château connut un silence inhabituel. Le lundi, les troisième année avaient le teint grisâtre en sortant de l’épreuve de Métamorphose. Parmi les exercices imposés, ils avaient dû changer une théière en tortue et Hermione exaspéra tout le monde en se plaignant que la sienne avait l’air d’une tortue marine, alors qu’il aurait fallu faire une tortue terrestre.
-Après un rapide déjeuner, ils passèrent l’épreuve de sortilèges. Hermione avait eu raison : le professeur Flitwick avait choisi pour sujet les sortilèges d’Allégresse. Harry, trop nerveux, eut la main un peu lourde et Ron, qui faisait équipe avec lui, fut saisi d’éclats de rire si violents qu’on dut l’emmener dans une salle vide où il resta une heure avant d’être suffisamment calmé pour pouvoir jeter à son tour le sortilège.
-Lorsqu’ils eurent dîné, les élèves se précipitèrent dans leurs salles communes respectives, non pour se reposer, mais pour réviser les épreuves du lendemain.
-Au matin, Hagrid fit passer l’examen de Soins aux créatures magiques. Il paraissait très inquiet et avait visiblement la tête ailleurs. Il avait apporté une bassine remplie de Veracrasses et annonça que, pour réussir l’épreuve, il suffisait de maintenir son Veracrasse en vie pendant une heure. Comme ces créatures se portaient le mieux du monde dès lors qu’on les laissait tranquilles, jamais examen n’avait été aussi facile. Harry, Ron et Hermione eurent même tout le temps de parler à Hagrid.
-— Buck est un peu déprimé, leur dit-il en se penchant vers eux sous le prétexte de vérifier que le Veracrasse de Harry était toujours vivant. Ça fait trop longtemps qu’il est enfermé… On sera fixés après-demain.
-L’après-midi, l’épreuve de potions tourna au désastre le plus complet. Harry eut beau déployer tous les efforts possibles, il fut incapable de préparer convenablement son philtre de Confusion et Rogue, qui le regardait avec un plaisir vengeur, gribouilla dans son carnet quelque chose qui ressemblait à un zéro.
-À minuit, ce fut l’examen d’astronomie, au sommet de la plus haute tour ; l’épreuve d’Histoire de la magie eut lieu le mercredi matin et Harry griffonna tout ce que Florian Fortarôme lui avait raconté sur les chasses aux sorcières du Moyen Age, mais il aurait de très loin préféré déguster un de ses sundaes au chocolat, dans cette salle de classe étouffante. Le mercredi après-midi, les épreuves de Botanique se déroulèrent dans les serres sous une chaleur cuisante ; les élèves revinrent ensuite dans la salle commune, la nuque brûlée par le soleil, songeant avec envie qu’à cette même heure le lendemain tout serait enfin terminé.
-L’avant-dernier examen eut lieu le jeudi matin. C’était celui de Défense contre les forces du Mal. Le professeur Lupin leur avait préparé l’épreuve la plus originale qu’ils aient jamais eue à passer : une sorte de course d’obstacles en plein air au cours de laquelle ils durent traverser une mare profonde où se cachaient des strangulots, parcourir des ornières pleines de Chaporouges, se frayer un chemin dans un marécage sans prêter attention aux indications trompeuses des Pitiponks, puis pénétrer dans une vieille malle où les attendait un nouvel épouvantard.
-— Excellent, murmura Lupin lorsque Harry fut ressorti de la malle avec un grand sourire. Vingt sur vingt. Ravi de son succès, Harry resta sur place pour assister aux parcours de Ron et d’Hermione. Ron fut excellent jusqu’au moment où un Pitiponk parvint à l’entraîner au milieu du marécage dans lequel il s’enfonça jusqu’à la taille. Hermione, après avoir tout réussi à la perfection, entra dans la malle qui contenait l’épouvantard. Une minute plus tard, elle bondit au-dehors en poussant un hurlement.
-— Hermione ! s’exclama Lupin, surpris. Que se passe-t-il ?
-— Le p-p-professeur McGonagall ! haleta-t-elle en montrant la malle. El… elle a dit que j’avais tout raté !
-Il fallut un certain temps pour la calmer. Quand elle eut enfin retrouvé ses esprits, elle retourna au château avec Harry et Ron. Ce dernier avait encore une légère tendance à rire de sa réaction face à l’épouvantard mais l’apparition d’un visiteur inattendu en haut des marches coupa court à la dispute qui menaçait.
+— Impossible ! s'exclama Ron. J'ai passé un temps fou à lire des trucs pour lui, ils ne vont quand même pas refuser d'écouter tout ça !
+Mais Harry avait la terrible impression que Mr Malefoy avait déjà réussi à convaincre les membres de la Commission. Drago, qui s'était montré étonnamment réservé depuis le triomphe de Gryffondor lors de la finale de Quidditch, avait repris ses airs bravaches depuis quelques jours. D'après les commentaires narquois que Harry l'avait entendu faire, il avait la certitude que Buck serait mis à mort et paraissait enchanté d'en être la cause. Dans ces occasions-là, Harry avait du mal à se retenir d'imiter Hermione et d'aller frapper Malefoy. Le pire, c'était qu'ils n'avaient ni le temps ni la possibilité d'aller voir Hagrid en raison des strictes mesures de sécurité toujours en vigueur. Et Harry n'osait pas aller récupérer sa cape d'invisibilité sous la statue de la sorcière borgne.
+Pendant la semaine des examens, le château connut un silence inhabituel. Le lundi, les troisième année avaient le teint grisâtre en sortant de l'épreuve de Métamorphose. Parmi les exercices imposés, ils avaient dû changer une théière en tortue et Hermione exaspéra tout le monde en se plaignant que la sienne avait l'air d'une tortue marine, alors qu'il aurait fallu faire une tortue terrestre.
+Après un rapide déjeuner, ils passèrent l'épreuve de sortilèges. Hermione avait eu raison : le professeur Flitwick avait choisi pour sujet les sortilèges d'Allégresse. Harry, trop nerveux, eut la main un peu lourde et Ron, qui faisait équipe avec lui, fut saisi d'éclats de rire si violents qu'on dut l'emmener dans une salle vide où il resta une heure avant d'être suffisamment calmé pour pouvoir jeter à son tour le sortilège.
+Lorsqu'ils eurent dîné, les élèves se précipitèrent dans leurs salles communes respectives, non pour se reposer, mais pour réviser les épreuves du lendemain.
+Au matin, Hagrid fit passer l'examen de Soins aux créatures magiques. Il paraissait très inquiet et avait visiblement la tête ailleurs. Il avait apporté une bassine remplie de Veracrasses et annonça que, pour réussir l'épreuve, il suffisait de maintenir son Veracrasse en vie pendant une heure. Comme ces créatures se portaient le mieux du monde dès lors qu'on les laissait tranquilles, jamais examen n'avait été aussi facile. Harry, Ron et Hermione eurent même tout le temps de parler à Hagrid.
+— Buck est un peu déprimé, leur dit-il en se penchant vers eux sous le prétexte de vérifier que le Veracrasse de Harry était toujours vivant. Ça fait trop longtemps qu'il est enfermé… On sera fixés après-demain.
+L'après-midi, l'épreuve de potions tourna au désastre le plus complet. Harry eut beau déployer tous les efforts possibles, il fut incapable de préparer convenablement son philtre de Confusion et Rogue, qui le regardait avec un plaisir vengeur, gribouilla dans son carnet quelque chose qui ressemblait à un zéro.
+À minuit, ce fut l'examen d'astronomie, au sommet de la plus haute tour ; l'épreuve d'Histoire de la magie eut lieu le mercredi matin et Harry griffonna tout ce que Florian Fortarôme lui avait raconté sur les chasses aux sorcières du Moyen Age, mais il aurait de très loin préféré déguster un de ses sundaes au chocolat, dans cette salle de classe étouffante. Le mercredi après-midi, les épreuves de Botanique se déroulèrent dans les serres sous une chaleur cuisante ; les élèves revinrent ensuite dans la salle commune, la nuque brûlée par le soleil, songeant avec envie qu'à cette même heure le lendemain tout serait enfin terminé.
+L'avant-dernier examen eut lieu le jeudi matin. C'était celui de Défense contre les forces du Mal. Le professeur Lupin leur avait préparé l'épreuve la plus originale qu'ils aient jamais eue à passer : une sorte de course d'obstacles en plein air au cours de laquelle ils durent traverser une mare profonde où se cachaient des strangulots, parcourir des ornières pleines de Chaporouges, se frayer un chemin dans un marécage sans prêter attention aux indications trompeuses des Pitiponks, puis pénétrer dans une vieille malle où les attendait un nouvel épouvantard.
+— Excellent, murmura Lupin lorsque Harry fut ressorti de la malle avec un grand sourire. Vingt sur vingt. Ravi de son succès, Harry resta sur place pour assister aux parcours de Ron et d'Hermione. Ron fut excellent jusqu'au moment où un Pitiponk parvint à l'entraîner au milieu du marécage dans lequel il s'enfonça jusqu'à la taille. Hermione, après avoir tout réussi à la perfection, entra dans la malle qui contenait l'épouvantard. Une minute plus tard, elle bondit au-dehors en poussant un hurlement.
+— Hermione ! s'exclama Lupin, surpris. Que se passe-t-il ?
+— Le p-p-professeur McGonagall ! haleta-t-elle en montrant la malle. El… elle a dit que j'avais tout raté !
+Il fallut un certain temps pour la calmer. Quand elle eut enfin retrouvé ses esprits, elle retourna au château avec Harry et Ron. Ce dernier avait encore une légère tendance à rire de sa réaction face à l'épouvantard mais l'apparition d'un visiteur inattendu en haut des marches coupa court à la dispute qui menaçait.
 Vêtu de son habituelle cape à rayures, Cornélius Fudge transpirait légèrement, le regard fixé sur le parc. Il sursauta en reconnaissant Harry.
-— Bonjour, Harry, lança-t-il. J’imagine que tu viens de passer un examen ? C’est presque fini ?
+— Bonjour, Harry, lança-t-il. J'imagine que tu viens de passer un examen ? C'est presque fini ?
 — Oui, répondit Harry.
-Hermione et Ron, qui refusaient d’adresser la parole au ministre de la Magie, restèrent en arrière, l’air mal à l’aise.
-— Belle journée, dit Fudge en jetant un coup d’œil au lac. Dommage… Dommage… Il poussa un profond soupir et regarda à nouveau Harry.
-— Je suis venu remplir une mission bien désagréable… La Commission d’Examen des Créatures dangereuses a demandé un témoin pour assister à la mise à mort d’un hippogriffe atteint de folie. Comme je devais me rendre à Poudlard pour voir où en est l’affaire Sirius Black, c’est moi qui ai hérité de la corvée.
-— L’audience en appel a déjà eu lieu ? intervint Ron en s’avançant vers le ministre.
-— Non, elle est prévue cet après-midi, répondit Fudge qui regarda Ron d’un air intrigué.
-— Dans ce cas, il n’y aura peut-être pas du tout de mise à mort, dit Ron d’un ton décidé. L’hippogriffe sera peut-être épargné ? Mais avant que Fudge ait eu le temps de répondre, deux sorciers sortirent du château, derrière lui. L’un d’eux était si âgé qu’il donnait l’impression de se ratatiner à vue d’œil, l’autre était grand et robuste, avec une fine moustache noire. Harry devina qu’il s’agissait des représentants de la Commission car le vieux sorcier plissa les yeux en regardant la cabane de Hagrid et dit d’une voix faible :
-— Mon dieu, mon dieu, je me fais trop vieux pour ce genre de choses… C’est prévu à quatorze heures, n’est-ce pas, Fudge ? L’homme à la moustache noire tripotait quelque chose accroché à sa ceinture. Harry regarda attentivement et vit qu’il passait son large pouce sur le tranchant d’une hache à la lame étincelante. Ron ouvrit la bouche pour dire quelque chose, mais Hermione lui donna un vigoureux coup de coude dans les côtes et fit un signe de tête en direction du château.
-— Pourquoi tu n’as pas voulu que je parle ? protesta Ron avec colère lorsqu’ils entrèrent dans la Grande Salle pour aller déjeuner. Tu les as vus ? La hache est déjà prête ! C’est ça qu’on appelle la justice ?
-— Ron, ton père travaille au ministère. Tu ne peux pas dire des choses comme ça à son patron, répondit Hermione, qui paraissait tout aussi scandalisée que lui. Si Hagrid garde son sang-froid, cette fois-ci, et qu’il défend bien sa cause, ils ne peuvent tout de même pas exécuter Buck…
-Harry, cependant, voyait bien qu’Hermione ne croyait pas vraiment à ce qu’elle disait. Autour d’eux, les élèves surexcités parlaient avec entrain de la fin des examens dont le dernier avait lieu l’après-midi, mais Harry, Ron et Hermione, très inquiets pour Hagrid et pour Buck, ne participaient pas à l’enthousiasme général.
-Pour leur dernier examen, Harry et Ron devaient passer l’épreuve de Divination et Hermione celle d’étude des Moldus. Ils montèrent ensemble l’escalier de marbre. Hermione les quitta au premier étage et Harry et Ron continuèrent jusqu’au septième où nombre de leurs camarades étaient assis sur les marches de l’escalier en colimaçon qui menait à la salle de classe du professeur Trelawney, essayant d’absorber quelques révisions de dernière minute.
-— Elle nous prend un par un, dit Neville à Ron et à Harry qui étaient venus s’asseoir à côté de lui.
+Hermione et Ron, qui refusaient d'adresser la parole au ministre de la Magie, restèrent en arrière, l'air mal à l'aise.
+— Belle journée, dit Fudge en jetant un coup d'œil au lac. Dommage… Dommage… Il poussa un profond soupir et regarda à nouveau Harry.
+— Je suis venu remplir une mission bien désagréable… La Commission d'Examen des Créatures dangereuses a demandé un témoin pour assister à la mise à mort d'un hippogriffe atteint de folie. Comme je devais me rendre à Poudlard pour voir où en est l'affaire Sirius Black, c'est moi qui ai hérité de la corvée.
+— L'audience en appel a déjà eu lieu ? intervint Ron en s'avançant vers le ministre.
+— Non, elle est prévue cet après-midi, répondit Fudge qui regarda Ron d'un air intrigué.
+— Dans ce cas, il n'y aura peut-être pas du tout de mise à mort, dit Ron d'un ton décidé. L'hippogriffe sera peut-être épargné ? Mais avant que Fudge ait eu le temps de répondre, deux sorciers sortirent du château, derrière lui. L'un d'eux était si âgé qu'il donnait l'impression de se ratatiner à vue d'œil, l'autre était grand et robuste, avec une fine moustache noire. Harry devina qu'il s'agissait des représentants de la Commission car le vieux sorcier plissa les yeux en regardant la cabane de Hagrid et dit d'une voix faible :
+— Mon dieu, mon dieu, je me fais trop vieux pour ce genre de choses… C'est prévu à quatorze heures, n'est-ce pas, Fudge ? L'homme à la moustache noire tripotait quelque chose accroché à sa ceinture. Harry regarda attentivement et vit qu'il passait son large pouce sur le tranchant d'une hache à la lame étincelante. Ron ouvrit la bouche pour dire quelque chose, mais Hermione lui donna un vigoureux coup de coude dans les côtes et fit un signe de tête en direction du château.
+— Pourquoi tu n'as pas voulu que je parle ? protesta Ron avec colère lorsqu'ils entrèrent dans la Grande Salle pour aller déjeuner. Tu les as vus ? La hache est déjà prête ! C'est ça qu'on appelle la justice ?
+— Ron, ton père travaille au ministère. Tu ne peux pas dire des choses comme ça à son patron, répondit Hermione, qui paraissait tout aussi scandalisée que lui. Si Hagrid garde son sang-froid, cette fois-ci, et qu'il défend bien sa cause, ils ne peuvent tout de même pas exécuter Buck…
+Harry, cependant, voyait bien qu'Hermione ne croyait pas vraiment à ce qu'elle disait. Autour d'eux, les élèves surexcités parlaient avec entrain de la fin des examens dont le dernier avait lieu l'après-midi, mais Harry, Ron et Hermione, très inquiets pour Hagrid et pour Buck, ne participaient pas à l'enthousiasme général.
+Pour leur dernier examen, Harry et Ron devaient passer l'épreuve de Divination et Hermione celle d'étude des Moldus. Ils montèrent ensemble l'escalier de marbre. Hermione les quitta au premier étage et Harry et Ron continuèrent jusqu'au septième où nombre de leurs camarades étaient assis sur les marches de l'escalier en colimaçon qui menait à la salle de classe du professeur Trelawney, essayant d'absorber quelques révisions de dernière minute.
+— Elle nous prend un par un, dit Neville à Ron et à Harry qui étaient venus s'asseoir à côté de lui.
 Il avait son exemplaire de Lever le voile du futur ouvert sur les genoux, à la page consacrée aux boules de cristal.
-— Vous avez déjà vu quelque chose dans une boule de cristal, vous ? ajouta-t-il d’un air affligé.
-— Non, répondit Ron, l’esprit ailleurs.
+— Vous avez déjà vu quelque chose dans une boule de cristal, vous ? ajouta-t-il d'un air affligé.
+— Non, répondit Ron, l'esprit ailleurs.
 Il ne cessait de consulter sa montre, attendant le moment où devait avoir lieu le recours en appel de Buck.
-Chaque fois qu’un élève redescendait l’échelle d’argent après avoir subi l’examen, les autres chuchotaient d’un air anxieux :
-— Alors, ça s’est bien passé ? Qu’est-ce qu’elle a demandé ?
+Chaque fois qu'un élève redescendait l'échelle d'argent après avoir subi l'examen, les autres chuchotaient d'un air anxieux :
+— Alors, ça s'est bien passé ? Qu'est-ce qu'elle a demandé ?
 Mais tout le monde refusait de répondre.
-— Elle a vu dans la boule de cristal que si je vous disais quoi que ce soit, j’aurais un horrible accident ! couina Neville en redescendant l’échelle.
-— C’est pratique ! grogna Ron. Je commence à penser qu’Hermione avait raison, tout ça, c’est de la mystification.
+— Elle a vu dans la boule de cristal que si je vous disais quoi que ce soit, j'aurais un horrible accident ! couina Neville en redescendant l'échelle.
+— C'est pratique ! grogna Ron. Je commence à penser qu'Hermione avait raison, tout ça, c'est de la mystification.
 — Oui, dit Harry en regardant sa propre montre.
-Il était deux heures de l’après-midi.
-— J’aimerais bien qu’elle se dépêche un peu, ajouta-t-il. Parvati descendit l’échelle. Elle avait l’air très contente d’elle.
-— Elle a dit que j’avais toutes les qualités d’une vraie voyante, annonça-t-elle à Ron et à Harry. J’ai vu énormément de choses… Bonne chance !
+Il était deux heures de l'après-midi.
+— J'aimerais bien qu'elle se dépêche un peu, ajouta-t-il. Parvati descendit l'échelle. Elle avait l'air très contente d'elle.
+— Elle a dit que j'avais toutes les qualités d'une vraie voyante, annonça-t-elle à Ron et à Harry. J'ai vu énormément de choses… Bonne chance !
 — Ronald Weasley, dit la voix familière au-dessus de leur tête.
-Ron fit une grimace et monta l’échelle. Harry était à présent le dernier candidat. Il s’assit par terre, le dos contre le mur, écoutant une mouche qui volait devant la fenêtre ensoleillée. Il pensait à Hagrid.
-Enfin, au bout de vingt minutes, les pieds de Ron réapparurent sur l’échelle.
-— Comment ça s’est passé ? demanda Harry en se relevant.
-— Très mal, répondit Ron. Je ne voyais rien du tout, alors, j’ai inventé quelque chose, mais je crois qu’elle n’était pas convaincue…
-— Je te retrouve dans la salle commune, murmura Harry tandis que le professeur Trelawney appelait son nom. La petite pièce confinée était plus étouffante que jamais et les habituels parfums qui flottaient dans l’air firent tousser Harry lorsqu’il s’avança d’un pas chancelant vers le professeur Trelawney, assise devant une grosse boule de cristal.
+Ron fit une grimace et monta l'échelle. Harry était à présent le dernier candidat. Il s'assit par terre, le dos contre le mur, écoutant une mouche qui volait devant la fenêtre ensoleillée. Il pensait à Hagrid.
+Enfin, au bout de vingt minutes, les pieds de Ron réapparurent sur l'échelle.
+— Comment ça s'est passé ? demanda Harry en se relevant.
+— Très mal, répondit Ron. Je ne voyais rien du tout, alors, j'ai inventé quelque chose, mais je crois qu'elle n'était pas convaincue…
+— Je te retrouve dans la salle commune, murmura Harry tandis que le professeur Trelawney appelait son nom. La petite pièce confinée était plus étouffante que jamais et les habituels parfums qui flottaient dans l'air firent tousser Harry lorsqu'il s'avança d'un pas chancelant vers le professeur Trelawney, assise devant une grosse boule de cristal.
 — Bonjour, mon cher, dit-elle à voix basse. Si vous voulez bien plonger votre regard dans cette Sphère… Prenez votre temps… Vous me direz ensuite ce que vous aurez vu… Harry se pencha sur la boule de cristal et regarda aussi fixement que possible, avec la volonté de voir autre chose que des volutes de fumée, mais rien ne se produisit.
-— Alors ? demanda le professeur Trelawney d’une voix douce. La chaleur était insupportable et les senteurs ambiantes lui picotaient les narines. Harry repensa à ce que Ron lui avait dit et lui aussi décida d’inventer quelque chose.
+— Alors ? demanda le professeur Trelawney d'une voix douce. La chaleur était insupportable et les senteurs ambiantes lui picotaient les narines. Harry repensa à ce que Ron lui avait dit et lui aussi décida d'inventer quelque chose.
 — Heu… je vois une forme sombre… prétendit-il.
-— À quoi ressemble-t-elle ? murmura le professeur Trelawney. Réfléchissez bien… Harry sauta sur la première pensée qui lui vint à l’esprit.
-— À un hippogriffe, dit-il d’un ton assuré.
-— Vraiment ? chuchota le professeur Trelawney en griffonnant rapidement quelque chose sur le parchemin posé sur ses genoux. Mon garçon, vous êtes sans doute en train de voir comment vont se terminer les ennuis de ce pauvre Hagrid avec le ministère de la Magie ! Regardez bien… Est-ce que l’hippogriffe a toujours… sa tête ?
+— À quoi ressemble-t-elle ? murmura le professeur Trelawney. Réfléchissez bien… Harry sauta sur la première pensée qui lui vint à l'esprit.
+— À un hippogriffe, dit-il d'un ton assuré.
+— Vraiment ? chuchota le professeur Trelawney en griffonnant rapidement quelque chose sur le parchemin posé sur ses genoux. Mon garçon, vous êtes sans doute en train de voir comment vont se terminer les ennuis de ce pauvre Hagrid avec le ministère de la Magie ! Regardez bien… Est-ce que l'hippogriffe a toujours… sa tête ?
 — Oui, affirma Harry.
 — Vous êtes sûr ? Vraiment sûr, mon garçon ? Vous ne le voyez pas en train de se tordre sur le sol avec une silhouette sombre qui brandit une hache derrière lui ?
 — Non, répondit Harry qui commençait à ne pas se sentir très bien.
 — Pas de sang ? Vous ne voyez pas Hagrid en train de pleurer ?
-— Non ! répéta Harry. Il n’avait plus qu’une idée en tête : fuir cette pièce et sa chaleur étouffante.
-— Au contraire, il a l’air en pleine forme… Il s’envole… Le professeur Trelawney soupira.
-— Eh bien, mon garçon, je crois que nous allons en rester là… C’est un peu décevant, je ne vous le cache pas… Mais je suis sûre que vous avez fait de votre mieux.
-Soulagé, Harry se leva, ramassa son sac et s’apprêtait à s’en aller lorsqu’une voix dure et sonore retentit derrière lui.
+— Non ! répéta Harry. Il n'avait plus qu'une idée en tête : fuir cette pièce et sa chaleur étouffante.
+— Au contraire, il a l'air en pleine forme… Il s'envole… Le professeur Trelawney soupira.
+— Eh bien, mon garçon, je crois que nous allons en rester là… C'est un peu décevant, je ne vous le cache pas… Mais je suis sûre que vous avez fait de votre mieux.
+Soulagé, Harry se leva, ramassa son sac et s'apprêtait à s'en aller lorsqu'une voix dure et sonore retentit derrière lui.
 Ça se passera ce soir !
-Harry se retourna. Le professeur Trelawney s’était figée dans son fauteuil, le regard vague, la mâchoire pendante.
+Harry se retourna. Le professeur Trelawney s'était figée dans son fauteuil, le regard vague, la mâchoire pendante.
 — P… pardon ? dit Harry.
-Mais le professeur ne semblait pas l’entendre. Ses yeux se mirent à rouler dans leurs orbites. Harry, paniqué, resta là à la regarder. Elle semblait sur le point d’avoir une crise de quelque chose. Il hésita, en se demandant s’il devait se précipiter à l’infirmerie. Puis le professeur reprit la parole de cette même voix dure, si différente de celle qu’on lui connaissait.
-Le Seigneur des Ténèbres est là, solitaire, abandonné de ses amis. Pendant douze ans, son serviteur a été enchaîné. Ce soir, avant minuit, le serviteur brisera ses chaînes et ira rejoindre son maître. Avec l’aide de son serviteur, le Seigneur des Ténèbres surgira à nouveau, plus puissant et plus terrible que jamais. Ce soir… avant minuit… le serviteur… ira… rejoindre… son maître…
+Mais le professeur ne semblait pas l'entendre. Ses yeux se mirent à rouler dans leurs orbites. Harry, paniqué, resta là à la regarder. Elle semblait sur le point d'avoir une crise de quelque chose. Il hésita, en se demandant s'il devait se précipiter à l'infirmerie. Puis le professeur reprit la parole de cette même voix dure, si différente de celle qu'on lui connaissait.
+Le Seigneur des Ténèbres est là, solitaire, abandonné de ses amis. Pendant douze ans, son serviteur a été enchaîné. Ce soir, avant minuit, le serviteur brisera ses chaînes et ira rejoindre son maître. Avec l'aide de son serviteur, le Seigneur des Ténèbres surgira à nouveau, plus puissant et plus terrible que jamais. Ce soir… avant minuit… le serviteur… ira… rejoindre… son maître…
 La tête du professeur Trelawney tomba sur sa poitrine. Elle laissa échapper une sorte de grognement, puis, brusquement, elle se redressa.
 — Je suis désolée, mon garçon, dit-elle, comme perdue dans un rêve. La chaleur, sans doute… Je me suis assoupie pendant un instant…
 Harry, immobile, continuait de la regarder.
-— Qu’y a-t-il, mon garçon ?
-— Vous… vous venez de me dire que le Seigneur des Ténèbres va surgir à nouveau… que son serviteur s’apprête à le rejoindre…
-Le professeur Trelawney eut l’air surpris.
-— Le Seigneur des Ténèbres ? Celui-Dont-On-Ne-Doit-Pas-Prononcer-Le-Nom ? Mon garçon, ce n’est pas un sujet de plaisanterie… Surgir à nouveau, voyez-vous ça !
-— C’est ce que vous venez de dire ! Vous avez dit que le Seigneur…
-— Vous aussi, vous avez dû vous assoupir, coupa le professeur Trelawney. Jamais je ne m’aventurerais à prédire quelque chose d’aussi invraisemblable !
-Harry redescendit l’échelle, puis l’escalier, en se posant des questions… Le professeur Trelawney avait-elle fait une véritable prédiction ? Ou bien avait-elle voulu l’impressionner pour pimenter un peu la fin des examens ?
-Cinq minutes plus tard, Harry passa en courant devant les trolls qui gardaient la tour de Gryffondor, les paroles du professeur Trelawney résonnant encore dans sa tête. Les élèves qu’il croisait riaient et plaisantaient en se dirigeant à grandes enjambées vers le parc où ils allaient pouvoir profiter d’une liberté si longtemps attendue ; lorsqu’il eut atteint le portrait et pénétré dans la salle commune, il s’aperçut qu’elle était presque déserte. Seuls Ron et Hermione étaient là, assis dans un coin.
-— Le professeur Trelawney, dit Harry hors d’haleine, vient de me raconter que…
-Mais il s’interrompit en voyant l’expression de leur visage.
-— Hagrid a perdu, dit Ron d’une voix faible. Il vient de nous envoyer ça.
+— Qu'y a-t-il, mon garçon ?
+— Vous… vous venez de me dire que le Seigneur des Ténèbres va surgir à nouveau… que son serviteur s'apprête à le rejoindre…
+Le professeur Trelawney eut l'air surpris.
+— Le Seigneur des Ténèbres ? Celui-Dont-On-Ne-Doit-Pas-Prononcer-Le-Nom ? Mon garçon, ce n'est pas un sujet de plaisanterie… Surgir à nouveau, voyez-vous ça !
+— C'est ce que vous venez de dire ! Vous avez dit que le Seigneur…
+— Vous aussi, vous avez dû vous assoupir, coupa le professeur Trelawney. Jamais je ne m'aventurerais à prédire quelque chose d'aussi invraisemblable !
+Harry redescendit l'échelle, puis l'escalier, en se posant des questions… Le professeur Trelawney avait-elle fait une véritable prédiction ? Ou bien avait-elle voulu l'impressionner pour pimenter un peu la fin des examens ?
+Cinq minutes plus tard, Harry passa en courant devant les trolls qui gardaient la tour de Gryffondor, les paroles du professeur Trelawney résonnant encore dans sa tête. Les élèves qu'il croisait riaient et plaisantaient en se dirigeant à grandes enjambées vers le parc où ils allaient pouvoir profiter d'une liberté si longtemps attendue ; lorsqu'il eut atteint le portrait et pénétré dans la salle commune, il s'aperçut qu'elle était presque déserte. Seuls Ron et Hermione étaient là, assis dans un coin.
+— Le professeur Trelawney, dit Harry hors d'haleine, vient de me raconter que…
+Mais il s'interrompit en voyant l'expression de leur visage.
+— Hagrid a perdu, dit Ron d'une voix faible. Il vient de nous envoyer ça.
 Cette fois, le mot de Hagrid ne portait pas de traces de larmes mais ses mains avaient tellement tremblé que son écriture était à peine lisible.
 Avons perdu en appel. Ils vont le mettre à mort au coucher du soleil. Vous ne pouvez plus rien faire. Ne venez pas. Je ne veux pas que vous regardiez ça.
 
 — Il faut y aller, dit aussitôt Harry. On ne peut pas le laisser tout seul à attendre le bourreau.
-— Au coucher du soleil, dit Ron qui regardait par la fenêtre d’un œil éteint. On n’aura jamais le droit de sortir… Surtout toi, Harry…
-— Si seulement on avait la cape d’invisibilité, dit Harry, l’air songeur.
+— Au coucher du soleil, dit Ron qui regardait par la fenêtre d'un œil éteint. On n'aura jamais le droit de sortir… Surtout toi, Harry…
+— Si seulement on avait la cape d'invisibilité, dit Harry, l'air songeur.
 — Où est-elle ? demanda Hermione.
-Harry lui raconta qu’il l’avait laissée dans le passage secret, sous la statue de la sorcière borgne.
-— Si jamais Rogue me voit encore dans ce coin-là, j’aurai de sérieux ennuis, ajouta-t-il.
-— C’est vrai, dit Hermione en se levant. Si c’est toi qu’il voit… Comment on fait pour ouvrir la bosse de la sorcière ?
+Harry lui raconta qu'il l'avait laissée dans le passage secret, sous la statue de la sorcière borgne.
+— Si jamais Rogue me voit encore dans ce coin-là, j'aurai de sérieux ennuis, ajouta-t-il.
+— C'est vrai, dit Hermione en se levant. Si c'est toi qu'il voit… Comment on fait pour ouvrir la bosse de la sorcière ?
 — Il faut lui donner un coup de baguette magique en disant « Dissendium », mais…
-Hermione n’attendit pas qu’il ait terminé sa phrase. Elle traversa la salle à grands pas, poussa le portrait de la grosse dame et disparut.
+Hermione n'attendit pas qu'il ait terminé sa phrase. Elle traversa la salle à grands pas, poussa le portrait de la grosse dame et disparut.
 — Elle ne va quand même pas aller la chercher elle-même ? dit Ron, les yeux ronds.
-Un quart d’heure plus tard, cependant, Hermione était de retour avec la cape d’invisibilité soigneusement pliée sous sa robe.
-— Hermione, qu’est-ce qui t’arrive, ces temps-ci ? s’exclama Ron. D’abord, tu donnes une gifle à Malefoy, ensuite tu quittes le cours du professeur Trelawney…
-L’air admiratif de Ron sembla flatter Hermione.
-Ils descendirent dîner mais à la fin du repas, ils ne retournèrent pas à la tour de Gryffondor avec les autres. Harry avait caché la cape d’invisibilité sous sa robe et gardait les bras croisés sur sa poitrine pour dissimuler la bosse qu’elle formait. Ils se faufilèrent dans une salle vide, à proximité du hall d’entrée, tendant l’oreille jusqu’à ce qu’ils aient la certitude que plus personne ne se trouvait dans les environs. Ils entendirent encore deux personnes traverser le hall en courant, puis une porte claquer. Hermione passa alors la tête au-dehors.
+Un quart d'heure plus tard, cependant, Hermione était de retour avec la cape d'invisibilité soigneusement pliée sous sa robe.
+— Hermione, qu'est-ce qui t'arrive, ces temps-ci ? s'exclama Ron. D'abord, tu donnes une gifle à Malefoy, ensuite tu quittes le cours du professeur Trelawney…
+L'air admiratif de Ron sembla flatter Hermione.
+Ils descendirent dîner mais à la fin du repas, ils ne retournèrent pas à la tour de Gryffondor avec les autres. Harry avait caché la cape d'invisibilité sous sa robe et gardait les bras croisés sur sa poitrine pour dissimuler la bosse qu'elle formait. Ils se faufilèrent dans une salle vide, à proximité du hall d'entrée, tendant l'oreille jusqu'à ce qu'ils aient la certitude que plus personne ne se trouvait dans les environs. Ils entendirent encore deux personnes traverser le hall en courant, puis une porte claquer. Hermione passa alors la tête au-dehors.
 — Ça va, dit-elle, on peut y aller.
-Marchant l’un contre l’autre, ils se recouvrirent de la cape, traversèrent le hall sur la pointe des pieds puis descendirent les marches jusqu’à la pelouse. Le soleil se couchait déjà derrière la forêt interdite, entourant d’un liseré d’or les plus hautes branches des arbres.
-Lorsqu’ils frappèrent à la porte de la cabane, Hagrid mit un long moment à venir leur ouvrir. Il avait le teint pâle et tremblait de tout son corps.
-— C’est nous, chuchota Harry. On a mis la cape d’invisibilité. Laissez-nous entrer, qu’on puisse l’enlever.
-— Vous n’auriez pas dû venir, murmura Hagrid en s’écartant pour les laisser passer. Il referma rapidement la porte et Harry enleva la cape. Hagrid ne pleurait pas, il ne leur tomba pas dans les bras. Il avait l’air de ne plus savoir où il en était et son désarroi était bien plus déchirant que des larmes.
-— Vous voulez du thé ? demanda-t-il. Ses mains tremblaient lorsqu’il prit la bouilloire.
-— Où est Buck ? demanda Hermione d’une voix hésitante.
-— Je… Je l’ai sorti, répondit Hagrid en renversant du lait sur la table. Il est attaché dans le potager. J’ai pensé qu’il aimerait bien voir les arbres et respirer un peu d’air frais avant… Ses mains tremblaient si violemment que le pot au lait lui échappa et se brisa sur le sol.
-— Je vais arranger ça, Hagrid, dit Hermione qui se dépêcha d’essuyer par terre.
-— Il y a un autre pot dans le buffet, dit Hagrid en s’asseyant et en s’essuyant le front d’un revers de manche. Harry et Ron échangèrent un regard désolé.
-— Est-ce qu’on peut faire quelque chose, Hagrid ? demanda Harry d’un ton décidé. Dumbledore…
-— Il a essayé, répondit Hagrid. Mais il n’a pas le pouvoir d’annuler une décision de la Commission. Il leur a dit que Buck n’était pas dangereux, mais ils ont peur… Vous connaissez Lucius Malefoy… J’imagine qu’il les a menacés. Et Macnair, le bourreau, est un vieil ami de Malefoy… Mais au moins, ça ira vite… Et je serai à côté de lui… Hagrid, la gorge nouée, jetait des regards autour de lui, comme s’il cherchait désespérément le moindre espoir auquel se raccrocher.
-— Dumbledore va venir quand… quand ça se produira… Il m’a écrit ce matin. Il m’a dit qu’il veut… être avec moi. Un grand homme, Dumbledore… Hermione, qui avait fouillé dans le buffet pour chercher un autre pot au lait, laissa échapper un sanglot étouffé. Elle se redressa, le pot à la main, en se retenant à grand-peine de pleurer.
+Marchant l'un contre l'autre, ils se recouvrirent de la cape, traversèrent le hall sur la pointe des pieds puis descendirent les marches jusqu'à la pelouse. Le soleil se couchait déjà derrière la forêt interdite, entourant d'un liseré d'or les plus hautes branches des arbres.
+Lorsqu'ils frappèrent à la porte de la cabane, Hagrid mit un long moment à venir leur ouvrir. Il avait le teint pâle et tremblait de tout son corps.
+— C'est nous, chuchota Harry. On a mis la cape d'invisibilité. Laissez-nous entrer, qu'on puisse l'enlever.
+— Vous n'auriez pas dû venir, murmura Hagrid en s'écartant pour les laisser passer. Il referma rapidement la porte et Harry enleva la cape. Hagrid ne pleurait pas, il ne leur tomba pas dans les bras. Il avait l'air de ne plus savoir où il en était et son désarroi était bien plus déchirant que des larmes.
+— Vous voulez du thé ? demanda-t-il. Ses mains tremblaient lorsqu'il prit la bouilloire.
+— Où est Buck ? demanda Hermione d'une voix hésitante.
+— Je… Je l'ai sorti, répondit Hagrid en renversant du lait sur la table. Il est attaché dans le potager. J'ai pensé qu'il aimerait bien voir les arbres et respirer un peu d'air frais avant… Ses mains tremblaient si violemment que le pot au lait lui échappa et se brisa sur le sol.
+— Je vais arranger ça, Hagrid, dit Hermione qui se dépêcha d'essuyer par terre.
+— Il y a un autre pot dans le buffet, dit Hagrid en s'asseyant et en s'essuyant le front d'un revers de manche. Harry et Ron échangèrent un regard désolé.
+— Est-ce qu'on peut faire quelque chose, Hagrid ? demanda Harry d'un ton décidé. Dumbledore…
+— Il a essayé, répondit Hagrid. Mais il n'a pas le pouvoir d'annuler une décision de la Commission. Il leur a dit que Buck n'était pas dangereux, mais ils ont peur… Vous connaissez Lucius Malefoy… J'imagine qu'il les a menacés. Et Macnair, le bourreau, est un vieil ami de Malefoy… Mais au moins, ça ira vite… Et je serai à côté de lui… Hagrid, la gorge nouée, jetait des regards autour de lui, comme s'il cherchait désespérément le moindre espoir auquel se raccrocher.
+— Dumbledore va venir quand… quand ça se produira… Il m'a écrit ce matin. Il m'a dit qu'il veut… être avec moi. Un grand homme, Dumbledore… Hermione, qui avait fouillé dans le buffet pour chercher un autre pot au lait, laissa échapper un sanglot étouffé. Elle se redressa, le pot à la main, en se retenant à grand-peine de pleurer.
 — Nous aussi, on va rester avec vous, dit-elle. Mais Hagrid hocha sa tête hirsute.
-— Il faut que vous retourniez au château, répliqua-t-il. Je vous l’ai dit, je ne veux pas que vous regardiez ça. Et de toute façon, vous ne devriez pas être ici… Si Fudge et Dumbledore te voient dehors sans autorisation, Harry, tu auras de gros ennuis. Des larmes silencieuses coulaient à présent sur les joues d’Hermione, mais elle les cacha à Hagrid en s’affairant à préparer le thé. Soudain, au moment où elle prenait la bouteille de lait pour remplir le pot, elle poussa un cri perçant.
-— Ron ! C’est… C’est incroyable ! Croûtard ! Ron la regarda bouche bée.
-— Qu’est-ce que tu racontes ? Hermione se précipita vers la table et retourna le pot au lait. Criant et se débattant frénétiquement, Croûtard glissa alors du pot et tomba sur la table.
-— Croûtard ! dit Ron d’une voix blanche. Croûtard, qu’est-ce que tu fabriques ici ? Il attrapa le rat qui continuait de se débattre et le regarda à la lumière. Croûtard était dans un état épouvantable. Plus maigre que jamais, il avait complètement pelé par endroits, et se tortillait dans les mains de Ron comme s’il cherchait à tout prix à s’enfuir.
-— Du calme, Croûtard ! dit Ron. Il n’y a pas de chat, ici ! Personne ne cherche à te faire du mal ! Hagrid se leva soudain, les yeux fixés sur la fenêtre. Son teint d’habitude coloré avait pris la teinte jaunâtre d’un vieux parchemin.
-— Ils arrivent… dit-il. Harry, Ron et Hermione se retournèrent et virent au loin un groupe d’hommes qui descendaient les marches du château. À leur tête, ils reconnurent Albus Dumbledore, sa barbe d’argent scintillant dans la lumière du crépuscule. Cornélius Fudge trottinait à côté de lui. Le vieillard de la Commission et le bourreau les suivaient.
-— Il faut que vous partiez, dit Hagrid en tremblant des pieds à la tête. Il ne faut pas qu’ils vous trouvent ici… Filez vite… Ron enfonça de force Croûtard dans sa poche et Hermione prit la cape.
+— Il faut que vous retourniez au château, répliqua-t-il. Je vous l'ai dit, je ne veux pas que vous regardiez ça. Et de toute façon, vous ne devriez pas être ici… Si Fudge et Dumbledore te voient dehors sans autorisation, Harry, tu auras de gros ennuis. Des larmes silencieuses coulaient à présent sur les joues d'Hermione, mais elle les cacha à Hagrid en s'affairant à préparer le thé. Soudain, au moment où elle prenait la bouteille de lait pour remplir le pot, elle poussa un cri perçant.
+— Ron ! C'est… C'est incroyable ! Croûtard ! Ron la regarda bouche bée.
+— Qu'est-ce que tu racontes ? Hermione se précipita vers la table et retourna le pot au lait. Criant et se débattant frénétiquement, Croûtard glissa alors du pot et tomba sur la table.
+— Croûtard ! dit Ron d'une voix blanche. Croûtard, qu'est-ce que tu fabriques ici ? Il attrapa le rat qui continuait de se débattre et le regarda à la lumière. Croûtard était dans un état épouvantable. Plus maigre que jamais, il avait complètement pelé par endroits, et se tortillait dans les mains de Ron comme s'il cherchait à tout prix à s'enfuir.
+— Du calme, Croûtard ! dit Ron. Il n'y a pas de chat, ici ! Personne ne cherche à te faire du mal ! Hagrid se leva soudain, les yeux fixés sur la fenêtre. Son teint d'habitude coloré avait pris la teinte jaunâtre d'un vieux parchemin.
+— Ils arrivent… dit-il. Harry, Ron et Hermione se retournèrent et virent au loin un groupe d'hommes qui descendaient les marches du château. À leur tête, ils reconnurent Albus Dumbledore, sa barbe d'argent scintillant dans la lumière du crépuscule. Cornélius Fudge trottinait à côté de lui. Le vieillard de la Commission et le bourreau les suivaient.
+— Il faut que vous partiez, dit Hagrid en tremblant des pieds à la tête. Il ne faut pas qu'ils vous trouvent ici… Filez vite… Ron enfonça de force Croûtard dans sa poche et Hermione prit la cape.
 — Je vais vous faire sortir par-derrière, dit Hagrid.
-Ils le suivirent jusqu’à la porte qui donnait sur le potager. Harry avait l’impression de vivre quelque chose d’irréel, surtout lorsqu’il vit Buck attaché à la clôture, un peu plus loin, derrière les plants de citrouilles. L’hippogriffe semblait deviner que quelque chose se préparait. Il tournait la tête en tous sens et ses pattes martelaient nerveusement le sol.
-— Ne t’inquiète pas, Bucky, dit Hagrid d’une voix douce. Ne t’inquiète pas… Il se tourna vers Harry, Ron et Hermione.
+Ils le suivirent jusqu'à la porte qui donnait sur le potager. Harry avait l'impression de vivre quelque chose d'irréel, surtout lorsqu'il vit Buck attaché à la clôture, un peu plus loin, derrière les plants de citrouilles. L'hippogriffe semblait deviner que quelque chose se préparait. Il tournait la tête en tous sens et ses pattes martelaient nerveusement le sol.
+— Ne t'inquiète pas, Bucky, dit Hagrid d'une voix douce. Ne t'inquiète pas… Il se tourna vers Harry, Ron et Hermione.
 — Allez-y, dit-il. Partez… Mais ils ne bougèrent pas.
 — Hagrid, on ne peut pas…
-— On va leur dire ce qui s’est vraiment passé…
+— On va leur dire ce qui s'est vraiment passé…
 — Ils ne peuvent pas le tuer…
-— Filez ! dit Hagrid d’un ton féroce. C’est déjà suffisamment difficile, inutile de chercher les ennuis ! Ils n’avaient pas le choix. Tandis qu’Hermione jetait la cape sur la tête de Harry et de Ron, ils entendirent des voix à l’entrée de la cabane.
-— Dépêchez-vous, leur dit Hagrid. N’écoutez pas…
+— Filez ! dit Hagrid d'un ton féroce. C'est déjà suffisamment difficile, inutile de chercher les ennuis ! Ils n'avaient pas le choix. Tandis qu'Hermione jetait la cape sur la tête de Harry et de Ron, ils entendirent des voix à l'entrée de la cabane.
+— Dépêchez-vous, leur dit Hagrid. N'écoutez pas…
 Et il retourna à grands pas vers sa cabane pour aller ouvrir la porte à laquelle on venait de frapper.
-Lentement, dans une sorte de transe angoissée, Harry, Ron et Hermione, à présent invisibles, contournèrent silencieusement la cabane. Lorsqu’ils furent passés de l’autre côté, ils entendirent la porte d’entrée se refermer avec un claquement sec.
-— Dépêchez-vous, s’il vous plaît, chuchota Hermione. Je n’en peux plus, je n’en peux plus…
-Ils remontèrent la pente douce qui menait au château. Le soleil plongeait à l’horizon. Le ciel avait pris une teinte grise mêlée de lueurs pourpres, tandis qu’à l’ouest scintillait un halo rouge couleur de rubis.
-Ron s’immobilisa soudain.
-— Ron, je t’en prie… murmura Hermione.
-— C’est Croûtard, dit Ron. Il ne veut pas rester en place. Ron était penché en avant, essayant de maintenir Croûtard dans sa poche, mais le rat s’agitait comme un diable. Il poussait de petits cris et se tortillait frénétiquement, donnant des coups de pattes en tous sens. Il tenta même de mordre les mains de Ron.
-— Croûtard, c’est moi, espèce d’idiot, souffla Ron. Ils entendirent une porte s’ouvrir derrière eux, puis des voix d’hommes.
-— Ron, allons-y, ils s’apprêtent à le tuer ! murmura Hermione.
-— D’accord… Croûtard, tiens-toi tranquille. Ils reprirent leur marche. Harry, tout comme Hermione, essayait de ne pas entendre la rumeur des voix, dans leur dos. Ron s’arrêta à nouveau.
-— Je n’arrive pas à le tenir, dit-il. Croûtard, arrête, tout le monde va nous entendre…
-Le rat poussait de petits cris féroces, mais pas assez puissants pour couvrir les bruits qui provenaient du jardin de Hagrid. Il y eut un mélange de voix indistinctes, un moment de silence, puis, brusquement, le sifflement caractéristique d’une hache qui s’abattait dans un choc sourd.
+Lentement, dans une sorte de transe angoissée, Harry, Ron et Hermione, à présent invisibles, contournèrent silencieusement la cabane. Lorsqu'ils furent passés de l'autre côté, ils entendirent la porte d'entrée se refermer avec un claquement sec.
+— Dépêchez-vous, s'il vous plaît, chuchota Hermione. Je n'en peux plus, je n'en peux plus…
+Ils remontèrent la pente douce qui menait au château. Le soleil plongeait à l'horizon. Le ciel avait pris une teinte grise mêlée de lueurs pourpres, tandis qu'à l'ouest scintillait un halo rouge couleur de rubis.
+Ron s'immobilisa soudain.
+— Ron, je t'en prie… murmura Hermione.
+— C'est Croûtard, dit Ron. Il ne veut pas rester en place. Ron était penché en avant, essayant de maintenir Croûtard dans sa poche, mais le rat s'agitait comme un diable. Il poussait de petits cris et se tortillait frénétiquement, donnant des coups de pattes en tous sens. Il tenta même de mordre les mains de Ron.
+— Croûtard, c'est moi, espèce d'idiot, souffla Ron. Ils entendirent une porte s'ouvrir derrière eux, puis des voix d'hommes.
+— Ron, allons-y, ils s'apprêtent à le tuer ! murmura Hermione.
+— D'accord… Croûtard, tiens-toi tranquille. Ils reprirent leur marche. Harry, tout comme Hermione, essayait de ne pas entendre la rumeur des voix, dans leur dos. Ron s'arrêta à nouveau.
+— Je n'arrive pas à le tenir, dit-il. Croûtard, arrête, tout le monde va nous entendre…
+Le rat poussait de petits cris féroces, mais pas assez puissants pour couvrir les bruits qui provenaient du jardin de Hagrid. Il y eut un mélange de voix indistinctes, un moment de silence, puis, brusquement, le sifflement caractéristique d'une hache qui s'abattait dans un choc sourd.
 Hermione vacilla.
-— Ils l’ont fait ! murmura-t-elle… Je n’arrive pas à y croire… Ils l’ont fait !
-
-
+— Ils l'ont fait ! murmura-t-elle… Je n'arrive pas à y croire… Ils l'ont fait !
