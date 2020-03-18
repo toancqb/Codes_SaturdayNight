@@ -69,8 +69,8 @@ for (my $file=1; $file <=22; $file=$file+1) {
 }
 my @keys = keys %data;
 my $size = @keys;
-print "Le nombre totale des mots: $numligne\n";
-print "Le nombre des mots uniques apres conjugasion: $size\n";
+print "- Le nombre totale des mots: $numligne\n";
+print "- Le nombre des mots\n uniques apres conjugasion: $size\n";
 
 # foreach my $k (sort keys %data) {
 #   print "$k : $data{$k}\n";
