@@ -13,6 +13,14 @@ my @lst_mots = (
  ["jaune","jaunes"],
 );
 
+my @lst_verbe_mots = (
+  ["avoir","ai","as","a","avons","avez","ont","avais",
+  "avait","avions","aviez","avaient","eu","eus","eut",
+  "eûmes","eûtes","eurent","aurai","auras","aura","aurons",
+  "aurez","auront","aurais","aurait","aurions","auriez","auraient",
+  "aie","aies","ait","ayons","ayez","aient","eusse","eusses"
+  ,"eussions","eussiez","eussent"]
+);
 
 my @lst_mots = (
 	["maison","maisons"],

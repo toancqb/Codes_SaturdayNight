@@ -4,25 +4,10 @@ use strict;
 use warnings;
 use utf8;
 
+use Term::ANSIColor;
 binmode(STDOUT, ':utf8');
 
-# define
-# NFILE
-
-sub process {
-  my $word = "";
-  if ($_[0] eq "-" || $_[0] eq "!" || $_[0] eq "?"
-    || $_[0] eq "—"|| $_[0] eq ":" || $_[0] eq "»"
-    || $_[0] eq "«"|| $_[0] eq ";") {
-    return "";
-  }
-  $word = lc($_[0]);
-  my $n = index($word, "\'");
-  $word = substr $word, $n + 1;
-  $word =~ s/[\.\,\(\)\…\»]//g;
-  return $word;
-}
-#  Lires #########################
+#  Datas #########################
 
 my @lst_verbe_mots = (
   ["avoir","ai","as","a","avons","avez","ont","avais",
@@ -103,9 +88,22 @@ my @lst_noms_mots = (
 ##################################
 
 my %mots_plus_utilises;
-#my @splited_word;
 my $nombre_mots = 0;
 my $nombre_mots_utilises = 0;
+
+sub process {
+  my $word = "";
+  if ($_[0] eq "-" || $_[0] eq "!" || $_[0] eq "?"
+    || $_[0] eq "—"|| $_[0] eq ":" || $_[0] eq "»"
+    || $_[0] eq "«"|| $_[0] eq ";") {
+    return "";
+  }
+  $word = lc($_[0]);
+  my $n = index($word, "\'");
+  $word = substr $word, $n + 1;
+  $word =~ s/[\.\,\(\)\…\»]//g;
+  return $word;
+}
 
 sub print_lst_mots {
   foreach my $tab (@_) {
@@ -123,7 +121,6 @@ sub is_mot_plus_utilise {
     for (my $j = 0 ; $j < @{$lst_mots[$i]} ; $j++ ) {
         if ($mot eq $lst_mots[$i][$j]) {
           return $lst_mots[$i][0];
-          #return $lst_mots[$i][$j];
         }
     }
   }
@@ -137,9 +134,7 @@ for (my $file=1; $file <=22; $file=$file+1) {
     $file = "0$file";
   }
   open(IN, "harry-potter/part-$file.txt");
-  #open(IN, "test$file.txt");
   binmode(IN,':utf8');
-
 
   while (my $ligne = <IN>) {
     chop $ligne;
@@ -152,11 +147,7 @@ for (my $file=1; $file <=22; $file=$file+1) {
         $nombre_mots = $nombre_mots + 1;
         $w = is_mot_plus_utilise($w);
         if ($w ne "") {
-          if (exists($mots_plus_utilises{$w})) {
-            $mots_plus_utilises{$w} += 1;
-          } else {
-            $mots_plus_utilises{$w} = 1;
-          }
+          $mots_plus_utilises{$w} += 1;
           $nombre_mots_utilises += 1;
         }
       }
@@ -165,18 +156,14 @@ for (my $file=1; $file <=22; $file=$file+1) {
       $nombre_mots = $nombre_mots + 1;
       $word2 = is_mot_plus_utilise($word2);
       if ($word2 ne "") {
-        if (exists($mots_plus_utilises{$word2})) {
-          $mots_plus_utilises{$word2} += 1;
-        } else {
-          $mots_plus_utilises{$word2} = 1;
-        }
+        $mots_plus_utilises{$word2} += 1;
         $nombre_mots_utilises += 1;
       }
     }
   }
-
   close(IN);
 }
+
 my @keys = keys %mots_plus_utilises;
 my $size = @keys;
 print "- Le nombre totale des mots: $nombre_mots\n";
@@ -184,10 +171,6 @@ print "- Le nombre totale des mots plus utilises: $nombre_mots_utilises\n";
 my $percent = $nombre_mots_utilises*100/$nombre_mots;
 print "- Use of the 50 most common noun words: $percent\n";
 print "- Le nombre des mots plus utilises: $size\n";
-
-# foreach my $k (sort keys %data) {
-#   print "$k : $data{$k}\n";
-# }
 
 foreach my $k (reverse sort {$mots_plus_utilises{$a} <=> $mots_plus_utilises{$b}} keys %mots_plus_utilises) {
   print "[$k] : $mots_plus_utilises{$k}\n";
