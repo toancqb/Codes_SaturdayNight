@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<body>
+
+<h1>Number of references to a specific Color</h1>
+
+<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Noir', 62],
+  ['Rouge', 23],
+  ['Vert', 19],
+  ['Blanc', 16],
+  ['Gris', 14],
+  ['Jaune', 11],
+  ['Orange', 10],
+  ['Bleu', 7]
+  // ,
+  // ['Violet', 6],
+  // ['Marron', 3],
+  // ['Rose', 1]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':'Pourcentage des couleurs',
+    'width':550,
+    'height':400,
+    'colors':
+    ['#000000','#ff2d00','#00ff34','#cfd4e9'
+    ,'#757575','#f0f305','#ff9b00','#002dff']
+  };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+
+</body>
+</html>

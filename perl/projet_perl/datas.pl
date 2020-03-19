@@ -1,4 +1,18 @@
 
+my @lst_mots = (
+ ["blanc","blancs","blanche","blanches"],
+ ["noir","noirs","noire","noires"],
+ ["rouge","rouges"],
+ ["vert","verts","verte","vertes"],
+ ["orange","oranges"],
+ ["marron","marron"],
+ ["bleu","bleus","bleue","bleues"],
+ ["violet","violets","violette","violettes"],
+ ["gris","grise","grises"],
+ ["rose","roses"],
+ ["jaune","jaunes"],
+);
+
 
 my @lst_mots = (
 	["maison","maisons"],

@@ -24,7 +24,30 @@ sub process {
 }
 #  Lires #########################
 
+my @lst_verbe_mots = (
+  ["avoir","ai","as","a","avons","avez","ont","avais",
+  "avait","avions","aviez","avaient","eu","eus","eut",
+  "eûmes","eûtes","eurent","aurai","auras","aura","aurons",
+  "aurez","auront","aurais","aurait","aurions","auriez","auraient",
+  "aie","aies","ait","ayons","ayez","aient","eusse","eusses"
+  ,"eussions","eussiez","eussent"]
+);
+
 my @lst_mots = (
+ ["blanc","blancs","blanche","blanches"],
+ ["noir","noirs","noire","noires"],
+ ["rouge","rouges"],
+ ["vert","verts","verte","vertes"],
+ ["orange","oranges"],
+ ["marron","marron"],
+ ["bleu","bleus","bleue","bleues"],
+ ["violet","violets","violette","violettes"],
+ ["gris","grise","grises"],
+ ["rose","roses"],
+ ["jaune","jaunes"],
+);
+
+my @lst_noms_mots = (
 	["maison","maisons"],
 	["tête","têtes"],
 	["ville","villes"],
@@ -100,6 +123,7 @@ sub is_mot_plus_utilise {
     for (my $j = 0 ; $j < @{$lst_mots[$i]} ; $j++ ) {
         if ($mot eq $lst_mots[$i][$j]) {
           return $lst_mots[$i][0];
+          #return $lst_mots[$i][$j];
         }
     }
   }
