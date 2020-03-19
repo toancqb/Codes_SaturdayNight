@@ -9,16 +9,26 @@ binmode(STDOUT, ':utf8');
 
 #  Datas #########################
 
+#my @lst_mots = (
 my @lst_verbe_mots = (
   ["avoir","ai","as","a","avons","avez","ont","avais",
   "avait","avions","aviez","avaient","eu","eus","eut",
   "eûmes","eûtes","eurent","aurai","auras","aura","aurons",
   "aurez","auront","aurais","aurait","aurions","auriez","auraient",
   "aie","aies","ait","ayons","ayez","aient","eusse","eusses"
-  ,"eussions","eussiez","eussent"]
+  ,"eussions","eussiez","eussent"],
+  ["être","suis","es","est","sommes","êtes","sont",
+  "été","étais","était","étions","étiez","étaient",
+  "fus","fus","fut","fûmes","fûtes","furent","serai",
+  "seras","sera","serons","serez","seront","sois",
+  "soit","soyons","soyez","soient","fusse","fusses",
+  "fût","fussions","fussiez","fussent","serais",
+  "serais","serait","serions","seriez","seraient",
+  "étant"]
 );
 
-my @lst_mots = (
+my @lst_color_mots = (
+#my @lst_mots = (
  ["blanc","blancs","blanche","blanches"],
  ["noir","noirs","noire","noires"],
  ["rouge","rouges"],
@@ -32,7 +42,8 @@ my @lst_mots = (
  ["jaune","jaunes"],
 );
 
-my @lst_noms_mots = (
+#my @lst_noms_mots = (
+my @lst_mots = (
 	["maison","maisons"],
 	["tête","têtes"],
 	["ville","villes"],
@@ -91,6 +102,7 @@ my %mots_plus_utilises;
 my $nombre_mots = 0;
 my $nombre_mots_utilises = 0;
 
+###################################
 sub process {
   my $word = "";
   if ($_[0] eq "-" || $_[0] eq "!" || $_[0] eq "?"
@@ -128,6 +140,17 @@ sub is_mot_plus_utilise {
   return "";
 }
 
+sub manipuler_word {
+  my $word = $_[0];
+  $word = is_mot_plus_utilise($word);
+  if ($word ne "") {
+    $mots_plus_utilises{$word} += 1;
+    $nombre_mots_utilises += 1;
+  }
+}
+
+###################################
+
 for (my $file=1; $file <=22; $file=$file+1) {
 
   if ($file < 10) {
@@ -141,37 +164,57 @@ for (my $file=1; $file <=22; $file=$file+1) {
     my @splited_word = split /\s+/,$ligne;
     foreach my $word (@splited_word) {
       if (index($word, "\'") != -1) {
-        my $w = substr $word, 0, index($word, "\'");
-        $w = "${w}e";
-        if ($w eq "") {next;}
+        my $w1 = substr $word, 0, index($word, "\'");
+        $w1 = "${w1}e";
         $nombre_mots = $nombre_mots + 1;
-        $w = is_mot_plus_utilise($w);
-        if ($w ne "") {
-          $mots_plus_utilises{$w} += 1;
-          $nombre_mots_utilises += 1;
-        }
+        manipuler_word($w1);
       }
-      my $word2 = process($word);
-      if ($word2 eq "") {next;}
+      my $w2 = process($word);
+      if ($w2 eq "") {next;}
       $nombre_mots = $nombre_mots + 1;
-      $word2 = is_mot_plus_utilise($word2);
-      if ($word2 ne "") {
-        $mots_plus_utilises{$word2} += 1;
-        $nombre_mots_utilises += 1;
-      }
+      manipuler_word($w2)
     }
   }
   close(IN);
 }
 
+sub print_color {
+  print color($_[0]), $_[1], color('reset');
+}
+
 my @keys = keys %mots_plus_utilises;
 my $size = @keys;
-print "- Le nombre totale des mots: $nombre_mots\n";
-print "- Le nombre totale des mots plus utilises: $nombre_mots_utilises\n";
-my $percent = $nombre_mots_utilises*100/$nombre_mots;
-print "- Use of the 50 most common noun words: $percent\n";
-print "- Le nombre des mots plus utilises: $size\n";
+##
+print color('bold black on_green'), "- Le nombre totale des mots:               ", color('reset');
+print color('bold red on_yellow');
+printf("%10i\n", $nombre_mots); print color('reset');
 
+print color('bold black on_green'), "- Le nombre totale des mots plus utilises: ", color('reset');
+print color('bold red on_yellow');
+printf("%10i\n",$nombre_mots_utilises); print color('reset');
+
+my $percent = $nombre_mots_utilises*100/$nombre_mots;
+
+print color('bold black on_green'), "- Use of the 50 most common noun words:    ", color('reset');
+print color('bold red on_yellow');
+printf("%9.2f%%\n", $percent); print color('reset');
+
+print color('bold black on_green'), "- Le nombre des mots plus utilises:        ", color('reset');
+print color('bold red on_yellow');
+printf("%10i\n",$size); print color('reset');
+##
+my $top = 1;
 foreach my $k (reverse sort {$mots_plus_utilises{$a} <=> $mots_plus_utilises{$b}} keys %mots_plus_utilises) {
-  print "[$k] : $mots_plus_utilises{$k}\n";
+  #print "-=[$k]=- : $mots_plus_utilises{$k}\n";
+  print_color('bold black on_white', "-=[");
+  print color('bold red on_yellow');
+  printf("%-10s", $k); print color('reset');
+  print_color('bold black on_white', "]=- : ");
+  print color('bold magenta on_cyan');
+  printf("%8i", $mots_plus_utilises{$k}); print color('reset');
+  print color('on_white'), "                          \n", color('reset');
+  if ($top >= 20) {
+    last;
+  }
+  $top += 1;
 }
