@@ -103,6 +103,14 @@ my $nombre_mots = 0;
 my $nombre_mots_utilises = 0;
 
 ###################################
+##################################
+
+my %mots_plus_utilises2;
+my $nombre_mots2 = 0;
+my $nombre_mots_utilises2 = 0;
+
+###################################
+
 sub process {
   my $word = "";
   if ($_[0] eq "-" || $_[0] eq "!" || $_[0] eq "?"
@@ -115,15 +123,6 @@ sub process {
   $word = substr $word, $n + 1;
   $word =~ s/[\.\,\(\)\…\»]//g;
   return $word;
-}
-
-sub print_lst_mots {
-  foreach my $tab (@_) {
-    foreach my $m ($tab) {
-      print "-[$m]-";
-    }
-    print "\n";
-  }
 }
 
 sub is_mot_plus_utilise {
@@ -148,7 +147,21 @@ sub manipuler_word {
   }
 }
 
+sub manipuler_word2 {
+  my $word = $_[0];
+  $word = is_mot_plus_utilise($word);
+  if ($word ne "") {
+    $mots_plus_utilises2{$word} += 1;
+    $nombre_mots_utilises2 += 1;
+  }
+}
+
+sub print_color {
+  print color($_[0]), $_[1], color('reset');
+}
+
 ###################################
+## Lire la premiere ouvre        ##
 
 for (my $file=1; $file <=22; $file=$file+1) {
 
@@ -176,10 +189,32 @@ for (my $file=1; $file <=22; $file=$file+1) {
   }
   close(IN);
 }
+##                               ##
+###################################
+## Lire la deuxieme ouvre        ##
 
-sub print_color {
-  print color($_[0]), $_[1], color('reset');
+open(IN, "stevenson/stevenson-fr-v2.txt");
+binmode(IN,':utf8');
+
+while (my $ligne = <IN>) {
+  chop $ligne;
+  my @splited_word = split /\s+/,$ligne;
+  foreach my $word (@splited_word) {
+    if (index($word, "\'") != -1) {
+      my $w1 = substr $word, 0, index($word, "\'");
+      $w1 = "${w1}e";
+      $nombre_mots2 = $nombre_mots2 + 1;
+      manipuler_word2($w1);
+    }
+    my $w2 = process($word);
+    if ($w2 eq "") {next;}
+    $nombre_mots2 = $nombre_mots2 + 1;
+    manipuler_word2($w2);
+  }
 }
+close(IN);
+##                               ##
+###################################
 
 my @keys = keys %mots_plus_utilises;
 my $size = @keys;
@@ -217,50 +252,6 @@ foreach my $k (reverse sort {$mots_plus_utilises{$a} <=> $mots_plus_utilises{$b}
   }
   $top += 1;
 }
-
-##################################
-
-my %mots_plus_utilises2;
-my $nombre_mots2 = 0;
-my $nombre_mots_utilises2 = 0;
-
-###################################
-
-
-sub manipuler_word2 {
-  my $word = $_[0];
-  $word = is_mot_plus_utilise($word);
-  if ($word ne "") {
-    $mots_plus_utilises2{$word} += 1;
-    $nombre_mots_utilises2 += 1;
-  }
-}
-
-open(IN, "stevenson-fr-v2.txt");
-binmode(IN,':utf8');
-
-
-
-while (my $ligne = <IN>) {
-  chop $ligne;
-  my @splited_word = split /\s+/,$ligne;
-  foreach my $word (@splited_word) {
-    if (index($word, "\'") != -1) {
-      my $w1 = substr $word, 0, index($word, "\'");
-      $w1 = "${w1}e";
-      $nombre_mots2 = $nombre_mots2 + 1;
-      manipuler_word2($w1);
-    }
-    my $w2 = process($word);
-    if ($w2 eq "") {next;}
-    $nombre_mots2 = $nombre_mots2 + 1;
-    manipuler_word2($w2);
-  }
-}
-close(IN);
-
-
-
 
 @keys = keys %mots_plus_utilises2;
 $size = @keys;

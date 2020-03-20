@@ -37,7 +37,7 @@ for (my $file=1; $file <=22; $file=$file+1) {
     $file = "0$file";
   }
   open(IN, "harry-potter/part-$file.txt");
-  #open(IN, "test$file.txt");
+  #open(IN, "stevenson/stevenson-fr-v2.txt");
   binmode(IN,':utf8');
 
 
