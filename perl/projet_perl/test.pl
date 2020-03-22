@@ -2,58 +2,64 @@ use strict;
 use warnings;
 use utf8;
 
+use Term::ANSIColor;
+
 binmode(STDOUT, ':utf8');
 
-#my @lst_color_mots = (
-my @lst_mots = (
- ["blanc","blancs","blanche","blanches"],
- ["noir","noirs","noire","noires"],
- ["rouge","rouges"],
- ["vert","verts","verte","vertes"],
- ["orange","oranges"],
- ["marron","marron"],
- ["bleu","bleus","bleue","bleues"],
- ["violet","violets","violette","violettes"],
- ["gris","grise","grises"],
- ["rose","roses"],
- ["jaune","jaunes"],
-);
-
-sub is_mot_plus_utilise {
+sub cherche_mot {
   my $mot = $_[0];
+  my $fichier = $_[1];
+  my $numligne = 0;
 
-  for (my $i = 0 ; $i < @lst_mots ; $i++) {
-    for (my $j = 0 ; $j < @{$lst_mots[$i]} ; $j++ ) {
-        if ($mot eq $lst_mots[$i][$j]) {
-          return $lst_mots[$i][0];
-        }
-    }
+  open(IN, $fichier);
+  binmode(IN,':utf8');
+
+  print color('bold blue'),"[$fichier]: \n",color('reset');
+
+  while (my $ligne = <IN>) {
+    chop $ligne;
+    $numligne += 1;
+
+    if ($ligne =~ /^(.*)($mot\w*)(.*)$/) {
+
+      my $gauche = $1;
+      my $motif  = $2;
+      my $droite = $3;
+
+      if (length($gauche)>30) {
+        $gauche = substr($gauche,-30,30);
+      }
+
+      # vvv ajouts par rapport à la version 2 vvv
+      my @mots = split(/\W+/,$droite);
+      $droite = '';
+      my $maxmots = 5;
+      if (scalar(@mots)<$maxmots) {
+        $maxmots = scalar(@mots);
+      }
+      for (my $i=0 ; $i<$maxmots ; $i=$i+1) {
+        $droite = $droite.$mots[$i].' ';
+      }
+      # ^^^ ajouts par rapport à la version 2 ^^
+      #
+
+      print color('bright_magenta');
+      printf("%5i: ",$numligne);
+      print color('reset');
+
+      print color('bold white');
+      printf("%30s",$gauche);
+      print color('reset');
+
+      print color('green on_white');
+      printf("%-10s",$motif);
+      print color('reset');
+
+      print color('bold white'),$droite,color('reset');
+      print "\n";
+      }
   }
-  return "";
+  close(IN);
 }
 
-sub manipuler_word {
-  my ($word, $nombre_mots_utilisesx, %mots_plus_utilisesx) = @_;
-  $word = is_mot_plus_utilise($word);
-  if ($word ne "") {
-    $mots_plus_utilisesx{$word} += 1;
-    $nombre_mots_utilisesx += 1;
-  }
-}
-
-my $n1 = 0;
-my %mots_plus_utilises;
-
-manipuler_word("gris", $n1, %mots_plus_utilises);
-
-foreach my $k (reverse sort {$mots_plus_utilises{$a} <=> $mots_plus_utilises{$b}} keys %mots_plus_utilises) {
-  #print "-=[$k]=- : $mots_plus_utilises{$k}\n";
-  print_color('bold black on_white', "-=[");
-  print color('bold red on_yellow');
-  printf("%-10s", $k); print color('reset');
-  print_color('bold black on_white', "]=- : ");
-  print color('bold black on_cyan');
-  printf("%8i", $mots_plus_utilises{$k}); print color('reset');
-  print color('on_white'), "                          \n", color('reset');
-  
-}
+cherche_mot("pass", "stevenson/stevenson-fr-v2.txt");
