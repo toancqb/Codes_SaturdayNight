@@ -180,7 +180,7 @@ sub cherche_mot { # C'est la fonction de professeur Fabien-Torre
 # Cherche tous les lignes qui contient $mot*
       my $gauche = $1; # de la gauche de $mot*
       my $motif  = $2;
-      my $droite = $3; 
+      my $droite = $3;
 
       if (length($gauche)>30) {
         $gauche = substr($gauche,-30,30); # on coupe $gauche si len($gauche)>30
@@ -294,21 +294,21 @@ my $size = @keys;
 ##
 print_color('bold red on_blue', $title1);
 ##
-print color('bold black on_green'), "- Nombre total des mots du texte:                     ", color('reset');
+print_color('bold black on_green', "- Nombre total des mots du texte:                     ");
 print color('bold red on_yellow');
 printf("%10i\n", $nombre_mots); print color('reset');
 
-print color('bold black on_green'), "- Mots faisant partie de la liste des 50 plus utilise:", color('reset');
+print_color('bold black on_green', "- Mots faisant partie de la liste des 50 plus utilise:");
 print color('bold red on_yellow');
 printf("%10i\n",$nombre_mots_utilises); print color('reset');
 
 my $percent = $nombre_mots_utilises*100/$nombre_mots;
 
-print color('bold black on_green'), "- Pourcentage des 50 mots les plus communs:           ", color('reset');
+print_color('bold black on_green', "- Pourcentage des 50 mots les plus communs:           ");
 print color('bold red on_yellow');
 printf("%9.2f%%\n", $percent); print color('reset');
 
-print color('bold black on_green'), "- Nombre de ces mots sans repetition:                 ", color('reset');
+print_color('bold black on_green', "- Nombre de ces mots sans repetition:                 ");
 print color('bold red on_yellow');
 printf("%10i\n",$size); print color('reset');
 ##
@@ -333,17 +333,17 @@ $size = @keys;
 ##
 print_color('bold red on_blue', $title2);
 ##
-print color('bold black on_green'), "- Nombre total des mots du texte:                     ", color('reset');
+print_color('bold black on_green', "- Nombre total des mots du texte:                     ");
 print color('bold red on_yellow');
 printf("%10i\n", $nombre_mots2); print color('reset');
 
-print color('bold black on_green'), "- Mots faisant partie de la liste des 50 plus utilise:", color('reset');
+print_color('bold black on_green', "- Mots faisant partie de la liste des 50 plus utilise:");
 print color('bold red on_yellow');
 printf("%10i\n",$nombre_mots_utilises2); print color('reset');
 
 $percent = $nombre_mots_utilises2*100/$nombre_mots2;
 
-print color('bold black on_green'), "- Pourcentage des 50 mots les plus communs:           ", color('reset');
+print_color('bold black on_green', "- Pourcentage des 50 mots les plus communs:           ");
 print color('bold red on_yellow');
 printf("%9.2f%%\n", $percent); print color('reset');
 
