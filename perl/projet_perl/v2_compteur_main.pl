@@ -28,17 +28,17 @@ close(INDICO);
 ##                              ##
 ##################################
 ##                              ##
-my $title1 = "         <~HARRY POTTER~>                               \n";
-my %dmots;         ##
+my $title1 = "          <~HARRY POTTER~>                                     \n";
+my %dmots;                      ##
 my $nombre_mots = 0;            ##
-my $nombre_dmots = 0;   ##
+my $nombre_dmots = 0;           ##
 ##                              ##
 ##################################
 ##                              ##
-my $title2 = "           <~STEVENSON~>                                \n";
-my %dmots2;        ##
+my $title2 = "            <~STEVENSON~>                                      \n";
+my %dmots2;                     ##
 my $nombre_mots2 = 0;           ##
-my $nombre_dmots2 = 0;  ##
+my $nombre_dmots2 = 0;          ##
 ##                              ##
 ##################################
 
@@ -64,7 +64,7 @@ sub cherche_mot {
 # Cherche tous les lignes qui contient $mot*
       my $gauche = $1; # de la gauche de $mot*
       my $motif  = $2;
-      my $droite = $3; # de la droite de $mot*
+      my $droite = $3; 
 
       if (length($gauche)>30) {
         $gauche = substr($gauche,-30,30); # on coupe $gauche si len($gauche)>30
@@ -160,13 +160,14 @@ while (my $ligne = <IN>) {
 
     chop $ligne; # on enlève le passage à la ligne
 
-    my @splited_words = split(/[\W\d]+/,"\L$ligne");
-    foreach my $word (@splited_words) {
+    my @splited_words = split(/[\W\d]+/,"\L$ligne"); # Split la ligne pour des mots
+    foreach my $word (@splited_words) { # Pour chaque mot
       if ($word ne '') {
         if (!exists($dico_stop{$word}) && exists($dico{$word})) {
           $dmots2{$word} += 1;
           $nombre_dmots2 += 1;
-
+					# On ne traite que les mots dans le dictionnaire %dico
+					# sauf que les mots dans le dictionnaire %dico_stop
         }
         $nombre_mots2 = $nombre_mots2 + 1;
       }
@@ -182,21 +183,21 @@ my $size = @keys;
 ##
 print_color('bold red on_blue', $title1);
 ##
-print_color('bold black on_green', "- Nombre total des mots du texte:             ");
+print_color('bold black on_green', "- Nombre total des mots du texte:                    ");
 print color('bold red on_yellow');
 printf("%10i\n", $nombre_mots); print color('reset');
 
-print_color('bold black on_green', "- Nombre total de mots differents:            ");
+print_color('bold black on_green', "- Nombre total de mots differents:                   ");
 print color('bold red on_yellow');
 printf("%10i\n",$nombre_dmots); print color('reset');
 
 my $percent = $nombre_dmots*100/$nombre_mots;
 
-print_color('bold black on_green', "- Pourcentage:                                ");
+print_color('bold black on_green', "- Pourcentage:                                       ");
 print color('bold red on_yellow');
 printf("%9.2f%%\n", $percent); print color('reset');
 
-print_color('bold black on_green', "- Le nombre des mots utilises:                ");
+print_color('bold black on_green', "- Nombre de mots differents utilises sans repetition:");
 print color('bold red on_yellow');
 printf("%10i\n",$size); print color('reset');
 ##
@@ -209,7 +210,7 @@ foreach my $k (reverse sort {$dmots{$a} <=> $dmots{$b}} keys %dmots) {
   print_color('bold black on_white', "]=- : ");
   print color('bold black on_cyan');
   printf("%8i", $dmots{$k}); print color('reset');
-  print color('on_white'), "                             \n", color('reset');
+  print color('on_white'), "                                    \n", color('reset');
   if ($top >= 15) {
     last;
   }
@@ -221,21 +222,21 @@ $size = @keys;
 ##
 print_color('bold red on_blue', $title2);
 ##
-print_color('bold black on_green', "- Nombre total de mots:                       ");
+print_color('bold black on_green', "- Nombre total de mots:                              ");
 print color('bold red on_yellow');
 printf("%10i\n", $nombre_mots2); print color('reset');
 
-print_color('bold black on_green', "- Nombre total de mots differents:            ");
+print_color('bold black on_green', "- Nombre total de mots differents:                   ");
 print color('bold red on_yellow');
 printf("%10i\n",$nombre_dmots2); print color('reset');
 
 $percent = $nombre_dmots2*100/$nombre_mots2;
 
-print_color('bold black on_green', "- Pourcentage:                                ");
+print_color('bold black on_green', "- Pourcentage:                                       ");
 print color('bold red on_yellow');
 printf("%9.2f%%\n", $percent); print color('reset');
 
-print_color('bold black on_green', "- Le nombre des mots utilises:                ");
+print_color('bold black on_green', "- Nombre de mots differents utilises sans repetition:");
 print color('bold red on_yellow');
 printf("%10i\n",$size); print color('reset');
 ##
@@ -248,7 +249,7 @@ foreach my $k (reverse sort {$dmots2{$a} <=> $dmots2{$b}} keys %dmots2) {
   print_color('bold black on_white', "]=- : ");
   print color('bold black on_cyan');
   printf("%8i", $dmots2{$k}); print color('reset');
-  print color('on_white'), "                             \n", color('reset');
+  print color('on_white'), "                                    \n", color('reset');
   if ($top >= 15) {
     last;
   }

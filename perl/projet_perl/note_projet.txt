@@ -101,6 +101,14 @@ $> perl v2_optimal_main.pl
 Si je change pour la liste couleurs:
 == HarryPotter est 'noir'
 == Stenvenson est 'rouge'
+
+v2_optimal:
+Titre 2: Mots faisant partie de la liste des 50 plus utilises
+Titre 4: Nombre de ces mots sans repetition
+
+v2_compteur:
+Titre 4: Nombre de mots differents utilises sans repetition
+
 ##########################################################################
 ###########=[v2_optimal_main.pl MotCherChe]: #############################
 *) Pour compiler:
