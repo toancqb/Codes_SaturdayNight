@@ -101,47 +101,45 @@ my %dico = ();
 open(INDICO,'dictionnaire-2020.txt');
 binmode(INDICO,':utf8');
 while (my $mot = <INDICO>) {
-	chop $mot;
+	chop $mot; # on enlève le passage à la ligne
 	$dico{$mot} = 1;
+}
+close(INDICO);
+my %dico_stop = ();
+open(INDICO,'stop.txt');
+binmode(INDICO,':utf8');
+while (my $mot = <INDICO>) {
+	chop $mot; # on enlève le passage à la ligne
+	$dico_stop{$mot} = 1;
 }
 close(INDICO);
 ##                              ##
 ##################################
 ##                              ##
+my $title1 = "           <~HARRY POTTER~>                            \n";
 my %mots_plus_utilises;         ##
 my $nombre_mots = 0;            ##
 my $nombre_mots_utilises = 0;   ##
 ##                              ##
 ##################################
 ##                              ##
+my $title2 = "            <~STEVENSON~>                              \n";
+
 my %mots_plus_utilises2;        ##
 my $nombre_mots2 = 0;           ##
 my $nombre_mots_utilises2 = 0;  ##
 ##                              ##
 ##################################
 
-sub process {
-  my $word = "";
-  if ($_[0] eq "-" || $_[0] eq "!" || $_[0] eq "?"
-    || $_[0] eq "—"|| $_[0] eq ":" || $_[0] eq "»"
-    || $_[0] eq "«"|| $_[0] eq ";") {
-    return "";
-  }
-  $word = lc($_[0]);
-  my $n = index($word, "\'");
-  $word = substr $word, $n + 1;
-  $word =~ s/[\.\,\(\)\…\»]//g;
-  return $word;
-}
-
-sub is_mot_plus_utilise {
-  my $mot = $_[0];
+sub is_mot_dans_lst_mots {
+  my $mot = $_[0]; # mot on a besoin de verifier
 
   for (my $i = 0 ; $i < @lst_mots ; $i++) {
     for (my $j = 0 ; $j < @{$lst_mots[$i]} ; $j++ ) {
-        if ($mot eq $lst_mots[$i][$j]) {
-          return $lst_mots[$i][0];
-        }
+        if ($mot eq $lst_mots[$i][$j]) { # si le mot est egal a un des mots dans @lst_mots[$i]
+          return $lst_mots[$i][0]; # retourner le valeur de premier element
+        }                          # Pour ca, on peut compter blanc, blancs, blanche, blanches
+                                   # comme un mot unique
     }
   }
   return "";
@@ -149,27 +147,27 @@ sub is_mot_plus_utilise {
 
 sub manipuler_word {
   my $word = $_[0];
-  $word = is_mot_plus_utilise($word);
-  if ($word ne "") {
-    $mots_plus_utilises{$word} += 1;
-    $nombre_mots_utilises += 1;
+  $word = is_mot_dans_lst_mots($word); # verifier si $word est dans @lst_mots
+  if ($word ne "") {                   # et $word = le premier valeur dans @lst_mots[$i]
+    $mots_plus_utilises{$word} += 1;   # enregistrer $word dans dictionnaire %mots_plus_utilises
+    $nombre_mots_utilises += 1;        # compter $nombre_mots_utilises += 1
   }
 }
 
 sub manipuler_word2 {
   my $word = $_[0];
-  $word = is_mot_plus_utilise($word);
-  if ($word ne "") {
-    $mots_plus_utilises2{$word} += 1;
-    $nombre_mots_utilises2 += 1;
+  $word = is_mot_dans_lst_mots($word); # verifier si $word est dans @lst_mots
+  if ($word ne "") {                   # et $word = le premier valeur dans @lst_mots[$i]
+    $mots_plus_utilises2{$word} += 1;  # enregistrer $word dans dictionnaire %mots_plus_utilises2
+    $nombre_mots_utilises2 += 1;       # compter $nombre_mots_utilises2 += 1
   }
 }
 
 sub print_color {
-  print color($_[0]), $_[1], color('reset');
+  print color($_[0]), $_[1], color('reset'); # shortcut d'utilisation de print color
 }
 
-sub cherche_mot {
+sub cherche_mot { # C'est la fonction de professeur Fabien-Torre
   my $mot = $_[0];
   my $fichier = $_[1];
   my $numligne = 0;
@@ -180,17 +178,17 @@ sub cherche_mot {
   print color('bold blue'),"[$fichier]: \n",color('reset');
 
   while (my $ligne = <IN>) {
-    chop $ligne;
-    $numligne += 1;
+    chop $ligne; # on enlève le passage à la ligne
+    $numligne += 1; # on compte $numligne += 1
 
     if ($ligne =~ /^(.*)($mot\w*)(.*)$/) {
-
-      my $gauche = $1;
+# Cherche tous les lignes qui contient $mot*
+      my $gauche = $1; # de la gauche de $mot*
       my $motif  = $2;
-      my $droite = $3;
+      my $droite = $3; # de la droite de $mot*
 
       if (length($gauche)>30) {
-        $gauche = substr($gauche,-30,30);
+        $gauche = substr($gauche,-30,30); # on coupe $gauche si len($gauche)>30
       }
 
       # vvv ajouts par rapport à la version 2 vvv
@@ -228,7 +226,6 @@ sub cherche_mot {
 ##                               ##
 ###################################
 ## La Fonction Main commence     ##
-## Lire la premiere ouvre        ##
 
 my $nombre_argv = $#ARGV + 1;
 if ($nombre_argv > 0) {
@@ -241,7 +238,12 @@ if ($nombre_argv > 0) {
     cherche_mot("$ARGV[0]", "harry-potter/part-$file.txt");
 
   }
-} else { ## START ELSE
+} else { ## ELSE Commence
+
+##                               ##
+###################################
+## Lire la premiere ouvre        ##
+
 for (my $file=1; $file <=22; $file=$file+1) {
 
   if ($file < 10) {
@@ -257,10 +259,10 @@ for (my $file=1; $file <=22; $file=$file+1) {
       my @splited_word = split(/[\W\d]+/,"\L$ligne");
       foreach my $word (@splited_word) {
         if ($word ne '') {
-          if (exists($dico{$word})) {
+          if (!exists($dico_stop{$word}) and exists($dico{$word})) {
             manipuler_word($word);
-            $nombre_mots = $nombre_mots + 1;
           }
+          $nombre_mots = $nombre_mots + 1;
         }
       }
   }
@@ -280,10 +282,10 @@ while (my $ligne = <IN>) {
     my @splited_word = split(/[\W\d]+/,"\L$ligne");
     foreach my $word (@splited_word) {
       if ($word ne '') {
-        if (exists($dico{$word})) {
+        if (!exists($dico_stop{$word}) and exists($dico{$word})) {
           manipuler_word2($word);
-          $nombre_mots2 = $nombre_mots2 + 1;
         }
+        $nombre_mots2 = $nombre_mots2 + 1;
       }
     }
 }
@@ -291,26 +293,27 @@ close(IN);
 ##                               ##
 ###################################
 ## Print Resultats               ##
-my %resultats;
 
 my @keys = keys %mots_plus_utilises;
 my $size = @keys;
 ##
-print color('bold black on_green'), "- Le nombre totale des mots:               ", color('reset');
+print_color('bold red on_blue', $title1);
+##
+print color('bold black on_green'), "- Nombre total des mots du texte:            ", color('reset');
 print color('bold red on_yellow');
 printf("%10i\n", $nombre_mots); print color('reset');
 
-print color('bold black on_green'), "- Le nombre totale des mots plus utilises: ", color('reset');
+print color('bold black on_green'), "- Nombre total de mots juges pertinents:     ", color('reset');
 print color('bold red on_yellow');
 printf("%10i\n",$nombre_mots_utilises); print color('reset');
 
 my $percent = $nombre_mots_utilises*100/$nombre_mots;
 
-print color('bold black on_green'), "- Use of the 50 most common noun words:    ", color('reset');
+print color('bold black on_green'), "- Pourcentage des 50 mots les plus communs:  ", color('reset');
 print color('bold red on_yellow');
 printf("%9.2f%%\n", $percent); print color('reset');
 
-print color('bold black on_green'), "- Le nombre des mots plus utilises:        ", color('reset');
+print color('bold black on_green'), "- Nombre de mots pertinents sans repetition: ", color('reset');
 print color('bold red on_yellow');
 printf("%10i\n",$size); print color('reset');
 ##
@@ -323,8 +326,8 @@ foreach my $k (reverse sort {$mots_plus_utilises{$a} <=> $mots_plus_utilises{$b}
   print_color('bold black on_white', "]=- : ");
   print color('bold black on_cyan');
   printf("%8i", $mots_plus_utilises{$k}); print color('reset');
-  print color('on_white'), "                          \n", color('reset');
-  if ($top >= 20) {
+  print color('on_white'), "                            \n", color('reset');
+  if ($top >= 15) {
     last;
   }
   $top += 1;
@@ -333,21 +336,23 @@ foreach my $k (reverse sort {$mots_plus_utilises{$a} <=> $mots_plus_utilises{$b}
 @keys = keys %mots_plus_utilises2;
 $size = @keys;
 ##
-print color('bold black on_green'), "- Le nombre totale des mots:               ", color('reset');
+print_color('bold red on_blue', $title2);
+##
+print color('bold black on_green'), "- Nombre total des mots du texte:            ", color('reset');
 print color('bold red on_yellow');
 printf("%10i\n", $nombre_mots2); print color('reset');
 
-print color('bold black on_green'), "- Le nombre totale des mots plus utilises: ", color('reset');
+print color('bold black on_green'), "- Nombre total de mots juges pertinents:     ", color('reset');
 print color('bold red on_yellow');
 printf("%10i\n",$nombre_mots_utilises2); print color('reset');
 
 $percent = $nombre_mots_utilises2*100/$nombre_mots2;
 
-print color('bold black on_green'), "- Use of the 50 most common noun words:    ", color('reset');
+print color('bold black on_green'), "- Pourcentage des 50 mots les plus communs:  ", color('reset');
 print color('bold red on_yellow');
 printf("%9.2f%%\n", $percent); print color('reset');
 
-print color('bold black on_green'), "- Le nombre des mots plus utilises:        ", color('reset');
+print color('bold black on_green'), "- Nombre de mots pertinents sans repetition: ", color('reset');
 print color('bold red on_yellow');
 printf("%10i\n",$size); print color('reset');
 ##
@@ -360,8 +365,8 @@ foreach my $k (reverse sort {$mots_plus_utilises2{$a} <=> $mots_plus_utilises2{$
   print_color('bold black on_white', "]=- : ");
   print color('bold black on_cyan');
   printf("%8i", $mots_plus_utilises2{$k}); print color('reset');
-  print color('on_white'), "                          \n", color('reset');
-  if ($top >= 20) {
+  print color('on_white'), "                            \n", color('reset');
+  if ($top >= 15) {
     last;
   }
   $top += 1;

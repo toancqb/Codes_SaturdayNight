@@ -9,16 +9,103 @@ un corpus textuel de votre choix
 
 
 --==[ PROJET ]==--
---==[ - Version1: Compter le nombre des mots par le paragraph ]==--
---==[ - Version2: Compter le nombre des mots par phrase ]==--
---==[ - Version3: Compter les plus frequences 'mots' ]==--
---==[ - Version4: Compter le nombre des mots uniques ]==--
+--==[ - v2_compteur_main.pl: Compter le nombre des mots ]==--
+--==[ - v2_optimal_main.pl: Compter les plus frequences 'mots francais' utilise ]==--
+--==[ - v2_optimal_main.pl MotCherche: Chercher le mot MotCherChe dans 2 ouvres ]==--
+notes: Tu vois des images de l'affichage de notre programme pour mieux comprendre
+###########=[v2_compteur_main.pl]: ##########################################
+*) Pour compiler:
+$> perl v2_compteur_main.pl
 
-ex: 'mots'
-- 'Aller' est different avec 'vas'
+*) Fonctions:
+== Objective ==: Statistique litterature! ==
+== On veut savoir dans l'ouvre HarryPotter et l'ouvre Stevenson ==
+== Chaque auteur a deja utilise combien de mots, ==
+== Top 15 mots qu'il utilise plus frequence ==
+== Par example: HarryPotter: l'auteur a utilise le mot 'dit' 1011 fois (dans 126662 mots)
+==              Stenvenson: l'auteur a utilise le mot 'plus' 196 fois (dans 28328 mots); le mot 'dit' 69 fois seulement ==
+== Mon idee c'est savoir les caracteriques de l'ouvre en faisant le stastistique
+   et comparer entre 2 ouvres / 2 auteur ==
 
-ex:
-- Verbe 'aller'
-- "Il faut aller vite" => Aller
-- "Je vais a l'ecole" => vais => Aller
-- "J'iras chez toi" => iras => Aller
+ - Compter le nombre total des mots francais: 126662
+    ex: 'le matin fait beau' => 4 mots
+ - Identifier les mots francais dans 'dictionnaire-2020.txt' sauf que les mots dans 'stop.txt' et on compte tous: 58028 (9164 mots uniquement)
+    ex: 'le matin fait beau' => 3 mots ('le' on ne compte pas)
+    ex2: 'le matin faisait beau et le matin fait beau'
+      => 'matin' on compte 2 fois
+ - Pourcentage: 45%
+    ex: 3*100/4 = 75%
+ - Comme l'idee 2, mais on compte le mot 'matin' 1 fois: 9164
+############################################################################
+###########=[v2_optimal_main.pl]: ##########################################
+*) Pour compiler:
+$> perl v2_optimal_main.pl
+
+*) Fonctions:
+== Objective ==: Stastistique litterature! ==
+== On developpe au plus fond, Maintenant on a un liste des mots francais
+   qui sont utilise plus souvent dans la langue francais ==
+== Par example: 'maison', 'tete', 'ville' ... ==
+== Et on veut savoir que l'auteur a deja utilise combien des mots comme ca dans
+   la liste ==
+== C'est un programme compteur des mots particuliers qu'on veut ==
+== #my @lst_noms_mots = (
+   my @lst_mots = (
+	["maison","maisons"], # ici, par ex: 'maison' et 'maisons' est le meme mot
+	["tête","têtes"],     # et on compte comme un mot unique
+	["ville","villes"],
+	["temps","temps"],
+	["porte","portes"],
+	["pays"],
+	["route","routes"],
+	["fleur","fleurs"],
+	["raison","raisons"],
+	["homme","hommes"],
+	["cœur"],
+	["femme","femmes"],
+	["dieu","dieux"])
+== On doit preciser la liste que l'on veut faire la stastistiques ==
+== Si on veut savoir l'ouvre a des couleurs ==
+== my @lst_color_mots = (
+  #my @lst_mots = (
+        ["blanc","blancs","blanche","blanches"],
+        ["noir","noirs","noire","noires"],
+        ["rouge","rouges"],
+        ["vert","verts","verte","vertes"],
+        ["orange","oranges"],
+        ["marron","marron"],
+        ["bleu","bleus","bleue","bleues"],
+        ["violet","violets","violette","violettes"],
+        ["gris","grise","grises"],
+        ["rose","roses"],
+        ["jaune","jaunes"]);
+== Le programme va lire la liste qui s'appelle '@lst_mots', donc tu changer le nom
+   de la liste my @lst_mots = (
+	["maison","maisons"],	
+         ...........
+   a my @lst_noms_mots = (
+   
+   Et my @lst_color_mots = ( a my @lst_mots = (
+   Pour comparer les couleurs dans chaque ouvre
+
+ - Compter le nombre total des mots francais: 126662
+    ex: 'le matin fait beau' => 4 mots
+ - Identifier les mots francais dans 'dictionnaire-2020.txt' sauf que les mots dans 'stop.txt' et si le mot est dans la liste @lst_mots, on le compte: 1655 (43 mots uniquement)
+    ex: 'le matin fait beau' => 0 mots (ils ne sont pas dans la liste)
+    ex2: 'le maison est beau et le maisons sont beaux'
+      => 'maison' et 'maisons' sont le meme mot, on compte 2 fois pour le mot 'maison'
+ - Pourcentage: 1.31%
+    ex: 0*100/4 = 0%
+ - Comme l'idee 2, mais on compte le mot 'maison' 1 fois: 43
+
+Si je change pour la liste couleurs:
+== HarryPotter est 'noir'
+== Stenvenson est 'rouge'
+##########################################################################
+###########=[v2_optimal_main.pl MotCherChe]: #############################
+*) Pour compiler:
+$> perl v2_optimal_main.pl passe
+
+Il va chercher tous les lignes qui contient le mot 'passe*'
+C'est exactement le programme de professeur Fabien-Torre, j'ai reutilise  
+
